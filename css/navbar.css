@@ -1,0 +1,19 @@
+.navbar .nav > li > a > img {
+  width: 20px;
+  height: 20px;
+}
+.navbar {
+  background-color: #3A37D8
+}
+.navbar > .container {
+    float: center
+}
+.navbar .nav > li > a {
+  color: #FFFFFF
+}
+.navbar .nav > li.active > a,
+.navbar .nav > li.active > a:hover, 
+.navbar .nav > li.active > a:focus {
+    background-color: #2A71D3;
+    color: #FFFFFF
+}
