@@ -1,0 +1,9 @@
+.base_container {
+    padding-top: 50px;
+}
+.github-fork-ribbon.right-top:before {
+    background-color: #3A37D8;
+}
+.github-fork-ribbon.right-top {
+    position: fixed;
+}

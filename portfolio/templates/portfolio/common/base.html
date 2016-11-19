@@ -1,21 +1,31 @@
 <!DOCTYPE html>
-
+{% load static %}
 <html>
 <head>
-    <title>Zachariah Carmichael | Homepage</title>
-    <!-- Latest compiled and minified CSS -->
+    <title>Zachariah Carmichael | {% block title %}{% endblock %}</title>
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
           integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <!-- Custom styles for this template -->
-    <link href="css/navbar.css" rel="stylesheet">
+    <!-- CSS -->
+    <link href="{% static 'css/navbar.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/base.css' %}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/gh-fork-ribbon.css' %}" />
+    <!--[if lt IE 9]>
+        <link rel="stylesheet" href="{% static 'css/gh-fork-ribbon.ie.css' %}" />
+    <![endif]-->
+    {% block head %}{% endblock %}
 </head>
-<body>
-
-<!-- Latest jQuery -->
+{% block body_tags %}<body>{% endblock %}
+<a class="github-fork-ribbon right-top" href="https://github.com/craymichael" title="Fork me on GitHub" target="_blank">Fork me on GitHub</a>
+{% include "portfolio/common/header.html" %}
+<div class="container base_container">{% block body_block %}{% endblock %}</div>
+{% include "portfolio/common/footer.html" %}
+<!-- jQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<!-- Latest compiled and minified JavaScript -->
+<!-- JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
         integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
         crossorigin="anonymous"></script>
+{% block scripts %}{% endblock %}
 </body>
 </html>
