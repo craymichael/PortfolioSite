@@ -1,58 +1,115 @@
-<html>
-<head>
-    <title>Zachariah Carmichael | Homepage</title>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
-          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <!-- Custom styles for this template -->
-    <link href="css/navbar.css" rel="stylesheet">
-    <link href="css/scrolling-nav.css" rel="stylesheet">
-</head>
+{% extends "portfolio/common/base.html" %}
+{% load static %}
+
+{% block title %}Home{% endblock %}
+
+{% block head %}
+    <link href="{% static 'css/scrolling-nav.css' %}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block body_tags %}
 <body data-spy="scroll" data-target=".sidebar-fixed">
-<!-- Header Begin -->
-<nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="index.html">Zachariah Carmichael</a>
-        </div>
+{% endblock %}
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
-                <li><a href="index.html">Home</a></li>
-                <li class="active"><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="resume.html">Resume</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="https://www.linkedin.com/in/zachariah-carmichael-9b9848b2" target="_blank"><img
-                        src="img/linkedin.png"></a></li>
-                <li><a href="http://meritpages.com/Zachariah-Carmichael/" target="_blank"><img src="img/meritpages.png"></a>
-                </li>
-            </ul>
-        </div><!-- /.navbar-collapse -->
-    </div><!-- /.container -->
-</nav>
-
-<!-- Header End -->
-<div class="container">
+{% block body_block %}
     <div class="row">
         <div class="col-md-9">
             <section id="education" class="education-section">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-9">
-                            <h1>Education</h1>
-                            RIT
+                            <h1><b>Education</b></h1>
+                            <hr>
+                            <h3>Rochester Institute of Technology (RIT) — Rochester, NY</h3>
+                            <h4>Expected Degrees (May, 2019)</h4>
+                            <ul>
+                                <li><a href="https://www.rit.edu/kgcoe/computerengineering/program/dual-degree-bsms/curriculum-bsms-dual-degree"
+                                   target="_blank">Bachelor of Science in Computer Engineering</a></li>
+                                <li><a href="https://www.rit.edu/kgcoe/computerengineering/program/dual-degree-bsms/curriculum-bsms-dual-degree"
+                                   target="_blank">Master of Science in Computer Engineering</a></li>
+                                <li><a href="https://www.rit.edu/programs/minors/mathematics" target="_blank">
+                                    Minor in Mathematics</a></li>
+                                <li><a href="https://www.rit.edu/programs/immersions/digital-literatures-and-comparative-media"
+                                    target="_blank">Immersion in Digital Literature and Comparative Media</a></li>
+                            </ul>
+                            <p><i>GPA: 3.53/4.00<br>
+                            Dean's List: 2014, 2015, 2016</i></p>
+                            <h4>Courses</h4>
+                            <ul class="row">
+                                <li class="col-md-6 vsplit-list">Applied Programming</li>
+                                <li class="col-md-6 vsplit-list">Computer Organization</li>
+                                <li class="col-md-6 vsplit-list">Electronics I with Lab</li>
+                                <li class="col-md-6 vsplit-list">Linear Optimization</li>
+                                <li class="col-md-6 vsplit-list">Digital Systems I and II with Lab</li>
+                                <li class="col-md-6 vsplit-list">Assembly Language with Lab</li>
+                                <li class="col-md-6 vsplit-list">Circuits I and II with Lab</li>
+                                <li class="col-md-6 vsplit-list">Computer Science I and II (Project-Based)</li>
+                                <li class="col-md-6 vsplit-list">Intro to Software Engineering with Project</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="skills" class="skills-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-9">
+                            <h1><b>Skills</b></h1>
+                            <hr>
+                            <h3>Languages</h3>
+                            <ul class="row">
+                                <li class="col-md-4 vsplit-list">Python</li>
+                                <li class="col-md-4 vsplit-list">Java</li>
+                                <li class="col-md-4 vsplit-list">C</li>
+                                <li class="col-md-4 vsplit-list">C++</li>
+                                <li class="col-md-4 vsplit-list">VHDL</li>
+                                <li class="col-md-4 vsplit-list">Verilog</li>
+                                <li class="col-md-4 vsplit-list">ARM Assembly</li>
+                                <li class="col-md-4 vsplit-list">SPARQL/RDF</li>
+                                <li class="col-md-4 vsplit-list">VBA</li>
+                                <li class="col-md-4 vsplit-list">HTML/CSS</li>
+                                <li class="col-md-4 vsplit-list">JavaScript</li>
+                            </ul>
+                            <h3>Hardware</h3>
+                            <ul class="row">
+                                <li class="col-md-4 vsplit-list">Freescale KL46Z</li>
+                                <li class="col-md-4 vsplit-list">Spartan6 FPGA</li>
+                                <li class="col-md-4 vsplit-list">Oscilloscope</li>
+                                <li class="col-md-4 vsplit-list">Multimeter</li>
+                                <li class="col-md-4 vsplit-list">Function Generator</li>
+                            </ul>
+                            <h3>Software and Libraries</h3>
+                            <ul class="row">
+                                <li class="col-md-4 vsplit-list">TensorFlow</li>
+                                <li class="col-md-4 vsplit-list">Scikit-Learn</li>
+                                <li class="col-md-4 vsplit-list">Django</li>
+                                <li class="col-md-4 vsplit-list">Flask</li>
+                                <li class="col-md-4 vsplit-list">NumPy</li>
+                                <li class="col-md-4 vsplit-list">SciPy</li>
+                                <li class="col-md-4 vsplit-list">Keil μVision</li>
+                                <li class="col-md-4 vsplit-list">Xilinx</li>
+                                <li class="col-md-4 vsplit-list">Quartus</li>
+                                <li class="col-md-4 vsplit-list">ModelSim</li>
+                                <li class="col-md-4 vsplit-list">ISim</li>
+                                <li class="col-md-4 vsplit-list">OrCAD Capture</li>
+                                <li class="col-md-4 vsplit-list">PSPICE</li>
+                                <li class="col-md-4 vsplit-list">Microsoft Office</li>
+                                <li class="col-md-4 vsplit-list">Footprints</li>
+                                <li class="col-md-4 vsplit-list">Eclipse</li>
+                                <li class="col-md-4 vsplit-list">IntelliJ/PyCharm</li>
+                                <li class="col-md-4 vsplit-list">Kafka</li>
+                                <li class="col-md-4 vsplit-list">Git</li>
+                                <li class="col-md-4 vsplit-list">TortoiseSVN</li>
+                            </ul>
+                            <h3>Operating Systems</h3>
+                            <ul class="row">
+                                <li class="col-md-4 vsplit-list">Ubuntu/Lubuntu</li>
+                                <li class="col-md-4 vsplit-list">CentOS</li>
+                                <li class="col-md-4 vsplit-list">Amazon Linux AMI</li>
+                                <li class="col-md-4 vsplit-list">Arch Linux</li>
+                                <li class="col-md-4 vsplit-list">Windows XP/Vista/7/8/10</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -62,17 +119,95 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-9">
-                            <h1>Work Experience</h1>
-                        </div>
-                    </div>
-                </div>
-            </section>
+                            <h1><b>Work Experience</b></h1>
+                            <hr>
+                            <h3>Software Engineering/Research Intern — <a href="http://www.cubrc.org/" target="_blank">CUBRC Inc.</a>, Cheektowaga, NY</h3>
+                            <h4></h4>
+                            <h4><i>June 2016 - December 2016</i></h4>
+                            <p>When I arrived at CUBRC, I joined the recently spawned health care initiative team who
+                            were striving to make a large breakthrough in data analysis; through...
+                            The initiative's goal was to branch out of CUBRC and start a predictive analytics company,
+                            Heartwood Analytics, in the health care industry, competing with major players, such as
+                            IBM.</p>
+                            <p>This position strongly improved my OOP programming abilities through Python and gave
+                            insight to the Semantic web's framework. I additionally gained deep knowledge of machine
+                            learning and optimization algorithms and their applications through vigorous research and
+                            conceptual exploration. My contributions to the team have made a noteworthy impact through
+                            my automated analytical framework, documentation of research papers and respective notes,
+                            and receptive, effective support with initial customers.</p>
+                            <h4>Languages</h4>
+                            <ul>
+                                <li>Python (2 and 3) — <i>Greatly Strengthened</i></li>
+                                <li>Bash and Shell — <i>Learned</i></li>
+                                <li>SPARQL and RDF — <i>Learned</i></li>
+                            </ul>
+                            <h4>Operating Systems</h4>
+                            <ul>
+                                <li>CentOS</li>
+                                <li>Amazon Linux AMI (AWS)</li>
+                                <li>Ubuntu and Lubuntu</li>
+                            </ul>
+                            <h4>Software and Libraries</h4>
+                            <ul>
+                                <li>TensorFlow</li>
+                                <li>Scikit-Learn</li>
+                                <li>Flask</li>
+                                <li>NumPy</li>
+                                <li>Kafka</li>
+                                <li>Atlassian Suite {JIRA, Confluence, HipChat, BitBucket}</li>
+                            </ul>
+                            <h4>Concepts and Major Algorithms</h4>
+                            <ul>
+                                <li>Algorithms
+                                    <ul>
+                                        <li>Feed-Forward Neural Network</li>
+                                        <li>Recurrent Neural Network</li>
+                                        <li>Deep Neural Network</li>
+                                        <li>Multivariate Logistic Regression</li>
+                                        <li><a href="http://ect.bell-labs.com/who/tkh/publications/papers/odt.pdf"
+                                               target="_blank">Random Forest</a> (and Other Tree-Based Algorithms)</li>
+                                        <li>Bayesian Optimization (Specifically
+                                            <a href="https://papers.nips.cc/paper/4522-practical-bayesian-optimization-of-machine-learning-algorithms.pdf"
+                                               target="_blank">GP EI MCMC)</a></li>
+                                    </ul>
+                                </li>
+                                <li>Concepts
+                                    <ul>
+                                        <li>Backpropagation</li>
+                                        <li>Hyperparameter Tuning</li>
+                                        <li>Feature Engineering and Selection</li>
+                                    </ul>
+                                </li>
+                            </ul>
 
-            <section id="honors" class="honors-section">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-9">
-                            <h1>Honors and Recognitions</h1>
+                            <h3>Senior SD Representative and RA Publisher —
+                                <a href="https://www.rit.edu/its/" target="_blank">ITS Service Desk (RIT)</a>,
+                                Rochester, NY</h3>
+                            <h4><i>Fall 2014 - Spring 2016</i></h4>
+                            <p>At the Information Services and Technology (ITS) Service Desk (SD), I was a senior
+                            representative and a Right Answers (RA) publisher and editor. As a SD senior, in addition to
+                            routine duties, I was responsible for the training of new employees, presentation of
+                            processes and support tips to student employees, and assessment of sensitive scenarios when
+                            full-time employees were unavailable. As a RA publisher, I was responsible for writing,
+                            editing, and publishing articles for the RIT community: faculty, staff, and students across
+                            multiple campuses.</p>
+                            <p>This position strengthened my critical analysis and communicative skills through hours of
+                            remote and local troubleshooting, intelligible public-facing publication of knowledge base
+                            articles, and collaborative efforts with employees of various ITS departments.</p>
+                            <h4>Software</h4>
+                            <ul>
+                                <li>Footprints</li>
+                                <li>Microsoft Office (Obligatory: "Proficient in Excel!")</li>
+                                <li>RightAnswers</li>
+                                <li>Atlassian Confluence</li>
+                            </ul>
+
+                            <h3>Founding Partner — CPUtiful Tech, Killingworth, CT</h3>
+                            <h4><i>Summer 2015 - Spring 2016</i></h4>
+                            <p>CPUtiful Tech was a company comprising four partners with the mutual interest of
+                            creating a consumer electronics retail company with a business platform based on personable
+                            interactions. The company was set to initiate retail via eBay in late summer 2016, but was
+                            aborted in early 2016 due to mutual complications involving studies and travel.</p>
                         </div>
                     </div>
                 </div>
@@ -82,7 +217,20 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-9">
-                            <h1>Activities</h1>
+                            <h1><b>Activities</b></h1>
+                            <hr>
+                            <h3>RIT Tennis Club Treasurer</h3>
+                            <h4><i>2014 - Present</i></h4>
+
+                            <h3>RIT Intramural Co-Ed Volleyball Captain</h3>
+                            <h4><i>2014 - Present</i></h4>
+
+                            <h3>RIT Intramural Co-Ed Flag Football Captain</h3>
+                            <h4><i>2015 - Present</i></h4>
+
+                            <h3>RIT KanJam Executive Board Member</h3>
+                            <h4><i>2014 - 2016</i></h4>
+
                         </div>
                     </div>
                 </div>
@@ -96,13 +244,13 @@
                         <a class="page-scroll" href="#education"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#education">Education</a
+                        <a class="page-scroll" href="#education">Education</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#skills">Skills</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#work">Work Experience</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#honors">Honors and Recognitions</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#activities">Activities</a>
@@ -111,15 +259,10 @@
             </nav>
         </div>
     </div>
-</div>
-<!-- Latest jQuery -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
-        integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
-        crossorigin="anonymous"></script>
+{% endblock %}
+
+{% block scripts %}
 <!-- Scrolling Nav JavaScript -->
-<script src="js/jquery.easing.min.js"></script>
-<script src="js/scrolling-nav.js"></script>
-</body>
-</html>
+<script src="{% static 'js/jquery.easing.min.js' %}"></script>
+<script src="{% static 'js/scrolling-nav.js' %}"></script>
+{% endblock %}

@@ -1,41 +1,43 @@
-body {
-    width: 100%;
-    height: 100%;
+.sidebar-fixed {
+    padding-top: 120px;
 }
-html {
-    width: 100%;
-    height: 100%;
+hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
-#sidebar {
-  padding-top: 120px;
+h4 {
+    font-size: 17px;
+}
+.vsplit-list {
+    padding-left: 0px;
+}
+.nav li > a:hover,
+.nav li > a:focus {
+    background-color: #fff;
 }
 li.active > a, 
 li.active > a:hover, 
 li.active > a:focus {
     background-color: #3A37D8;
-    color: #FFFFFF
+    color: #fff
 }
 .education-section {
-    height: 100%;
-    padding-top: 60px;
+    padding-top: 40px;
+    text-align: left;
+    background: #fff;
+}
+.skills-section {
+    padding-top: 40px;
     text-align: left;
     background: #fff;
 }
 .work-section {
-    height: 100%;
-    padding-top: 60px;
-    text-align: left;
-    background: #fff;
-}
-.honors-section {
-    height: 100%;
-    padding-top: 60px;
+    padding-top: 40px;
     text-align: left;
     background: #fff;
 }
 .activities-section {
-    height: 100%;
-    padding-top: 60px;
+    padding-top: 40px;
     text-align: left;
     background: #fff;
 }
