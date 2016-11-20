@@ -3,4 +3,5 @@
 db.sqlite3
 settings.py
 PSD/**
-*/__pycache__/**PortfolioSite/settings.py
+*/__pycache__/**
+PortfolioSite/settings.py
