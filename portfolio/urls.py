@@ -1,3 +1,17 @@
+# ======================================================================================================================
+# Portfolio Website
+# Copyright (C) 2016  Zachariah Carmichael
+#
+# This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public
+# License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later
+# version.
+#
+# This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied
+# warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License along with this program.  If not, see
+# <http://www.gnu.org/licenses/>.
+# ======================================================================================================================
 from django.conf.urls import url
 
 from . import views
@@ -5,7 +19,7 @@ from . import views
 app_name = 'portfolio'
 urlpatterns = [
     url(r'^$', views.IndexView.as_view(), name='index'),
-    url(r'^portfolio/$', views.PortfolioView.as_view(), {'active': 'portfolio'}, name='portfolio'),
-    url(r'^projects/$', views.ProjectsView.as_view(), {'active': 'projects'}, name='projects'),
-    url(r'^contact/$', views.ContactView.as_view(), {'active': 'contact'}, name='contact'),
+    url(r'^portfolio/$', views.PortfolioView.as_view(), name='portfolio'),
+    url(r'^projects/$', views.ProjectsView.as_view(), name='projects'),
+    url(r'^contact/$', views.ContactView.as_view(), name='contact'),
 ]
