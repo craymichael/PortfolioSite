@@ -1,4 +1,4 @@
-{% extends "portfolio/common/base.html" %}
+{% extends "portfolio/common/Reingold-Tilford.html" %}
 {% load static %}
 
 {% block title %}Home{% endblock %}
@@ -8,4 +8,5 @@
         <h1><b>Welcome</b></h1>
         <img src="{% static 'img/x-mas_daunte.JPG' %}" width="408" height="544">
     </div>
+    {{ block.super }}
 {% endblock %}
