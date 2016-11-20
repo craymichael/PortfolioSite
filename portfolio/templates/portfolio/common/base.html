@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 {% load static %}
 <html>
+<!--Portfolio Website
+Copyright (C) 2016  Zachariah Carmichael
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public
+License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later
+version.
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied
+warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+You should have received a copy of the GNU General Public License along with this program.  If not, see
+<http://www.gnu.org/licenses/>.-->
 <head>
     <title>Zachariah Carmichael | {% block title %}{% endblock %}</title>
     <!-- Bootstrap -->
@@ -16,13 +25,14 @@
     {% block head %}{% endblock %}
 </head>
 {% block body_tags %}<body>{% endblock %}
-<a class="github-fork-ribbon right-top" href="https://github.com/craymichael" title="Fork me on GitHub" target="_blank">Fork me on GitHub</a>
+<a class="github-fork-ribbon right-top" href="https://github.com/craymichael" title="Fork me on GitHub"
+   target="_blank">Fork me on GitHub</a>
 {% include "portfolio/common/header.html" %}
-<div class="container base_container">{% block body_block %}{% endblock %}</div>
+<div class="container base-container">{% block body_block %}{% endblock %}</div>
 {% include "portfolio/common/footer.html" %}
 <!-- jQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<!-- JavaScript -->
+<!-- Bootstrap JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
         integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
         crossorigin="anonymous"></script>
