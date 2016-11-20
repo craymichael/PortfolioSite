@@ -1,0 +1,14 @@
+{% extends "portfolio/common/base.html" %}
+{% load static %}
+
+{% block head %}
+    <link href="{% static 'css/Reingold-Tilford.css' %}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block body_block %}
+
+{% endblock %}
+
+{% block scripts %}<!-- D3 JavaScript -->
+<script src="{% static 'js/d3.v3.min.js' %}"></script>
+<script src="{% static 'js/Reingold-Tilford.js' %}"></script>{% endblock %}
