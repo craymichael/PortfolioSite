@@ -15,54 +15,60 @@
 from django.contrib import messages
 from django.core.exceptions import ImproperlyConfigured
 from django.core.mail import EmailMessage
-from django.core.urlresolvers import reverse_lazy
 from django.shortcuts import redirect, render, reverse
 from django.template import Context
 from django.template.loader import get_template
 from django.views import generic
 
-import json
-
 from . import config
 from .forms import ContactForm
 
 
-class BaseTemplateView(generic.TemplateView):
+class _BaseTemplateView(generic.TemplateView):
     active = None
     context = {}
 
     def render_to_response(self, context, **response_kwargs):
-        """
-        Returns a response, using the `response_class` for this
-        view, with a template rendered with the given context.
-
-        If any keyword arguments are provided, they will be
-        passed to the constructor of the response class.
-        """
         if self.active is None:
-            raise ImproperlyConfigured('BaseTemplateView requires either a definition of "active"')
-        return super(BaseTemplateView, self).render_to_response(context, **response_kwargs)
+            raise ImproperlyConfigured('_BaseTemplateView requires either a definition of "active"')
+        return super(_BaseTemplateView, self).render_to_response(context, **response_kwargs)
 
     def get_context_data(self, **kwargs):
-        context = super(BaseTemplateView, self).get_context_data(**kwargs)
+        context = super(_BaseTemplateView, self).get_context_data(**kwargs)
         context['active'] = self.active
         context.update(self.context)
         return context
 
 
-class IndexView(BaseTemplateView):
+class IndexView(_BaseTemplateView):
     template_name = 'portfolio/index.html'
     active = 'index'
 
 
-class PortfolioView(BaseTemplateView):
+class PortfolioView(_BaseTemplateView):
     template_name = 'portfolio/portfolio.html'
     active = 'portfolio'
 
 
-class ProjectsView(BaseTemplateView):
+class ProjectsView(_BaseTemplateView):
     template_name = 'portfolio/projects.html'
     active = 'projects'
+
+
+class _BaseProjectView(_BaseTemplateView):
+    active = 'projects'
+    active_project = None
+
+    def render_to_response(self, context, **response_kwargs):
+        if self.active_project is None:
+            raise ImproperlyConfigured('_BaseTemplateView requires either a definition of "active_project"')
+        return super(_BaseTemplateView, self).render_to_response(context, **response_kwargs)
+
+    def get_context_data(self, **kwargs):
+        context = super(_BaseTemplateView, self).get_context_data(**kwargs)
+        context['active_project'] = self.active_project
+        context.update(self.context)
+        return context
 
 
 def contact(request):
