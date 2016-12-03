@@ -3,17 +3,26 @@
     height: 20px;
 }
 .navbar {
-    background-color: #3A37D8
+    background-color: #0B3C5D;
 }
 .navbar > .container {
-    float: center
+    float: center;
 }
 .navbar .nav > li > a {
-    color: #FFFFFF
+    color: #fff;
 }
-.navbar .nav > li.active > a,
-.navbar .nav > li.active > a:hover, 
+.navbar .nav > li.active > a {
+    background-color: #1D2731;
+    color: #fff;
+}
+.navbar .nav > li.active > a:hover,
 .navbar .nav > li.active > a:focus {
-    background-color: #2A71D3;
-    color: #FFFFFF
+    background-color: #1D2731;
+    color: #808080;
+}
+.brand {
+    position: absolute;
+    left: 50%;
+    margin-left: -50px !important;  /* 50% of your logo width */
+    display: block;
 }
