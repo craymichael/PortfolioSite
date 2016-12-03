@@ -12,14 +12,11 @@
 # You should have received a copy of the GNU General Public License along with this program.  If not, see
 # <http://www.gnu.org/licenses/>.
 # ======================================================================================================================
-from django.conf.urls import url
+from django import forms
 
-from . import views
 
-app_name = 'portfolio'
-urlpatterns = [
-    url(r'^$', views.IndexView.as_view(), name='index'),
-    url(r'^portfolio/$', views.PortfolioView.as_view(), name='portfolio'),
-    url(r'^projects/$', views.ProjectsView.as_view(), name='projects'),
-    url(r'^contact/$', views.contact, name='contact'),
-]
+class ContactForm(forms.Form):
+    # https://en.wikipedia.org/wiki/Hubert_Blaine_Wolfeschlegelsteinhausenbergerdorff,_Sr.
+    contact_name = forms.CharField(max_length=666, required=True)
+    contact_email = forms.EmailField(required=True)
+    message = forms.CharField(max_length=10000, required=True, widget=forms.Textarea)

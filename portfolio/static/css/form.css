@@ -1,0 +1,7 @@
+.fieldWrapper {
+    padding-bottom: 15px;
+}
+textarea {
+    width: 100%;
+    max-width: 100%;
+}

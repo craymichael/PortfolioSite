@@ -6,9 +6,16 @@
 {% endblock %}
 
 {% block body_block %}
+    <div class="row" id="reingold-tilford">
 
+    </div>
 {% endblock %}
 
 {% block scripts %}<!-- D3 JavaScript -->
 <script src="{% static 'js/d3.v3.min.js' %}"></script>
-<script src="{% static 'js/Reingold-Tilford.js' %}"></script>{% endblock %}
+<script src="{% static 'js/Reingold-Tilford.js' %}"></script>
+{% block genTree_script %}
+<script type="text/javascript">
+    var flare = JSON.parse("{{ flare|escapejs|safe }}");
+    genTree(flare);
+</script>{% endblock %}{% endblock %}
