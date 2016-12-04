@@ -21,8 +21,16 @@
                 <li{% if active == 'portfolio' %} class="active"{% endif %}>
                     <a href="{% url 'portfolio:portfolio' %}">Portfolio</a>
                 </li>
-                <li{% if active == 'projects' %} class="active"{% endif %}>
+                <li{% if active == 'projects' %} class="active dropdown"{% else %} class="dropdown"{% endif %}>
                     <a href="{% url 'portfolio:projects' %}">Projects</a>
+                    <ul class="dropdown-menu">
+                        <li{% if active_project == 'portfolio-site' %} class="active"{% endif %}>
+                            <a href="{% url 'portfolio:portfolio-site' %}">Portfolio Site</a>
+                        </li>
+                        <li{% if active_project == 'test' %} class="active"{% endif %}>
+                            <a href="#">number 2</a>
+                        </li>
+                    </ul>
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">

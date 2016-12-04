@@ -62,13 +62,18 @@ class _BaseProjectView(_BaseTemplateView):
     def render_to_response(self, context, **response_kwargs):
         if self.active_project is None:
             raise ImproperlyConfigured('_BaseTemplateView requires either a definition of "active_project"')
-        return super(_BaseTemplateView, self).render_to_response(context, **response_kwargs)
+        return super(_BaseProjectView, self).render_to_response(context, **response_kwargs)
 
     def get_context_data(self, **kwargs):
-        context = super(_BaseTemplateView, self).get_context_data(**kwargs)
+        context = super(_BaseProjectView, self).get_context_data(**kwargs)
         context['active_project'] = self.active_project
         context.update(self.context)
         return context
+
+
+class PortfolioSiteProjectView(_BaseProjectView):
+    template_name = 'portfolio/projects/portfolio_site.html'
+    active_project = 'portfolio-site'
 
 
 def contact(request):

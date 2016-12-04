@@ -12,14 +12,20 @@
 # You should have received a copy of the GNU General Public License along with this program.  If not, see
 # <http://www.gnu.org/licenses/>.
 # ======================================================================================================================
-from django.conf.urls import url
+from django.conf.urls import include, url
 
 from . import views
 
 app_name = 'portfolio'
+
+project_patterns = [
+    url(r'^$', views.ProjectsView.as_view(), name='projects'),
+    url(r'^portfolio-site/$', views.PortfolioSiteProjectView.as_view(), name='portfolio-site'),
+]
+
 urlpatterns = [
     url(r'^$', views.IndexView.as_view(), name='index'),
     url(r'^portfolio/$', views.PortfolioView.as_view(), name='portfolio'),
-    url(r'^projects/$', views.ProjectsView.as_view(), name='projects'),
+    url(r'^projects/', include(project_patterns)),
     url(r'^contact/$', views.contact, name='contact'),
 ]
