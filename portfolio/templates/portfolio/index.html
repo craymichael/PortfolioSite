@@ -11,6 +11,16 @@
             like the site and want to explore or use it yourself, view the source
             <a href="https://github.com/craymichael/PortfolioSite" target="_blank">here on GitHub</a>. Thanks for
             dropping by and I hope that you enjoy your stay!</p>
+            <hr>
+            <h4><a href="{% url 'portfolio:portfolio' %}">View My Portfolio</a></h4>
+            <p>Interested in my work experience, education, or skill set? View my portfolio! If you would like the
+            latest copy of my resume or are looking to reach out to me, feel free to
+            <a href="{% url 'portfolio:contact' %}">contact me</a>.</p>
+            <hr>
+            <h4><a href="{% url 'portfolio:projects' %}">View My Projects</a></h4>
+            <p>I'm pleased to be able to showcase some of the projects I've done. They've all been very fun and helpful
+            to my desire to continually learn. Most of my projects are open-source; if you find something you like,
+            you'll likely be able to play with it yourself!</p>
         </div>
         <div class="col-md-5">
             {{ block.super }}

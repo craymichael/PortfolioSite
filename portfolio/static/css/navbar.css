@@ -21,21 +21,48 @@ You should have received a copy of the GNU General Public License along with thi
 .navbar .nav > li > a {
     color: #fff;
 }
+.navbar .nav > li.dropdown > a {
+    border-bottom: 2px solid #0B3C5D;
+}
 .navbar .nav > li.active > a {
     background-color: #1D2731;
     color: #fff;
+    border-bottom: 2px solid white;
 }
 .navbar .nav > li.active > a:hover,
 .navbar .nav > li.active > a:focus {
     background-color: #1D2731;
     color: #808080;
 }
-.brand {
-    position: absolute;
-    left: 50%;
-    margin-left: -50px !important;  /* 50% of your logo width */
-    display: block;
+.navbar .nav > li > a:hover,
+.navbar .nav > li > a:focus {
+    color: #808080;
+    background-color: #0B3C5D;
+}
+.navbar .nav > li > p,
+.navbar .nav > li > p:hover,
+.navbar .nav > li > p:focus {
+    background-color: #0B3C5D;
+    color: #FFF;
+    line-height: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 0px;
 }
 ul.nav li.dropdown:hover ul.dropdown-menu {
     display: block;
+}
+.navbar-brand {
+    line-height: 32px; /* Image height */
+    /* padding = ceil((51 - image height) / 2) */
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+@media (min-width: 768px){
+    .nav-centered {
+        float: none;
+        margin: 0 auto;
+        display: table;
+        table-layout: fixed;
+    }
 }
