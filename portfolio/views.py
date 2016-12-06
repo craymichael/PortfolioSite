@@ -76,6 +76,11 @@ class PortfolioSiteProjectView(_BaseProjectView):
     active_project = 'portfolio-site'
 
 
+class StHubertProjectView(_BaseProjectView):
+    template_name = 'portfolio/projects/st_hubert.html'
+    active_project = 'st-hubert'
+
+
 def contact(request):
     form_class = ContactForm
 
