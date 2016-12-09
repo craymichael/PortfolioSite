@@ -8,6 +8,9 @@ warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Ge
 You should have received a copy of the GNU General Public License along with this program.  If not, see
 <http://www.gnu.org/licenses/>.
 */
+.base-container {
+    padding-top: 0px;
+}
 .sidebar-fixed {
     padding-top: 120px;
 }
@@ -31,23 +34,11 @@ li.active > a:focus {
     background-color: #0B3C5D;
     color: #fff
 }
-.education-section {
-    padding-top: 40px;
+
+section {
     text-align: left;
     background: #fff;
 }
-.skills-section {
-    padding-top: 40px;
-    text-align: left;
-    background: #fff;
-}
-.work-section {
-    padding-top: 40px;
-    text-align: left;
-    background: #fff;
-}
-.activities-section {
-    padding-top: 40px;
-    text-align: left;
-    background: #fff;
+section > div.row {
+    padding-top: 55px;
 }
