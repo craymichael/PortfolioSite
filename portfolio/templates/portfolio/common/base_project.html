@@ -1,0 +1,15 @@
+{% extends "portfolio/common/base.html" %}
+{% load static %}
+{% block title %} | Projects{% endblock %}
+
+{% block head %}
+    <link href="{% static 'css/project.css' %}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block body_block %}
+        <div class="col-md-3 rhs-col">
+            <a href="{% url 'portfolio:projects' %}" class="btn btn-default" role="button">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> Return to Projects
+            </a>
+        </div>
+{% endblock %}

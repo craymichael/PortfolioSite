@@ -1,9 +1,57 @@
 {% extends "portfolio/common/base.html" %}
-{% block title %}Home{% endblock %}
+{% load static %}
+{% block title %}Contact{% endblock %}
+
+{% block head %}
+    <link href="{% static 'css/form.css' %}" rel="stylesheet" type="text/css">
+{% endblock %}
 
 {% block body_block %}
     <div class="row">
-        <div class="col-md-4">Test</div>
-        <div class="col-md-8">Test</div>
+        <div class="col-md-9">
+            <h1><b>Contact</b></h1>
+            <hr>
+            {% if messages %}
+            <div class="alert alert-success messages" id="success-alert">
+                {% for message in messages %}
+                <p{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</p>
+                {% endfor %}
+            </div>
+            {% endif %}
+            <form role="form" action="{% url 'portfolio:contact' %}" method="post">
+                {% csrf_token %}
+                {{ form.non_field_errors }}
+                <div class="fieldWrapper row">
+                    {{ form.contact_name.errors }}
+                    <div class="col-sm-3">
+                        <label for="{{ form.contact_name.id_for_label }}">Your Name:</label>
+                    </div>
+                    <div class="col-sm-9">
+                        {{ form.contact_name }}
+                    </div>
+                </div>
+                <div class="fieldWrapper row">
+                    {{ form.contact_email.errors }}
+                    <div class="col-sm-3">
+                        <label for="{{ form.contact_email.id_for_label }}">Your Email Address:</label>
+                    </div>
+                    <div class="col-sm-9">
+                        {{ form.contact_email }}
+                    </div>
+                </div>
+                <div class="fieldWrapper row">
+                    {{ form.message.errors }}
+                    <div class="col-sm-3">
+                        <label for="{{ form.message.id_for_label }}">Message:</label>
+                    </div>
+                    <div class="col-sm-9">
+                        {{ form.message }}
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-default pull-right">Submit</button>
+            </form>
+        </div>
+        <div class="col-md-3"></div>
     </div>
 {% endblock %}
+{% block scripts %}<script src="{% static 'js/success.js' %}"></script>{% endblock %}
