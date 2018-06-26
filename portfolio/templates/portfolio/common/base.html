@@ -11,17 +11,18 @@ warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Ge
 You should have received a copy of the GNU General Public License along with this program.  If not, see
 <http://www.gnu.org/licenses/>.-->
 <head>
-    <title>Zachariah Carmichael | {% block title %}{% endblock %}</title>
+    <title>{% block title %}{% endblock %} | Zachariah Carmichael</title>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
           integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <!-- CSS -->
     <link href="{% static 'css/navbar.css' %}" rel="stylesheet" type="text/css">
     <link href="{% static 'css/base.css' %}" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="{% static 'css/gh-fork-ribbon.css' %}" />
+    <link href="{% static 'css/gh-fork-ribbon.css' %}" rel="stylesheet"  type="text/css">
     <!--[if lt IE 9]>
-        <link rel="stylesheet" href="{% static 'css/gh-fork-ribbon.ie.css' %}" />
+        <link href="{% static 'css/gh-fork-ribbon.ie.css' %}" rel="stylesheet"  type="text/css">
     <![endif]-->
+    <link rel="shortcut icon" type="image/png" href="{% static 'img/ZC_32x32_opaque.png' %}"/>
     {% block head %}{% endblock %}
 </head>
 {% block body_tags %}<body>{% endblock %}
