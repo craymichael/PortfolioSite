@@ -21,16 +21,8 @@
                 <li{% if active == 'portfolio' %} class="active"{% endif %}>
                     <a href="{% url 'portfolio:portfolio' %}">Portfolio</a>
                 </li>
-                <li{% if active == 'projects' %} class="active dropdown"{% else %} class="dropdown"{% endif %}>
+                <li{% if active == 'projects' %} class="active"{% endif %}>
                     <a href="{% url 'portfolio:projects' %}">Projects</a>
-                    <!--<ul class="dropdown-menu">-->
-                        <!--<li{% if active_project == 'portfolio-site' %} class="active"{% endif %}>-->
-                            <!--<a href="{% url 'portfolio:portfolio-site' %}">Portfolio Site</a>-->
-                        <!--</li>-->
-                        <!--<li{% if active_project == 'st-hubert' %} class="active"{% endif %}>-->
-                            <!--<a href="{% url 'portfolio:st-hubert' %}">St. Hubert's Isle Site</a>-->
-                        <!--</li>-->
-                    <!--</ul>-->
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -48,6 +40,11 @@
                 <li>
                     <a href="https://github.com/craymichael" target="_blank">
                         <img src="{% static 'img/GitHub-Mark-Light-32px.png' %}">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://stackoverflow.com/users/6557588/craymichael" target="_blank">
+                        <img src="{% static 'img/so_favicon.ico' %}">
                     </a>
                 </li>
             </ul>
