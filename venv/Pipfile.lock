@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "5356c2cef9dcd7fdc236145b707ac506d0d5fc5e418ad1e84dc04859297f86a0"
+            "sha256": "e5f442aa706dcaea7f1ce436a7347e5f451d772cad773dfc5c135a4ef91166f1"
         },
         "pipfile-spec": 1,
         "requires": {},
@@ -14,10 +14,13 @@
     },
     "default": {
         "django": {
-            "version": "==1.10.8"
+            "version": "==1.11.18"
         },
         "django-subdomains": {
             "version": "==2.1.0"
+        },
+        "pytz": {
+            "version": "==2018.9"
         },
         "six": {
             "version": "==1.12.0"
