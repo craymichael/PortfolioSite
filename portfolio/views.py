@@ -96,11 +96,11 @@ def contact(request):
             # Render email template with name and message
             # Email not included; reply to message to view sender's actual email (stored in headers)
             template = get_template('portfolio/common/contact_template.txt')
-            context = Context({
+            context = {
                 'contact_name': contact_name,
                 'contact_email': contact_email,
                 'form_content': form_content
-            })
+            }
             content = template.render(context)
 
             # Create and send email message
