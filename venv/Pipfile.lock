@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "0c79aa8df485c98113fad1e26680d05c7025349d85ccac1c76851cc004b022f9"
+            "sha256": "a58f8f7c6aab62b60ffeaa2403e2f1788e6a0487fd8109a8ea9dc880ee4d3d4d"
         },
         "pipfile-spec": 1,
         "requires": {},
@@ -14,7 +14,7 @@
     },
     "default": {
         "django": {
-            "version": "==1.11.21"
+            "version": "==1.11.22"
         },
         "django-subdomains": {
             "version": "==2.1.0"
