@@ -5,6 +5,8 @@ PSD/**
 PortfolioSite/settings.py
 portfolio/config.py
 httpd/
+/Pipfile
+/Pipfile.lock
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

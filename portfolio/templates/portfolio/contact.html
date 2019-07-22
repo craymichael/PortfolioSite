@@ -4,6 +4,7 @@
 
 {% block head %}
     <link href="{% static 'css/form.css' %}" rel="stylesheet" type="text/css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 {% endblock %}
 
 {% block body_block %}
@@ -18,7 +19,7 @@
                 {% endfor %}
             </div>
             {% endif %}
-            <form role="form" action="{% url 'portfolio:contact' %}" method="post">
+            <form role="form" action="{% url 'portfolio:contact' %}" method="POST">
                 {% csrf_token %}
                 {{ form.non_field_errors }}
                 <div class="fieldWrapper row">
@@ -48,6 +49,8 @@
                         {{ form.message }}
                     </div>
                 </div>
+                <div class="g-recaptcha" data-sitekey="6LfX-K4UAAAAAOrS6eSNYYNxVNQdXE8zldjlGf3z"></div>
+                <br/>
                 <button type="submit" class="btn btn-default pull-right">Submit</button>
             </form>
         </div>
