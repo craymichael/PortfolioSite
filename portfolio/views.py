@@ -12,11 +12,12 @@
 # You should have received a copy of the GNU General Public License along with this program.  If not, see
 # <http://www.gnu.org/licenses/>.
 # ======================================================================================================================
+from __future__ import absolute_import
+
 from django.contrib import messages
 from django.core.exceptions import ImproperlyConfigured
 from django.core.mail import EmailMessage
 from django.shortcuts import redirect, render, reverse
-from django.template import Context
 from django.template.loader import get_template
 from django.views import generic
 
@@ -30,8 +31,10 @@ class _BaseTemplateView(generic.TemplateView):
 
     def render_to_response(self, context, **response_kwargs):
         if self.active is None:
-            raise ImproperlyConfigured('_BaseTemplateView requires either a definition of "active"')
-        return super(_BaseTemplateView, self).render_to_response(context, **response_kwargs)
+            raise ImproperlyConfigured('_BaseTemplateView requires a '
+                                       'definition of `active`')
+        return super(_BaseTemplateView, self).render_to_response(
+            context, **response_kwargs)
 
     def get_context_data(self, **kwargs):
         context = super(_BaseTemplateView, self).get_context_data(**kwargs)
@@ -61,8 +64,10 @@ class _BaseProjectView(_BaseTemplateView):
 
     def render_to_response(self, context, **response_kwargs):
         if self.active_project is None:
-            raise ImproperlyConfigured('_BaseTemplateView requires either a definition of "active_project"')
-        return super(_BaseProjectView, self).render_to_response(context, **response_kwargs)
+            raise ImproperlyConfigured('_BaseTemplateView requires a '
+                                       'definition of `active_project`')
+        return super(_BaseProjectView, self).render_to_response(
+            context, **response_kwargs)
 
     def get_context_data(self, **kwargs):
         context = super(_BaseProjectView, self).get_context_data(**kwargs)
@@ -82,10 +87,8 @@ class StHubertProjectView(_BaseProjectView):
 
 
 def contact(request):
-    form_class = ContactForm
-
     if request.method == 'POST':
-        form = form_class(data=request.POST)
+        form = ContactForm(data=request.POST, request=request)
 
         if form.is_valid():
             # Gather form information
@@ -94,7 +97,8 @@ def contact(request):
             form_content = request.POST.get('message', '')
 
             # Render email template with name and message
-            # Email not included; reply to message to view sender's actual email (stored in headers)
+            # Email not included; reply to message to view sender's actual email
+            # (stored in headers)
             template = get_template('portfolio/common/contact_template.txt')
             context = {
                 'contact_name': contact_name,
@@ -111,10 +115,12 @@ def contact(request):
             email.send()
 
             # Add success message in browser storage
-            messages.success(request, 'Thanks for the inquiry! I\'ll get back to you as soon as I can.')
+            messages.success(request, 'Thanks for the inquiry! I will get back '
+                                      'to you as soon as I can.')
 
             return redirect(reverse('portfolio:contact'))
     else:
-        form = form_class()
+        form = ContactForm(request=request)
 
-    return render(request, 'portfolio/contact.html', context={'form': form, 'active': 'contact'})
+    return render(request, 'portfolio/contact.html',
+                  context={'form': form, 'active': 'contact'})
