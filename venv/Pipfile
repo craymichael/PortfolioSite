@@ -3,6 +3,6 @@ verify_ssl = true
 url = "https://pypi.python.org/simple"
 
 [packages]
-Django = "==3.0.2"
+Django = "==3.0.3"
 django-subdomains = "*"
 six = "*"
