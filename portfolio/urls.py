@@ -20,8 +20,8 @@ app_name = 'portfolio'
 
 project_patterns = [
     url(r'^$', views.ProjectsView.as_view(), name='projects'),
-    url(r'^portfolio-site/$', views.PortfolioSiteProjectView.as_view(), name='portfolio-site'),
-    url(r'^st-huberts-isle/$', views.StHubertProjectView.as_view(), name='st-hubert'),
+    #url(r'^portfolio-site/$', views.PortfolioSiteProjectView.as_view(), name='portfolio-site'),
+    #url(r'^st-huberts-isle/$', views.StHubertProjectView.as_view(), name='st-hubert'),
 ]
 
 urlpatterns = [

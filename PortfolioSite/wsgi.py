@@ -11,7 +11,7 @@ import os
 
 os.environ['DJANGO_SETTINGS_MODULE'] = 'PortfolioSite.settings'
 
-from django.contrib.auth.handlers.modwsgi import check_password
+#from django.contrib.auth.handlers.modwsgi import check_password
 
 from django.core.wsgi import get_wsgi_application
 application = get_wsgi_application()
