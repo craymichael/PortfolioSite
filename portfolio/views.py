@@ -21,7 +21,7 @@ from django.shortcuts import redirect, render, reverse
 from django.template.loader import get_template
 from django.views import generic
 
-from . import config
+from django.conf import settings
 from .forms import ContactForm
 
 
@@ -110,7 +110,7 @@ def contact(request):
             # Create and send email message
             email = EmailMessage(subject='[DJANGO] Portfolio Inquiry',
                                  body=content,
-                                 to=[config.TO_EMAIL],
+                                 to=[settings.CONTACT_EMAIL],
                                  reply_to=[contact_email])
             email.send()
 

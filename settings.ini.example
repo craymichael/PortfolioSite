@@ -1,0 +1,16 @@
+[security]
+SECRET_KEY: abcdefgh01234567
+RECAPTCHA_SECRET_KEY: abcdefgh01234567
+
+[hosts]
+ALLOWED_HOSTS: localhost,127.0.0.1,mydomain.com
+
+[email]
+EMAIL_HOST: smtp.office365.com
+EMAIL_PORT: 587
+EMAIL_HOST_USER: some-outlook-email@outlook.com
+EMAIL_HOST_PASSWORD: your-password-here
+EMAIL_USE_TLS: true
+
+CONTACT_EMAIL: my-hidden-personal-email@gmail.com
+
