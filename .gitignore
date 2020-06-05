@@ -2,11 +2,10 @@
 */migrations/**
 db.sqlite3
 PSD/**
-PortfolioSite/settings.py
-portfolio/config.py
 httpd/
 /Pipfile
 /Pipfile.lock
+settings.ini
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
