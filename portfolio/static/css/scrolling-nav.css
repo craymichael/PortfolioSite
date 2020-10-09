@@ -11,25 +11,31 @@ You should have received a copy of the GNU General Public License along with thi
 .base-container {
     padding-top: 0px;
 }
+
 .sidebar-fixed {
     padding-top: 120px;
 }
+
 hr {
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
 h4 {
     font-size: 17px;
 }
+
 .vsplit-list {
     padding-left: 0px;
 }
+
 .nav li > a:hover,
 .nav li > a:focus {
     background-color: #fff;
 }
-li.active > a, 
-li.active > a:hover, 
+
+li.active > a,
+li.active > a:hover,
 li.active > a:focus {
     background-color: #0B3C5D;
     color: #fff
@@ -39,6 +45,7 @@ section {
     text-align: left;
     background: #fff;
 }
+
 section > div.row {
     padding-top: 55px;
 }
