@@ -3,6 +3,7 @@ Django settings for PortfolioSite project.
 """
 
 import os
+import sys
 from configparser import RawConfigParser
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -22,8 +23,10 @@ elif os.path.isfile(_config_home_name):
 elif os.path.isfile(_config_etc_name):
     _config_path = _config_etc_name
 else:
-    raise RuntimeError('Could not discover project settings file in: "{}", "{}", or "{}"'.format(
-        _config_local_name, _config_home_name, _config_etc_name))
+    raise RuntimeError(
+        'Could not discover project settings file in: "{}", "{}", or '
+        '"{}"'.format(_config_local_name, _config_home_name, _config_etc_name)
+    )
 
 _config = RawConfigParser()
 _config.read(_config_path)
@@ -43,21 +46,20 @@ ALLOWED_HOSTS = [_host.strip() for _host in ALLOWED_HOSTS.split(',')]
 
 INSTALLED_APPS = [
     'portfolio.apps.PortfolioConfig',
-    #'django.contrib.admin',
-    #'django.contrib.auth',
+    # 'django.contrib.admin',
+    # 'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
 
-
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
-    #'django.contrib.auth.middleware.AuthenticationMiddleware',
+    # 'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.gzip.GZipMiddleware',
@@ -74,7 +76,7 @@ TEMPLATES = [
             'context_processors': [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
-                #'django.contrib.auth.context_processors.auth',
+                # 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
         },
@@ -82,7 +84,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'PortfolioSite.wsgi.application'
-
 
 # Database
 
@@ -92,7 +93,6 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
 
 # Email
 
@@ -106,23 +106,22 @@ DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 CONTACT_EMAIL = _config.get('email', 'CONTACT_EMAIL')
 
-
 # Password validation
 
-#AUTH_PASSWORD_VALIDATORS = [
-    #{
-    #    'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
-    #},
-    #{
-    #    'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
-    #},
-    #{
-    #    'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
-    #},
-    #{
-    #    'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
-    #},
-#]
+# AUTH_PASSWORD_VALIDATORS = [
+# {
+#    'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+# },
+# {
+#    'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+# },
+# {
+#    'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+# },
+# {
+#    'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+# },
+# ]
 
 
 # Internationalization
@@ -137,7 +136,6 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 
 STATIC_URL = '/static/'
@@ -146,30 +144,27 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 # HTTPS
 CSRF_COOKIE_SECURE = True
 CSRF_COOKIE_HTTPONLY = True
-SECURE_SSL_REDIRECT = True
-SECURE_HSTS_SECONDS = 60
-SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+SECURE_SSL_REDIRECT = not (len(sys.argv) > 1 and sys.argv[1] == 'runserver')
 SECURE_FRAME_DENY = True
-SECURE_CONTENT_TYPE_NOSNIFF = True
 SECURE_BROWSER_XSS_FILTER = True
 SECURE_REFERRER_POLICY = 'same-origin'
 SECURE_HSTS_PRELOAD = True
-SECURE_HSTS_INCLUDE_SUBDOMAINS= True
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 SECURE_CONTENT_TYPE_NOSNIFF = True
 SECURE_HSTS_SECONDS = 86400
 SESSION_COOKIE_SECURE = True
 SESSION_COOKIE_HTTPONLY = True
-X_FRAME_OPTIONS='DENY'
+X_FRAME_OPTIONS = 'DENY'
 
 # No auth
-#REST_FRAMEWORK = {
+# REST_FRAMEWORK = {
 #    'EXCEPTION_HANDLER': 'rest_framework.views.exception_handler',
 #    'UNAUTHENTICATED_USER': None,
 #    'DEFAULT_AUTHENTICATION_CLASSES': [],
 #    'DEFAULT_PERMISSION_CLASSES': [],
-#}
+# }
 
 # 500 error if this is not here rather than at top...
-import django
-django.setup()
+import django  # noqa
 
+django.setup()
