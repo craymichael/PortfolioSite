@@ -20,3 +20,25 @@ You should have received a copy of the GNU General Public License along with thi
 .github-fork-ribbon.right-top {
     position: fixed;
 }
+
+.justified {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+[data-theme="dark"] {
+    background-color: #111 !important;
+    color: #eee;
+}
+
+[data-theme="dark"] .bg-light {
+    background-color: #333 !important;
+}
+
+[data-theme="dark"] .bg-white {
+    background-color: #000 !important;
+}
+
+[data-theme="dark"] .bg-black {
+    background-color: #eee !important;
+}

@@ -15,19 +15,23 @@
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li{% if active == 'index' %} class="active"{% endif %}>
-                    <a href="{% url 'portfolio:index' %}">Home</a>
+                <li
+                {% if active == 'index' %} class="active"{% endif %}>
+                <a href="{% url 'portfolio:index' %}">Home</a>
                 </li>
-                <li{% if active == 'portfolio' %} class="active"{% endif %}>
-                    <a href="{% url 'portfolio:portfolio' %}">Portfolio</a>
+                <li
+                {% if active == 'portfolio' %} class="active"{% endif %}>
+                <a href="{% url 'portfolio:portfolio' %}">Portfolio</a>
                 </li>
-                <li{% if active == 'projects' %} class="active"{% endif %}>
-                    <a href="{% url 'portfolio:projects' %}">Projects</a>
+                <li
+                {% if active == 'projects' %} class="active"{% endif %}>
+                <a href="{% url 'portfolio:projects' %}">Projects</a>
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li{% if active == 'contact' %} class="active"{% endif %}>
-                    <a href="{% url 'portfolio:contact' %}">Contact</a>
+                <li
+                {% if active == 'contact' %} class="active"{% endif %}>
+                <a href="{% url 'portfolio:contact' %}">Contact</a>
                 </li>
                 <li>
                     <a href="https://www.linkedin.com/in/zachariah-carmichael-9b9848b2" target="_blank">
@@ -51,6 +55,13 @@
                     <a href="https://scholar.google.com/citations?user=1Nq_tGYAAAAJ" target="_blank">
                         <img src="{% static 'img/google-scholar-favicon.ico' %}">
                     </a>
+                </li>
+                <li>
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="darkSwitch"/>
+                        <label class="custom-control-label" for="darkSwitch">Dark Mode</label>
+                    </div>
+                    <script src="{% static 'js/dark-mode-switch.min.js' %}"></script>
                 </li>
             </ul>
         </div>

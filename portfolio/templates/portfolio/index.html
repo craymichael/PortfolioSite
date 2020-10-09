@@ -4,54 +4,62 @@
 {% block title %}Home{% endblock %}
 
 {% block body_block %}
-    <div class="row">
-        <div class="col-md-7">
-            <h1><b>Greetings!</b></h1>
-            <p>
-                Welcome to my personal website in which I present my research, projects,
-                and experience.
-            </p>
-            <p>
-                If you like the site and want to explore or use it yourself, view the source
-                <a href="https://github.com/craymichael/PortfolioSite" target="_blank">here on GitHub</a>.
-            </p>
-            <hr>
-            <h4><a href="{% url 'portfolio:portfolio' %}">View My Portfolio</a></h4>
-            <p>If you would like to <a href="{% url 'portfolio:contact' %}">contact me</a>, feel free to do so.</p>
-            <hr>
-            <h4><a href="{% url 'portfolio:projects' %}">View My Projects</a></h4>
-            <p>View some of the projects I have worked on.</p>
-            <hr>
-            <h4>Recent Works</h4>
-            <p><a href="https://arxiv.org/abs/1812.01762" target="_blank">
-                <b>Deep Positron: A Deep Neural Network Using Posit Number System</b>
-            </a></p>
-            <p>
-                In this work, we address the knowledge gap on how low-precision operations can be realized for deep neural network (DNN) inference. In doing so, we propose a DNN architecture, Deep Positron, with posit numerical format operating successfully at under 8 bits for inference. We propose a precision-adaptable FPGA soft core for exact multiply-and-accumulate for uniform comparison across three numerical formats: fixed, floating-point and posit. Preliminary results demonstrate that 8-bit posit has better accuracy that 8-bit fixed or floating-point for three different low-dimensional datasets. Moreover, the accuracy is comparable to 32-bit floating-point on a Xilinx Virtex-7 FGPA device. The trade-offs between DNN performance and hardware resources, <i>i.e.</i> latency, power, and resource utilization, show that posit outperforms in accuracy and latency at 8-bit and below. The paper was accepted to the
-                <a href="https://www.date-conference.com/" target="_blank">
-                    2019 IEEE Conference and Exhibition on Design, Automation and Test in Europe (DATE)</a>.
-            </p>
-            <hr>
-            <p>
-                <b><a href="https://arxiv.org/abs/1808.00523" target="_blank">
-                    Mod-DeepESN: Modular Deep Echo State Network
-                </a></b>
-            </p>
-            <p>
-                In this work, we explore the impact of topology and connectivity of deep echo state
-                networks (ESNs). Xavier initialization and intrinsic plasticity are utilized in the
-                model initialization and training phases, respectively, and a genetic algorithm is
-                used to tune model hyperparameters. We propose the Mod-DeepESN architecture and show
-                that it either performs on par or outperforms baseline ESN models on multi-scale time
-                series tasks. The paper was accepted to the
-                <a href="https://ccneuro.org/" target="_blank">
-                    2018 Cognitive Computational Neuroscience Conference</a>.
-            </p>
-        </div>
-        <div class="col-md-5">
-            {{ block.super }}
-        </div>
+<div class="row">
+    <div class="col-md-7 justified">
+        <h1><b>Greetings!</b></h1>
+        <p>
+            Welcome to my personal website in which I present my research, projects,
+            and experience.
+        </p>
+        <p>
+            If you like the site and want to explore or use it yourself, view the source
+            <a href="https://github.com/craymichael/PortfolioSite" target="_blank">here on GitHub</a>.
+        </p>
+        <hr>
+        <h4><a href="{% url 'portfolio:portfolio' %}">View My Portfolio</a></h4>
+        <p>If you would like to <a href="{% url 'portfolio:contact' %}">contact me</a>, feel free to do so.</p>
+        <hr>
+        <h4><a href="{% url 'portfolio:projects' %}">View My Projects</a></h4>
+        <p>View some of the projects I have worked on.</p>
+        <hr>
+        <h4>Recent Works</h4>
+        <p><a href="https://arxiv.org/abs/1812.01762" target="_blank">
+            <b>Deep Positron: A Deep Neural Network Using Posit Number System</b>
+        </a></p>
+        <p>
+            In this work, we address the knowledge gap on how low-precision operations can be realized for deep neural
+            network (DNN) inference. In doing so, we propose a DNN architecture, Deep Positron, with posit numerical
+            format operating successfully at under 8 bits for inference. We propose a precision-adaptable FPGA soft core
+            for exact multiply-and-accumulate for uniform comparison across three numerical formats: fixed,
+            floating-point and posit. Preliminary results demonstrate that 8-bit posit has better accuracy that 8-bit
+            fixed or floating-point for three different low-dimensional datasets. Moreover, the accuracy is comparable
+            to 32-bit floating-point on a Xilinx Virtex-7 FGPA device. The trade-offs between DNN performance and
+            hardware resources, <i>i.e.</i> latency, power, and resource utilization, show that posit outperforms in
+            accuracy and latency at 8-bit and below. The paper was accepted to the
+            <a href="https://www.date-conference.com/" target="_blank">
+                2019 IEEE Conference and Exhibition on Design, Automation and Test in Europe (DATE)</a>.
+        </p>
+        <hr>
+        <p>
+            <b><a href="https://arxiv.org/abs/1808.00523" target="_blank">
+                Mod-DeepESN: Modular Deep Echo State Network
+            </a></b>
+        </p>
+        <p>
+            In this work, we explore the impact of topology and connectivity of deep echo state
+            networks (ESNs). Xavier initialization and intrinsic plasticity are utilized in the
+            model initialization and training phases, respectively, and a genetic algorithm is
+            used to tune model hyperparameters. We propose the Mod-DeepESN architecture and show
+            that it either performs on par or outperforms baseline ESN models on multi-scale time
+            series tasks. The paper was accepted to the
+            <a href="https://ccneuro.org/" target="_blank">
+                2018 Cognitive Computational Neuroscience Conference</a>.
+        </p>
     </div>
+    <div class="col-md-5">
+        {{ block.super }}
+    </div>
+</div>
 {% endblock %}
 
 {% block genTree_script %}
@@ -77,5 +85,7 @@
             }
         ]
     };
-    genTree(siteTree, 375, 400);
+    genTree(siteTree,
+        (window.outerWidth < 375 ? window.outerWidth : 375),
+        (window.outerHeight < 400 ? window.outerHeight : 400));
 </script>{% endblock %}
