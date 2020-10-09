@@ -34,6 +34,11 @@ h4 {
     background-color: #fff;
 }
 
+[data-theme="dark"] .nav li > a:hover,
+[data-theme="dark"] .nav li > a:focus {
+    background-color: #000;
+}
+
 li.active > a,
 li.active > a:hover,
 li.active > a:focus {
@@ -43,7 +48,6 @@ li.active > a:focus {
 
 section {
     text-align: left;
-    background: #fff;
 }
 
 section > div.row {

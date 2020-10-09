@@ -27,6 +27,8 @@ You should have received a copy of the GNU General Public License along with thi
     {% block head %}{% endblock %}
 </head>
 {% block body_tags %}<body>{% endblock %}
+<!-- Handle dark mode before full page loads -->
+<script src="{% static 'js/dark-mode-switch-init.min.js' %}"></script>
 <a class="github-fork-ribbon right-top" href="https://github.com/craymichael" title="Fork me on GitHub"
    target="_blank">Fork me on GitHub</a>
 {% include "portfolio/common/header.html" %}

@@ -15,6 +15,7 @@ You should have received a copy of the GNU General Public License along with thi
 
 .navbar {
     background-color: #0B3C5D;
+    border-color: #0B3C5D;
 }
 
 .navbar .nav > li > a {

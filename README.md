@@ -17,3 +17,12 @@ the server with insecure settings in order to serve static content (unless you s
 ```shell script
 python manage.py runserver --insecure
 ```
+
+# Development Notes
+
+Javascript and CSS minimization:
+
+```shell script
+sudo npm install uglify-es -g
+uglifyjs --compress --mangle -- dark-mode-switch-init.js > dark-mode-switch-init.min.js
+```
