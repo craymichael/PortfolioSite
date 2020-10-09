@@ -10,11 +10,13 @@ You should have received a copy of the GNU General Public License along with thi
 */
 .base-container {
     padding-top: 50px;
-    padding-bottom: 55px;
+    padding-bottom: 100px;
 }
+
 .github-fork-ribbon.right-top:before {
     background-color: #0B3C5D;
 }
+
 .github-fork-ribbon.right-top {
     position: fixed;
 }

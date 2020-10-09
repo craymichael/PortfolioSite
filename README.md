@@ -11,7 +11,8 @@ also need Python and Pip, of course).
 
 # Running
 For the development server, with the hardened `settings.py`, you will need to run
-the server with insecure settings in order to serve static content:
+the server with insecure settings in order to serve static content (unless you set
+`DEBUG` to false in `settings.py`:
 
 ```shell script
 python manage.py runserver --insecure
