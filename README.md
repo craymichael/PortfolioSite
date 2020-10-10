@@ -26,3 +26,8 @@ Javascript and CSS minimization:
 sudo npm install uglify-es -g
 uglifyjs --compress --mangle -- dark-mode-switch-init.js > dark-mode-switch-init.min.js
 ```
+
+Before deploying, ensure to update static content:
+```shell script
+python manage.py collectstatic
+```
