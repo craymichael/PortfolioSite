@@ -46,9 +46,9 @@ window.addEventListener('load', () => {
         darkThemeSelected ? document.body.setAttribute('data-theme', 'dark') :
             document.body.removeAttribute('data-theme');
         // Call each callback
-        darkModeHooks.forEach((el) => {
-            el(darkThemeSelected);
-        });
+        // darkModeHooks.forEach((el) => {
+        //     el(darkThemeSelected);
+        // });
         darkSwitch.addEventListener('change', () => {
             resetTheme();
         });
@@ -59,7 +59,7 @@ window.addEventListener('load', () => {
  * Set of elements that should have the `data-theme` tag added, if needed.
  * Ex: recaptcha
  */
-const darkModeHooks = new Set();
+// const darkModeHooks = new Set();
 
 
 /**
@@ -76,12 +76,16 @@ function resetTheme() {
         document.body.removeAttribute('data-theme');
         localStorage.removeItem('darkSwitch');
     }
-    darkModeHooks.forEach((el) => {
-        el(darkSwitch.checked)
-    });
+    // darkModeHooks.forEach((el) => {
+    //     el(darkSwitch.checked)
+    // });
 }
 
-function addDarkModeHook(el) {
-    darkModeHooks.add(el);
-    el(darkSwitch.checked);
+// function addDarkModeHook(el) {
+//     darkModeHooks.add(el);
+//     el(darkSwitch.checked);
+// }
+
+function inDarkMode() {
+    return darkSwitch.checked
 }
