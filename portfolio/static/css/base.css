@@ -39,6 +39,10 @@ body {
     border-color: #333;
 }
 
+[data-theme="dark"] a {
+    color: #009fff;
+}
+
 [data-theme="dark"] form button {
     background-color: #222;
     color: #eee;
