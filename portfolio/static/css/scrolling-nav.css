@@ -16,40 +16,31 @@ You should have received a copy of the GNU General Public License along with thi
     padding-top: 120px;
 }
 
-hr {
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-h4 {
-    font-size: 17px;
-}
-
 .vsplit-list {
     padding-left: 0px;
 }
 
-.nav li > a:hover,
-.nav li > a:focus {
+#sidebar.nav li > a:hover,
+#sidebar.nav li > a:focus {
     background-color: #fff;
 }
 
-[data-theme="dark"] .nav li > a:hover,
-[data-theme="dark"] .nav li > a:focus {
+[data-theme="dark"] #sidebar.nav li > a:hover,
+[data-theme="dark"] #sidebar.nav li > a:focus {
     background-color: #000;
 }
 
-li.active > a,
-li.active > a:hover,
-li.active > a:focus {
+#sidebar.nav li > a.active,
+#sidebar.nav li > a.active:hover,
+#sidebar.nav li > a.active:focus {
     background-color: #0B3C5D;
     color: #fff
 }
 
-section {
-    text-align: left;
+section:first-child > div.row {
+    padding-top: 100px;
 }
 
-section > div.row {
-    padding-top: 55px;
+section:not(:first-child) > div.row {
+    padding-top: 50px;
 }

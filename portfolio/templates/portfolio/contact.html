@@ -10,7 +10,7 @@
 {% block body_block %}
     <div class="row">
         <div class="col-md-9">
-            <h1><b>Contact</b></h1>
+            <h2><b>Contact</b></h2>
             <hr>
             {% if messages %}
             <div class="alert alert-success messages" id="success-alert">
@@ -49,9 +49,17 @@
                         {{ form.message }}
                     </div>
                 </div>
-                <div class="g-recaptcha" data-sitekey="6LfX-K4UAAAAAOrS6eSNYYNxVNQdXE8zldjlGf3z"></div>
-                <br/>
-                <button type="submit" class="btn btn-default pull-right">Submit</button>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="g-recaptcha" style="float: right" data-sitekey="6LfX-K4UAAAAAOrS6eSNYYNxVNQdXE8zldjlGf3z"></div>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <button type="submit" class="btn btn-default float-right btn-outline-dark">Submit</button>
+                    </div>
+                </div>
             </form>
         </div>
         <div class="col-md-3"></div>

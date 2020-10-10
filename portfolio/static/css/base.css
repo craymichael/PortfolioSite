@@ -8,8 +8,12 @@ warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Ge
 You should have received a copy of the GNU General Public License along with this program.  If not, see
 <http://www.gnu.org/licenses/>.
 */
+body {
+    font-size: 0.9rem;
+}
+
 .base-container {
-    padding-top: 65px;
+    padding-top: 100px;
     padding-bottom: 100px;
 }
 
@@ -21,7 +25,7 @@ You should have received a copy of the GNU General Public License along with thi
     position: fixed;
 }
 
-.justified {
+.justified :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
     text-align: justify;
     text-justify: inter-word;
 }
@@ -31,10 +35,24 @@ You should have received a copy of the GNU General Public License along with thi
     color: #eee;
 }
 
+[data-theme="dark"] hr {
+    border-color: #333;
+}
+
+[data-theme="dark"] form button {
+    background-color: #222;
+    color: #eee;
+}
+
+/* SVG */
 [data-theme="dark"] text {
     fill: #eee;
 }
 
-[data-theme="dark"] hr {
-    border-color: #333;
+[data-theme="dark"] path {
+    stroke: #333;
+}
+
+[data-theme="dark"] circle {
+    fill: #333 !important;
 }

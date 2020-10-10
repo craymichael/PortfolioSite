@@ -2,7 +2,7 @@
 {% load static %}
 <html lang="en">
 <!--Portfolio Website
-Copyright (C) 2016  Zachariah Carmichael
+Copyright (C) 2020  Zachariah Carmichael
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public
 License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later
 version.
@@ -11,22 +11,24 @@ warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Ge
 You should have received a copy of the GNU General Public License along with this program.  If not, see
 <http://www.gnu.org/licenses/>.-->
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>{% block title %}{% endblock %} | Zachariah Carmichael</title>
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
-          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!-- CSS -->
     <link href="{% static 'css/navbar.css' %}" rel="stylesheet" type="text/css">
     <link href="{% static 'css/base.css' %}" rel="stylesheet" type="text/css">
     <link href="{% static 'css/gh-fork-ribbon.css' %}" rel="stylesheet" type="text/css">
     <!--[if lt IE 9]>
-        <link href="{% static 'css/gh-fork-ribbon.ie.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/gh-fork-ribbon.ie.css' %}" rel="stylesheet" type="text/css">
     <![endif]-->
     <link rel="shortcut icon" type="image/png" href="{% static 'img/ZC_32x32_opaque.png' %}"/>
     {% block head %}{% endblock %}
 </head>
-{% block body_tags %}<body>{% endblock %}
+{% block body_tags %}
+<body>{% endblock %}
 <!-- Handle dark mode before full page loads -->
 <script src="{% static 'js/dark-mode-switch-init.min.js' %}"></script>
 <a class="github-fork-ribbon right-top" href="https://github.com/craymichael" title="Fork me on GitHub"
@@ -35,10 +37,14 @@ You should have received a copy of the GNU General Public License along with thi
 <div class="container base-container">{% block body_block %}{% endblock %}</div>
 {% include "portfolio/common/footer.html" %}
 <!-- jQuery -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<!-- Bootstrap JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
-        integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha384-xBuQ/xzmlsLoJpyjoggmTEz8OWUFM0/RC5BsqQBDX2v5cMvDHcMakNTNrHIW2I5f"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
 {% block scripts %}{% endblock %}
 </body>
