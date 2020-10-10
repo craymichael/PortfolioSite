@@ -22,10 +22,33 @@
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  SOFTWARE.
  */
+// Ensure that you include the dark-mode-switch-init[.min].js script right after
+// the first body tag in the document
+
+// Include this file right after the #darkSwitch element
+
 const darkSwitch = document.getElementById('darkSwitch');
+darkSwitch.checked = darkThemeSelected; // from dark-mode-switch-init[.min].js
+// darkSwitch.checked = darkThemeSelected;
 window.addEventListener('load', () => {
     if (darkSwitch) {
-        initTheme();
+        /**
+         * Summary: function that adds or removes the attribute 'data-theme' depending if
+         * the switch is 'on' or 'off'.
+         *
+         * Description: initTheme is a function that uses localStorage from JavaScript DOM,
+         * to store the value of the HTML switch. If the switch was already switched to
+         * 'on' it will set an HTML attribute to the body named: 'data-theme' to a 'dark'
+         * value. If it is the first time opening the page, or if the switch was off the
+         * 'data-theme' attribute will not be set.
+         * @return {void}
+         */
+        darkThemeSelected ? document.body.setAttribute('data-theme', 'dark') :
+            document.body.removeAttribute('data-theme');
+        // Call each callback
+        darkModeHooks.forEach((el) => {
+            el(darkThemeSelected);
+        });
         darkSwitch.addEventListener('change', () => {
             resetTheme();
         });
@@ -36,31 +59,7 @@ window.addEventListener('load', () => {
  * Set of elements that should have the `data-theme` tag added, if needed.
  * Ex: recaptcha
  */
-const darkModeElements = new Set([document.body]);
-
-/**
- * Summary: function that adds or removes the attribute 'data-theme' depending if
- * the switch is 'on' or 'off'.
- *
- * Description: initTheme is a function that uses localStorage from JavaScript DOM,
- * to store the value of the HTML switch. If the switch was already switched to
- * 'on' it will set an HTML attribute to the body named: 'data-theme' to a 'dark'
- * value. If it is the first time opening the page, or if the switch was off the
- * 'data-theme' attribute will not be set.
- * @return {void}
- */
-function initTheme() {
-    const darkThemeSelected =
-        ((localStorage.getItem('darkSwitch') === null) &&
-            (window.matchMedia('(prefers-color-scheme: dark)').matches === true)) ||
-        localStorage.getItem('darkSwitch') === 'dark';
-    darkSwitch.checked = darkThemeSelected;
-    darkThemeSelected ? darkModeElements.forEach(function (el) {
-        el.setAttribute('data-theme', 'dark')
-    }) : darkModeElements.forEach(function (el) {
-        el.removeAttribute('data-theme')
-    });
-}
+const darkModeHooks = new Set();
 
 
 /**
@@ -71,19 +70,18 @@ function initTheme() {
  */
 function resetTheme() {
     if (darkSwitch.checked) {
-        darkModeElements.forEach(function (el) {
-            el.setAttribute('data-theme', 'dark')
-        })
+        document.body.setAttribute('data-theme', 'dark');
         localStorage.setItem('darkSwitch', 'dark');
     } else {
-        darkModeElements.forEach(function (el) {
-            el.removeAttribute('data-theme')
-        });
+        document.body.removeAttribute('data-theme');
         localStorage.removeItem('darkSwitch');
     }
+    darkModeHooks.forEach((el) => {
+        el(darkSwitch.checked)
+    });
 }
 
-function addDarkModeElement(el) {
-    darkModeElements.add(el);
-    resetTheme();
+function addDarkModeHook(el) {
+    darkModeHooks.add(el);
+    el(darkSwitch.checked);
 }

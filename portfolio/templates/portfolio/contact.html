@@ -4,7 +4,23 @@
 
 {% block head %}
     <link href="{% static 'css/form.css' %}" rel="stylesheet" type="text/css">
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script type="text/javascript">
+    window.recaptchaOnload = () => {
+        // let recaptchaDiv = document.createElement('div');
+        let recaptchaDiv = document.getElementById('contact-recaptcha');
+        // if (isDark) {
+        // }
+        // recaptchaDiv.setAttribute('class', 'g-recaptcha');
+        // recaptchaDiv.setAttribute('style', 'float: right');
+        // recaptchaDiv.setAttribute('data-sitekey', '6LfX-K4UAAAAAOrS6eSNYYNxVNQdXE8zldjlGf3z');
+        // document.getElementById('contact-recaptcha-area').appendChild(recaptchaDiv);
+        grecaptcha.render('contact-recaptcha', {
+            'sitekey': '6LfX-K4UAAAAAOrS6eSNYYNxVNQdXE8zldjlGf3z',
+            'theme': 'dark'
+        });
+    };
+</script>
+<!--    <script src="https://www.google.com/recaptcha/api.js" async defer></script>-->
 {% endblock %}
 
 {% block body_block %}
@@ -50,8 +66,21 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-sm-12">
-                        <div class="g-recaptcha" style="float: right" data-sitekey="6LfX-K4UAAAAAOrS6eSNYYNxVNQdXE8zldjlGf3z"></div>
+                    <div class="col-sm-12" id="contact-recaptcha-area">
+<!--                        <div class="g-recaptcha" style="float: right" data-sitekey="6LfX-K4UAAAAAOrS6eSNYYNxVNQdXE8zldjlGf3z" data-theme="dark"></div>-->
+                        <div id="contact-recaptcha" style="float: right"></div>
+<!--                        <script type="text/javascript">-->
+<!--                            addDarkModeHook((isDark) => {-->
+<!--                                let recaptchaDiv = document.createElement('div');-->
+<!--                                if (isDark) {-->
+<!--                                    recaptchaDiv.setAttribute('data-theme', 'dark');-->
+<!--                                }-->
+<!--                                recaptchaDiv.setAttribute('class', 'g-recaptcha');-->
+<!--                                recaptchaDiv.setAttribute('style', 'float: right');-->
+<!--                                recaptchaDiv.setAttribute('data-sitekey', '6LfX-K4UAAAAAOrS6eSNYYNxVNQdXE8zldjlGf3z');-->
+<!--                                document.getElementById('contact-recaptcha-area').appendChild(recaptchaDiv);-->
+<!--                            });-->
+<!--                        </script>-->
                     </div>
                 </div>
                 <br>
@@ -65,4 +94,5 @@
         <div class="col-md-3"></div>
     </div>
 {% endblock %}
-{% block scripts %}<script src="{% static 'js/success.js' %}"></script>{% endblock %}
+{% block scripts %}<script src="{% static 'js/success.js' %}"></script>
+<script src="https://www.google.com/recaptcha/api.js?onload=recaptchaOnload&render=explicit" async defer></script>{% endblock %}
