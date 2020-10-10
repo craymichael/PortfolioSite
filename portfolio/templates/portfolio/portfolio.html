@@ -13,61 +13,72 @@
 
 {% block body_block %}
 <div class="row">
-    <div class="col-md-9">
+    <div class="col-md-9" id="portfolio-accordion">
         <section id="education" class="education-section">
             <div class="row">
                 <div class="col-lg-9">
-                    <h2><b>Education</b></h2>
-                    <hr>
-                    <h4>University of Notre Dame — Notre Dame, IN</h4>
-                    <h6>PhD Program in Computer Science & Engineering - Degree Expected (May 2023)</h6>
-                    <ul>
-                        <li>
-                            <a href="https://cse.nd.edu/grads"
-                               target="_blank">Doctor of Philosophy in Computer Science and Engineering</a></li>
-                    </ul>
-                    <h4>Rochester Institute of Technology (RIT) — Rochester, NY</h4>
-                    <h6>BS / MS Program in Computer Engineering - All Degrees Awarded (May 2019)</h6>
-                    <i>magna cum laude</i>
-                    <ul>
-                        <li>
-                            <a href="https://www.rit.edu/kgcoe/computerengineering/program/dual-degree-bsms/curriculum-bsms-dual-degree"
-                               target="_blank">Bachelor of Science in Computer Engineering</a></li>
-                        <li>
-                            <a href="https://www.rit.edu/kgcoe/computerengineering/program/dual-degree-bsms/curriculum-bsms-dual-degree"
-                               target="_blank">Master of Science in Computer Engineering</a></li>
-                        <li><a href="https://www.rit.edu/programs/minors/mathematics" target="_blank">
-                            Minor in Mathematics</a></li>
-                        <li><a href="https://www.rit.edu/programs/immersions/digital-literatures-and-comparative-media"
-                               target="_blank">Immersion in Digital Literature and Comparative Media</a></li>
-                    </ul>
-                    <div class="row">
-                        <p class="col-md-3">Grad GPA:</p>
-                        <p class="col-md-2">4.00 / 4.00</p>
+                    <div class="card-header" id="education-header">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#education-collapse" aria-expanded="false" aria-controls="education-collapse">
+                                <h2><b>Education</b></h2>
+                            </button>
+                        </h5>
                     </div>
-                    <div class="row">
-                        <p class="col-md-3">Undergrad GPA:</p>
-                        <p class="col-md-2">3.63 / 4.00</p>
+                    <div class="desktop-header">
+                        <h2><b>Education</b></h2>
+                        <hr>
                     </div>
-                    <div class="row">
-                        <p class="col-md-3">Cumulative GPA:</p>
-                        <p class="col-md-2">3.70 / 4.00</p>
+                    <div id="education-collapse" class="collapse" aria-labelledby="education-header" data-parent="#portfolio-accordion">
+                        <h4>University of Notre Dame — Notre Dame, IN</h4>
+                        <h6>PhD Program in Computer Science & Engineering - Degree Expected (May 2023)</h6>
+                        <ul>
+                            <li>
+                                <a href="https://cse.nd.edu/grads"
+                                   target="_blank">Doctor of Philosophy in Computer Science and Engineering</a></li>
+                        </ul>
+                        <h4>Rochester Institute of Technology (RIT) — Rochester, NY</h4>
+                        <h6>BS / MS Program in Computer Engineering - All Degrees Awarded (May 2019)</h6>
+                        <i>magna cum laude</i>
+                        <ul>
+                            <li>
+                                <a href="https://www.rit.edu/kgcoe/computerengineering/program/dual-degree-bsms/curriculum-bsms-dual-degree"
+                                   target="_blank">Bachelor of Science in Computer Engineering</a></li>
+                            <li>
+                                <a href="https://www.rit.edu/kgcoe/computerengineering/program/dual-degree-bsms/curriculum-bsms-dual-degree"
+                                   target="_blank">Master of Science in Computer Engineering</a></li>
+                            <li><a href="https://www.rit.edu/programs/minors/mathematics" target="_blank">
+                                Minor in Mathematics</a></li>
+                            <li><a href="https://www.rit.edu/programs/immersions/digital-literatures-and-comparative-media"
+                                   target="_blank">Immersion in Digital Literature and Comparative Media</a></li>
+                        </ul>
+                        <div class="row">
+                            <p class="col-md-3">Grad GPA:</p>
+                            <p class="col-md-2">4.00 / 4.00</p>
+                        </div>
+                        <div class="row">
+                            <p class="col-md-3">Undergrad GPA:</p>
+                            <p class="col-md-2">3.63 / 4.00</p>
+                        </div>
+                        <div class="row">
+                            <p class="col-md-3">Cumulative GPA:</p>
+                            <p class="col-md-2">3.70 / 4.00</p>
+                        </div>
+                            <!--Dean's List: 2014, 2015, 2016, 2017, 2018</i></p>-->
+                        <h5>Courses</h5>
+                        <ul class="row">
+                            <li class="col-md-6 vsplit-list">Brain-Inspired Computing</li>
+                            <li class="col-md-6 vsplit-list">Computer Vision</li>
+                            <li class="col-md-6 vsplit-list">Deep Learning</li>
+                            <li class="col-md-6 vsplit-list">Advanced C++ Programming</li>
+                            <li class="col-md-6 vsplit-list">Graph Theory</li>
+                            <li class="col-md-6 vsplit-list">Computer Architecture</li>
+                            <li class="col-md-6 vsplit-list">Applied Programming</li>
+                            <li class="col-md-6 vsplit-list">Linear Optimization</li>
+                            <li class="col-md-6 vsplit-list">Digital Systems I and II</li>
+                            <li class="col-md-6 vsplit-list">Computer Science I and II</li>
+                            <li class="col-md-6 vsplit-list">Electronics I</li>
+                        </ul>
                     </div>
-                        <!--Dean's List: 2014, 2015, 2016, 2017, 2018</i></p>-->
-                    <h5>Courses</h5>
-                    <ul class="row">
-                        <li class="col-md-6 vsplit-list">Brain-Inspired Computing</li>
-                        <li class="col-md-6 vsplit-list">Computer Vision</li>
-                        <li class="col-md-6 vsplit-list">Deep Learning</li>
-                        <li class="col-md-6 vsplit-list">Advanced C++ Programming</li>
-                        <li class="col-md-6 vsplit-list">Graph Theory</li>
-                        <li class="col-md-6 vsplit-list">Computer Architecture</li>
-                        <li class="col-md-6 vsplit-list">Applied Programming</li>
-                        <li class="col-md-6 vsplit-list">Linear Optimization</li>
-                        <li class="col-md-6 vsplit-list">Digital Systems I and II</li>
-                        <li class="col-md-6 vsplit-list">Computer Science I and II</li>
-                        <li class="col-md-6 vsplit-list">Electronics I</li>
-                    </ul>
                 </div>
             </div>
         </section>
@@ -75,50 +86,69 @@
         <section id="publications" class="publications-section">
             <div class="row">
                 <div class="col-lg-9">
-                    <h2><b>Publications</b></h2>
-                    <hr>
-                    <p style="text-align:right"><b>Also see my <a href="https://scholar.google.com/citations?user=1Nq_tGYAAAAJ" target="_blank">Google Scholar profile <span class="glyphicon glyphicon-education" aria-hidden="true"></span></a></b></p>
-                    <p style="text-align:justify"><sup>†</sup><sup>§</sup><b>Z. Carmichael</b>, H. F. Langroudi, C. Khazanov, J. Lillie, J. L. Gustafson, D. Kudithipudi, "<b>Deep Positron: A Deep Neural Network Using Posit Number System</b>," <i>Proceedings of the IEEE Conference and Exhibition on Design, Automation and Test in Europe (DATE)</i>, Florence, Italy, 2019 [<b>24% acceptance rate</b>].
-                        <br><a href="https://arxiv.org/abs/1812.01762" target="_blank"><span class="glyphicon glyphicon-link" aria-hidden="true"></span> arxiv.org/abs/1812.01762</a>
-                    </p>
-                    <p style="text-align:justify"><sup>†</sup><sup>§</sup><b>Z. Carmichael</b>, D. Kudithipudi. "<b>Stochastic Tucker-Decomposed Recurrent Neural Networks for Forecasting.</b>" In <i>IEEE Global Conference on Signal and Information Processing (GlobalSIP 2019)</i>, Ottawa, Canada, Forthcoming 2019.</p>
-                    <p style="text-align:justify"><sup>†</sup><sup>§</sup><b>Z. Carmichael</b>, H. F. Langroudi, C. Khazanov, J. Lillie, J. L. Gustafson, D. Kudithipudi, "<b>Performance-Efficiency Trade-off of Low-Precision Numerical Formats in Deep Neural Networks</b>," <i>Proceedings of the ACM Conference for Next Generation Arithmetic (CoNGA)</i>, Singapore, 2019.
-                        <br><a href="https://arxiv.org/abs/1903.10584" target="_blank"><span class="glyphicon glyphicon-link" aria-hidden="true"></span> arxiv.org/abs/1903.10584</a>
-                    </p>
-                    <p style="text-align:justify"><sup>†</sup><sup>§</sup><b>Z. Carmichael</b>, B. Glasstone, F. Cwitkowitz, K. Alexopoulos, R. Relyea, R. Ptucha, "<b>Autonomous Navigation Using Localization Priors, Sensor Fusion, and Terrain Classification</b>," <i>Proceedings of IS&T International Symposium on Electronic Imaging: Image Processing Algorithms and Systems</i>, San Francisco, CA, 2019.</p>
-                    <p style="text-align:justify"><sup>†</sup><sup>§</sup><b>Z. Carmichael</b>, H. Syed, D. Kudithipudi, "<b>Analysis of Wide and Deep Echo State Networks for Multiscale Spatiotemporal Time Series Forecasting</b>," <i>Proceedings of the ACM Neuro Inspired Computational Elements (NICE) Workshop</i>, Albany, NY, 2019.</p>
-                    <p style="text-align:justify"><sup>‡</sup><b>Z. Carmichael</b>, H. Syed, S. Burtner, D. Kudithipudi, "<b>Mod-DeepESN: Modular Deep Echo State Network</b>," <i>Annual Conference on Cognitive Computational Neuroscience</i>, Philadelphia, PA, 2018.
-                        <br><a href="https://arxiv.org/abs/1808.00523" target="_blank"><span class="glyphicon glyphicon-link" aria-hidden="true"></span> arxiv.org/abs/1808.00523</a>
-                    <p style="text-align:justify"><b>Z. Carmichael</b>. "<b>Towards Lightweight AI: Leveraging Stochasticity, Quantization, and Tensorization for Forecasting</b>." Master's Thesis, Department of Computer Engineering, Rochester Institute of Technology. 2019.
-                    <br><a href="https://scholarworks.rit.edu/theses/10144/" target="_blank"><span class="glyphicon glyphicon-link" aria-hidden="true"></span> scholarworks.rit.edu</a>
-                    <hr style="background-color: grey; border-color: grey; color: grey">
-                    <p><sup>†</sup> Proceedings Paper | <sup>§</sup> Oral Presentation | <sup>‡</sup> Poster Presentation</p>
+                    <div class="card-header" id="publications-header">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#publications-collapse" aria-expanded="false" aria-controls="publications-collapse">
+                                <h2><b>Publications</b></h2>
+                            </button>
+                        </h5>
+                    </div>
+                    <div class="desktop-header">
+                        <h2><b>Publications</b></h2>
+                        <hr>
+                    </div>
+                    <div id="publications-collapse" class="collapse" aria-labelledby="publications-header" data-parent="#portfolio-accordion">
+                        <p style="text-align:right"><b>Also see my <a href="https://scholar.google.com/citations?user=1Nq_tGYAAAAJ" target="_blank">Google Scholar profile <span class="glyphicon glyphicon-education" aria-hidden="true"></span></a></b></p>
+                        <p style="text-align:justify"><sup>†</sup><sup>§</sup><b>Z. Carmichael</b>, H. F. Langroudi, C. Khazanov, J. Lillie, J. L. Gustafson, D. Kudithipudi, "<b>Deep Positron: A Deep Neural Network Using Posit Number System</b>," <i>Proceedings of the IEEE Conference and Exhibition on Design, Automation and Test in Europe (DATE)</i>, Florence, Italy, 2019 [<b>24% acceptance rate</b>].
+                            <br><a href="https://arxiv.org/abs/1812.01762" target="_blank"><span class="glyphicon glyphicon-link" aria-hidden="true"></span> arxiv.org/abs/1812.01762</a>
+                        </p>
+                        <p style="text-align:justify"><sup>†</sup><sup>§</sup><b>Z. Carmichael</b>, D. Kudithipudi. "<b>Stochastic Tucker-Decomposed Recurrent Neural Networks for Forecasting.</b>" In <i>IEEE Global Conference on Signal and Information Processing (GlobalSIP 2019)</i>, Ottawa, Canada, Forthcoming 2019.</p>
+                        <p style="text-align:justify"><sup>†</sup><sup>§</sup><b>Z. Carmichael</b>, H. F. Langroudi, C. Khazanov, J. Lillie, J. L. Gustafson, D. Kudithipudi, "<b>Performance-Efficiency Trade-off of Low-Precision Numerical Formats in Deep Neural Networks</b>," <i>Proceedings of the ACM Conference for Next Generation Arithmetic (CoNGA)</i>, Singapore, 2019.
+                            <br><a href="https://arxiv.org/abs/1903.10584" target="_blank"><span class="glyphicon glyphicon-link" aria-hidden="true"></span> arxiv.org/abs/1903.10584</a>
+                        </p>
+                        <p style="text-align:justify"><sup>†</sup><sup>§</sup><b>Z. Carmichael</b>, B. Glasstone, F. Cwitkowitz, K. Alexopoulos, R. Relyea, R. Ptucha, "<b>Autonomous Navigation Using Localization Priors, Sensor Fusion, and Terrain Classification</b>," <i>Proceedings of IS&T International Symposium on Electronic Imaging: Image Processing Algorithms and Systems</i>, San Francisco, CA, 2019.</p>
+                        <p style="text-align:justify"><sup>†</sup><sup>§</sup><b>Z. Carmichael</b>, H. Syed, D. Kudithipudi, "<b>Analysis of Wide and Deep Echo State Networks for Multiscale Spatiotemporal Time Series Forecasting</b>," <i>Proceedings of the ACM Neuro Inspired Computational Elements (NICE) Workshop</i>, Albany, NY, 2019.</p>
+                        <p style="text-align:justify"><sup>‡</sup><b>Z. Carmichael</b>, H. Syed, S. Burtner, D. Kudithipudi, "<b>Mod-DeepESN: Modular Deep Echo State Network</b>," <i>Annual Conference on Cognitive Computational Neuroscience</i>, Philadelphia, PA, 2018.
+                            <br><a href="https://arxiv.org/abs/1808.00523" target="_blank"><span class="glyphicon glyphicon-link" aria-hidden="true"></span> arxiv.org/abs/1808.00523</a>
+                        <p style="text-align:justify"><b>Z. Carmichael</b>. "<b>Towards Lightweight AI: Leveraging Stochasticity, Quantization, and Tensorization for Forecasting</b>." Master's Thesis, Department of Computer Engineering, Rochester Institute of Technology. 2019.
+                        <br><a href="https://scholarworks.rit.edu/theses/10144/" target="_blank"><span class="glyphicon glyphicon-link" aria-hidden="true"></span> scholarworks.rit.edu</a>
+                        <hr style="background-color: grey; border-color: grey; color: grey">
+                        <p><sup>†</sup> Proceedings Paper | <sup>§</sup> Oral Presentation | <sup>‡</sup> Poster Presentation</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="research" class="work-section">
+        <section id="research" class="research-section">
             <div class="row">
                 <div class="col-lg-9">
-                    <h2><b>Research Experience</b></h2>
-                    <hr>
-                    <h4>Computer Vision Research Lab (CVRL) Graduate Research Assistant — <a href="https://cvrl.nd.edu/" target="_blank">Notre Dame</a>, Notre Dame, IN</h4>
-                    <h6></h6>
-                    <h6><i>August 2019 - Present</i></h6>
-<!--                    <ul>-->
-<!--                        <li></li>-->
-<!--                    </ul>-->
-                    <h4>Nu.AI Laboratory Research Fellow — <a href="http://engineering.utsa.edu/new-employee-dhireesha-kudithipudi/" target="_blank">UTSA</a>, San Antonio, TX</h4>
-                    <h6></h6>
-                    <h6><i>August 2019 - Present</i></h6>
-                    <h4>Nu.AI Laboratory Graduate Research Assistant — <a href="https://www.rit.edu/kgcoe/neuro/" target="_blank">RIT</a>, Rochester, NY</h4>
-                    <h6></h6>
-                    <h6><i>January 2018 - August 2019</i></h6>
-                    <ul>
-                        <li>Performed research concerning the application of the posit numerical system to deep learning and neuromorphic networks.</li>
-                        <li>Studied efficient training of echo state networks to minimize the complexity of model computations and model search.</li>
-                        <li>Started a weekly reading group to engage discussion of multidisciplinary and novel research, mentored undergraduate students, and developed a lab website.</li>
-                    </ul>
+                    <div class="card-header" id="research-header">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#research-collapse" aria-expanded="false" aria-controls="research-collapse">
+                                <h2><b>Research</b></h2>
+                            </button>
+                        </h5>
+                    </div>
+                    <div class="desktop-header">
+                        <h2><b>Research Experience</b></h2>
+                        <hr>
+                    </div>
+                    <div id="research-collapse" class="collapse" aria-labelledby="research-header" data-parent="#portfolio-accordion">
+                        <h4>Computer Vision Research Lab (CVRL) Graduate Research Assistant — <a href="https://cvrl.nd.edu/" target="_blank">Notre Dame</a>, Notre Dame, IN</h4>
+                        <h6></h6>
+                        <h6><i>August 2019 - Present</i></h6>
+                        <h4>Nu.AI Laboratory Research Fellow — <a href="http://engineering.utsa.edu/new-employee-dhireesha-kudithipudi/" target="_blank">UTSA</a>, San Antonio, TX</h4>
+                        <h6></h6>
+                        <h6><i>August 2019 - Present</i></h6>
+                        <h4>Nu.AI Laboratory Graduate Research Assistant — <a href="https://www.rit.edu/kgcoe/neuro/" target="_blank">RIT</a>, Rochester, NY</h4>
+                        <h6></h6>
+                        <h6><i>January 2018 - August 2019</i></h6>
+                        <ul>
+                            <li>Performed research concerning the application of the posit numerical system to deep learning and neuromorphic networks.</li>
+                            <li>Studied efficient training of echo state networks to minimize the complexity of model computations and model search.</li>
+                            <li>Started a weekly reading group to engage discussion of multidisciplinary and novel research, mentored undergraduate students, and developed a lab website.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
@@ -126,23 +156,34 @@
         <section id="awards" class="awards-section">
             <div class="row">
                 <div class="col-lg-9">
-                    <h2><b>Awards</b></h2>
-                    <hr>
+                    <div class="card-header" id="awards-header">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#awards-collapse" aria-expanded="false" aria-controls="awards-collapse">
+                                <h2><b>Awards</b></h2>
+                            </button>
+                        </h5>
+                    </div>
+                    <div class="desktop-header">
+                        <h2><b>Awards</b></h2>
+                        <hr>
+                    </div>
+                    <div id="awards-collapse" class="collapse" aria-labelledby="awards-header" data-parent="#portfolio-accordion">
 
-                    <h5>University of Notre Dame Jack and Mary Ann Remick Fellowship in Engineering</h5>
-                    <h6><i>2019 - Present</i></h6>
+                        <h5>University of Notre Dame Jack and Mary Ann Remick Fellowship in Engineering</h5>
+                        <h6><i>2019 - Present</i></h6>
 
-                    <h5>RIT KGCOE Dean's List</h5>
-                    <h6><i>2014 - 2019</i></h6>
+                        <h5>RIT KGCOE Dean's List</h5>
+                        <h6><i>2014 - 2019</i></h6>
 
-                    <h5>RIT Presidential Scholarship</h5>
-                    <h6><i>2014 - 2018</i></h6>
+                        <h5>RIT Presidential Scholarship</h5>
+                        <h6><i>2014 - 2018</i></h6>
 
-                    <h5>RIT BS/MS Tuition Award</h5>
-                    <h6><i>2014 - 2018</i></h6>
+                        <h5>RIT BS/MS Tuition Award</h5>
+                        <h6><i>2014 - 2018</i></h6>
 
-                    <h5>RIT Excellence in Computing</h5>
-                    <h6><i>2014</i></h6>
+                        <h5>RIT Excellence in Computing</h5>
+                        <h6><i>2014</i></h6>
+                    </div>
                 </div>
             </div>
         </section>
@@ -150,10 +191,21 @@
         <section id="reviewing" class="reviewing-section">
             <div class="row">
                 <div class="col-lg-9">
-                    <h2><b>Journal & Conference Reviewing</b></h2>
-                    <hr>
-                    <h5>IEEE Transactions on Neural Networks and Learning Systems</h5>
-                    <h5>Neural Information Processing Systems (NeurIPS) Workshop on Compact Deep Neural Networks</h5>
+                    <div class="card-header" id="reviewing-header">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#reviewing-collapse" aria-expanded="false" aria-controls="reviewing-collapse">
+                                <h2><b>Reviewing</b></h2>
+                            </button>
+                        </h5>
+                    </div>
+                    <div class="desktop-header">
+                        <h2><b>Journal & Conference Reviewing</b></h2>
+                        <hr>
+                    </div>
+                    <div id="reviewing-collapse" class="collapse" aria-labelledby="reviewing-header" data-parent="#portfolio-accordion">
+                        <h5>IEEE Transactions on Neural Networks and Learning Systems</h5>
+                        <h5>Neural Information Processing Systems (NeurIPS) Workshop on Compact Deep Neural Networks</h5>
+                    </div>
                 </div>
             </div>
         </section>
@@ -161,14 +213,25 @@
         <section id="membership" class="membership-section">
             <div class="row">
                 <div class="col-lg-9">
-                    <h2><b>Membership</b></h2>
-                    <hr>
-                    <h5>Institute of Electrical and Electronics Engineers (IEEE) Student Member</h5>
-                    <h6><i>Oct 2018 - Present</i></h6>
-                    <h5>Tau Beta Pi - The Engineering Honor Society</h5>
-                    <h6><i>Oct 2018 - Present</i></h6>
-                    <h5>The National Society of Leadership and Success</h5>
-                    <h6><i>Oct 2018 - Present</i></h6>
+                    <div class="card-header" id="membership-header">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#membership-collapse" aria-expanded="false" aria-controls="membership-collapse">
+                                <h2><b>Membership</b></h2>
+                            </button>
+                        </h5>
+                    </div>
+                    <div class="desktop-header">
+                        <h2><b>Membership</b></h2>
+                        <hr>
+                    </div>
+                    <div id="membership-collapse" class="collapse" aria-labelledby="membership-header" data-parent="#portfolio-accordion">
+                        <h5>Institute of Electrical and Electronics Engineers (IEEE) Student Member</h5>
+                        <h6><i>Oct 2018 - Present</i></h6>
+                        <h5>Tau Beta Pi - The Engineering Honor Society</h5>
+                        <h6><i>Oct 2018 - Present</i></h6>
+                        <h5>The National Society of Leadership and Success</h5>
+                        <h6><i>Oct 2018 - Present</i></h6>
+                    </div>
                 </div>
             </div>
         </section>
@@ -176,61 +239,69 @@
         <section id="skills" class="skills-section">
             <div class="row">
                 <div class="col-lg-9">
-                    <h2><b>Skills</b></h2>
-                    <hr>
-                    <h4>Languages</h4>
-                    <ul class="row">
-                        <li class="col-md-4 vsplit-list">Python</li>
-                        <li class="col-md-4 vsplit-list">C++</li>
-                        <li class="col-md-4 vsplit-list">C</li>
-                        <li class="col-md-4 vsplit-list">System Verilog/Verilog</li>
-                        <li class="col-md-4 vsplit-list">VHDL</li>
-                        <li class="col-md-4 vsplit-list">Java</li>
-                        <li class="col-md-4 vsplit-list">LaTeX</li>
-                        <li class="col-md-4 vsplit-list">HTML/CSS</li>
-                        <li class="col-md-4 vsplit-list">Shell/Bash</li>
-                        <li class="col-md-4 vsplit-list">Rust</li>
-                        <li class="col-md-4 vsplit-list">TCL</li>
-                        <li class="col-md-4 vsplit-list">ARM Assembly</li>
-                        <li class="col-md-4 vsplit-list">JavaScript</li>
-                    </ul>
-                    <h4>Hardware</h4>
-                    <ul class="row">
-                        <li class="col-md-4 vsplit-list">Cortex M0+/M4 Architectures</li>
-                        <li class="col-md-4 vsplit-list">NXP/Freescale KL46Z/KL64F</li>
-                        <li class="col-md-4 vsplit-list">Arduino</li>
-                        <li class="col-md-4 vsplit-list">Spartan6 FPGA</li>
-                    </ul>
-                    <h4>Software and Libraries</h4>
-                    <ul class="row">
-                        <li class="col-md-4 vsplit-list">TensorFlow</li>
-                        <li class="col-md-4 vsplit-list">Scikit-Learn</li>
-                        <li class="col-md-4 vsplit-list">Intellij/Pycharm</li>
-                        <li class="col-md-4 vsplit-list">Git</li>
-                        <li class="col-md-4 vsplit-list">SVN</li>
-                        <li class="col-md-4 vsplit-list">NumPy/SciPy</li>
-                        <li class="col-md-4 vsplit-list">MATLAB/Octave</li>
-                        <li class="col-md-4 vsplit-list">Xilinx ISE/Vivado</li>
-                        <li class="col-md-4 vsplit-list">ROS</li>
-                        <li class="col-md-4 vsplit-list">Django</li>
-                        <li class="col-md-4 vsplit-list">ModelSim</li>
-                        <li class="col-md-4 vsplit-list">Keil μVision</li>
-                        <li class="col-md-4 vsplit-list">Microsoft Office</li>
-<!--                        <li class="col-md-4 vsplit-list">Footprints</li>-->
-                        <li class="col-md-4 vsplit-list">Eclipse</li>
-                        <li class="col-md-4 vsplit-list">Atlassian Suite</li>
-<!--                        <li class="col-md-4 vsplit-list">vim</li>-->
-                    </ul>
-                    <h4>Operating Systems</h4>
-                    <ul class="row">
-<!--                        <li class="col-md-4 vsplit-list">Windows XP/Vista/7/8/10</li>-->
-                        <li class="col-md-4 vsplit-list">Windows</li>
-                        <li class="col-md-4 vsplit-list">Arch Linux</li>
-                        <li class="col-md-4 vsplit-list">Ubuntu & variants</li>
-                        <li class="col-md-4 vsplit-list">CentOS/RedHat</li>
-                        <li class="col-md-4 vsplit-list">NixOS</li>
-                        <li class="col-md-4 vsplit-list">Amazon Linux AMI</li>
-                    </ul>
+                    <div class="card-header" id="skills-header">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#skills-collapse" aria-expanded="false" aria-controls="skills-collapse">
+                                <h2><b>Skills</b></h2>
+                            </button>
+                        </h5>
+                    </div>
+                    <div class="desktop-header">
+                        <h2><b>Skills</b></h2>
+                        <hr>
+                    </div>
+                    <div id="skills-collapse" class="collapse" aria-labelledby="skills-header" data-parent="#portfolio-accordion">
+                        <h4>Languages</h4>
+                        <ul class="row">
+                            <li class="col-md-4 vsplit-list">Python</li>
+                            <li class="col-md-4 vsplit-list">C++</li>
+                            <li class="col-md-4 vsplit-list">C</li>
+                            <li class="col-md-4 vsplit-list">System Verilog/Verilog</li>
+                            <li class="col-md-4 vsplit-list">VHDL</li>
+                            <li class="col-md-4 vsplit-list">Java</li>
+                            <li class="col-md-4 vsplit-list">LaTeX</li>
+                            <li class="col-md-4 vsplit-list">HTML/CSS</li>
+                            <li class="col-md-4 vsplit-list">Shell/Bash</li>
+                            <li class="col-md-4 vsplit-list">Rust</li>
+                            <li class="col-md-4 vsplit-list">TCL</li>
+                            <li class="col-md-4 vsplit-list">ARM Assembly</li>
+                            <li class="col-md-4 vsplit-list">JavaScript</li>
+                        </ul>
+                        <h4>Hardware</h4>
+                        <ul class="row">
+                            <li class="col-md-4 vsplit-list">Cortex M0+/M4 Architectures</li>
+                            <li class="col-md-4 vsplit-list">NXP/Freescale KL46Z/KL64F</li>
+                            <li class="col-md-4 vsplit-list">Arduino</li>
+                            <li class="col-md-4 vsplit-list">Spartan6 FPGA</li>
+                        </ul>
+                        <h4>Software and Libraries</h4>
+                        <ul class="row">
+                            <li class="col-md-4 vsplit-list">TensorFlow</li>
+                            <li class="col-md-4 vsplit-list">Scikit-Learn</li>
+                            <li class="col-md-4 vsplit-list">Intellij/Pycharm</li>
+                            <li class="col-md-4 vsplit-list">Git</li>
+                            <li class="col-md-4 vsplit-list">SVN</li>
+                            <li class="col-md-4 vsplit-list">NumPy/SciPy</li>
+                            <li class="col-md-4 vsplit-list">MATLAB/Octave</li>
+                            <li class="col-md-4 vsplit-list">Xilinx ISE/Vivado</li>
+                            <li class="col-md-4 vsplit-list">ROS</li>
+                            <li class="col-md-4 vsplit-list">Django</li>
+                            <li class="col-md-4 vsplit-list">ModelSim</li>
+                            <li class="col-md-4 vsplit-list">Keil μVision</li>
+                            <li class="col-md-4 vsplit-list">Microsoft Office</li>
+                            <li class="col-md-4 vsplit-list">Eclipse</li>
+                            <li class="col-md-4 vsplit-list">Atlassian Suite</li>
+                        </ul>
+                        <h4>Operating Systems</h4>
+                        <ul class="row">
+                            <li class="col-md-4 vsplit-list">Windows</li>
+                            <li class="col-md-4 vsplit-list">Arch Linux</li>
+                            <li class="col-md-4 vsplit-list">Ubuntu & variants</li>
+                            <li class="col-md-4 vsplit-list">CentOS/RedHat</li>
+                            <li class="col-md-4 vsplit-list">NixOS</li>
+                            <li class="col-md-4 vsplit-list">Amazon Linux AMI</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
@@ -238,106 +309,117 @@
         <section id="work" class="work-section">
             <div class="row">
                 <div class="col-lg-9 justified">
-                    <h2><b>Work Experience</b></h2>
-                    <hr>
+                     <div class="card-header" id="work-header">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#work-collapse" aria-expanded="false" aria-controls="work-collapse">
+                                <h2><b>Work Experience</b></h2>
+                            </button>
+                        </h5>
+                    </div>
+                    <div class="desktop-header">
+                        <h2><b>Work Experience</b></h2>
+                        <hr>
+                    </div>
+                    <div id="work-collapse" class="collapse" aria-labelledby="work-header" data-parent="#portfolio-accordion">
 
-                    <h4>Digital Engineering Intern — <a
-                            href="https://www.plexus.com" target="_blank">Plexus Corp.</a>, Raleigh, NC</h4>
-                    <h6></h6>
-                    <h6><i>June 2017 - August 2017</i></h6>
-                    <p>As a digital engineering intern, I worked on several projects: some for Plexus
-                        customers, and others for internal usage. I designed RTL code for the generic
-                        instantiation of power-hungry components for Xilinx FPGAs. The module uses a given
-                        proportion of a chip to generate as much heat as possible when enabled to test the
-                        efficacy of its cooling systems. I worked with the digital engineering team at Plexus
-                        in parametrizing the design and ensuring weekly project goals were met. I also worked on
-                        an internal battery testing unit using the development board FRDM-K64F. I collaborated with
-                        mechanical, electrical, and software engineers to verify and validate the design.</p>
-                    <h5>Languages</h5>
-                    <ul>
-                        <li>C/C++</li>
-                        <li>System Verilog</li>
-                        <li>Powershell</li>
-                    </ul>
-                    <h5>Hardware</h5>
-                    <ul>
-                        <li>NXP/Freedom K64F</li>
-                        <li>Xilinx Spartan FPGA</li>
-                    </ul>
+                        <h4>Digital Engineering Intern — <a
+                                href="https://www.plexus.com" target="_blank">Plexus Corp.</a>, Raleigh, NC</h4>
+                        <h6></h6>
+                        <h6><i>June 2017 - August 2017</i></h6>
+                        <p>As a digital engineering intern, I worked on several projects: some for Plexus
+                            customers, and others for internal usage. I designed RTL code for the generic
+                            instantiation of power-hungry components for Xilinx FPGAs. The module uses a given
+                            proportion of a chip to generate as much heat as possible when enabled to test the
+                            efficacy of its cooling systems. I worked with the digital engineering team at Plexus
+                            in parametrizing the design and ensuring weekly project goals were met. I also worked on
+                            an internal battery testing unit using the development board FRDM-K64F. I collaborated with
+                            mechanical, electrical, and software engineers to verify and validate the design.</p>
+                        <h5>Languages</h5>
+                        <ul>
+                            <li>C/C++</li>
+                            <li>System Verilog</li>
+                            <li>Powershell</li>
+                        </ul>
+                        <h5>Hardware</h5>
+                        <ul>
+                            <li>NXP/Freedom K64F</li>
+                            <li>Xilinx Spartan FPGA</li>
+                        </ul>
 
-                    <h4>Software Engineering/Research Intern — <a
-                            href="http://www.cubrc.org/" target="_blank">CUBRC, Inc.</a>, Cheektowaga, NY</h4>
-                    <h6></h6>
-                    <h6><i>June 2016 - December 2016</i></h6>
-                    <p>At CUBRC, I joined the recently spawned health care team who were striving to push for
-                        a breakthrough in data analysis in the health care industry. The project, called
-                        <a href="https://www.cubrc.org/index.php/data-science-and-information-fusion/heartwood-analytics"
-                           target="_blank">Heartwood Analytics</a>, has a vision to provide a broad genre of agencies
-                        with the
-                        tools to reduce the perplexity of the possession and potential utilization of huge
-                        amounts of data; through automated predictive analysis and accessible centralization
-                        of multi-source data, Heartwood Analytics provides its customers with the ability to
-                        build on their core competencies, identify market opportunities, and manage outcomes
-                        for their highest risk patients.</p>
-                    <p>I contributed to the analytical backend of the proposed product by developing
-                        an automated machine learning framework that produces a fine-tuned model for any
-                        given health record data. Data is abstracted through a common ontology to allow for
-                        the use of various data sources, and then a model search is executed given a budget
-                        to produce a predictive model. Analysis is also run to interpret important factors,
-                        such as the higher weighted features of a regression. Additionally, I documented
-                        relevant research and the software itself, and provided receptive, effective support
-                        for our customers.</p>
-                    <h5>Languages</h5>
-                    <ul>
-                        <li>Python {2, 3}</li>
-                        <li>Shell/Bash</li>
-                        <li>SPARQL and RDF</li>
-                    </ul>
-                    <h5>Software and Libraries</h5>
-                    <ul>
-                        <li>TensorFlow</li>
-                        <li>Scikit-Learn</li>
-                        <li>Flask</li>
-                        <li>NumPy</li>
-                        <li>Kafka</li>
-                        <li>Atlassian Suite {JIRA, Confluence, HipChat, BitBucket}</li>
-                    </ul>
+                        <h4>Software Engineering/Research Intern — <a
+                                href="http://www.cubrc.org/" target="_blank">CUBRC, Inc.</a>, Cheektowaga, NY</h4>
+                        <h6></h6>
+                        <h6><i>June 2016 - December 2016</i></h6>
+                        <p>At CUBRC, I joined the recently spawned health care team who were striving to push for
+                            a breakthrough in data analysis in the health care industry. The project, called
+                            <a href="https://www.cubrc.org/index.php/data-science-and-information-fusion/heartwood-analytics"
+                               target="_blank">Heartwood Analytics</a>, has a vision to provide a broad genre of agencies
+                            with the
+                            tools to reduce the perplexity of the possession and potential utilization of huge
+                            amounts of data; through automated predictive analysis and accessible centralization
+                            of multi-source data, Heartwood Analytics provides its customers with the ability to
+                            build on their core competencies, identify market opportunities, and manage outcomes
+                            for their highest risk patients.</p>
+                        <p>I contributed to the analytical backend of the proposed product by developing
+                            an automated machine learning framework that produces a fine-tuned model for any
+                            given health record data. Data is abstracted through a common ontology to allow for
+                            the use of various data sources, and then a model search is executed given a budget
+                            to produce a predictive model. Analysis is also run to interpret important factors,
+                            such as the higher weighted features of a regression. Additionally, I documented
+                            relevant research and the software itself, and provided receptive, effective support
+                            for our customers.</p>
+                        <h5>Languages</h5>
+                        <ul>
+                            <li>Python {2, 3}</li>
+                            <li>Shell/Bash</li>
+                            <li>SPARQL and RDF</li>
+                        </ul>
+                        <h5>Software and Libraries</h5>
+                        <ul>
+                            <li>TensorFlow</li>
+                            <li>Scikit-Learn</li>
+                            <li>Flask</li>
+                            <li>NumPy</li>
+                            <li>Kafka</li>
+                            <li>Atlassian Suite {JIRA, Confluence, HipChat, BitBucket}</li>
+                        </ul>
 
-                    <h4>Senior SD Representative and RA Publisher —
-                        <a href="https://www.rit.edu/its/" target="_blank">ITS Service Desk (RIT)</a>,
-                        Rochester, NY</h4>
-                    <h6><i>Fall 2014 - Spring 2016</i></h6>
-                    <p>At the Information Services and Technology (ITS) Service Desk (SD), I was a senior
-                        representative and a Right Answers (RA) publisher and editor. As a SD senior, in addition to
-                        routine duties, I was responsible for the training of new employees, presentation of
-                        processes and support tips to student employees, and assessment of sensitive scenarios when
-                        full-time employees were unavailable. As a RA publisher, I was responsible for writing,
-                        editing, and publishing articles for the RIT community: faculty, staff, and students across
-                        multiple campuses.</p>
-                    <!--<p>This position strengthened my critical analysis and communicative skills through hours of-->
-                    <!--remote and local troubleshooting, intelligible public-facing publication of knowledge base-->
-                    <!--articles, and collaborative efforts with employees of various ITS departments.</p>-->
-                    <h5>Software</h5>
-                    <ul>
-                        <li>Footprints</li>
-                        <li>Microsoft Office</li>
-                        <li>RightAnswers</li>
-                        <li>Atlassian Confluence</li>
-                    </ul>
+                        <h4>Senior SD Representative and RA Publisher —
+                            <a href="https://www.rit.edu/its/" target="_blank">ITS Service Desk (RIT)</a>,
+                            Rochester, NY</h4>
+                        <h6><i>Fall 2014 - Spring 2016</i></h6>
+                        <p>At the Information Services and Technology (ITS) Service Desk (SD), I was a senior
+                            representative and a Right Answers (RA) publisher and editor. As a SD senior, in addition to
+                            routine duties, I was responsible for the training of new employees, presentation of
+                            processes and support tips to student employees, and assessment of sensitive scenarios when
+                            full-time employees were unavailable. As a RA publisher, I was responsible for writing,
+                            editing, and publishing articles for the RIT community: faculty, staff, and students across
+                            multiple campuses.</p>
+                        <!--<p>This position strengthened my critical analysis and communicative skills through hours of-->
+                        <!--remote and local troubleshooting, intelligible public-facing publication of knowledge base-->
+                        <!--articles, and collaborative efforts with employees of various ITS departments.</p>-->
+                        <h5>Software</h5>
+                        <ul>
+                            <li>Footprints</li>
+                            <li>Microsoft Office</li>
+                            <li>RightAnswers</li>
+                            <li>Atlassian Confluence</li>
+                        </ul>
 
-                    <h4>Founding Partner — CPUtiful Tech, Killingworth, CT</h4>
-                    <h6><i>Summer 2015 - Spring 2016</i></h6>
-                    <p>CPUtiful Tech was a company comprising four partners with the mutual interest of
-                        creating a consumer electronics retail company with a business platform based on personable
-                        interactions. The company was dissolved in 2016.</p>
+                        <h4>Founding Partner — CPUtiful Tech, Killingworth, CT</h4>
+                        <h6><i>Summer 2015 - Spring 2016</i></h6>
+                        <p>CPUtiful Tech was a company comprising four partners with the mutual interest of
+                            creating a consumer electronics retail company with a business platform based on personable
+                            interactions. The company was dissolved in 2016.</p>
 
-                    <h4>Miscellaneous Work</h4>
-                    <ul>
-                        <li>Notre Dame CSE-60625/40625 <i>Advanced Topics in Machine Learning</i> Teaching Assistant</li>
-                        <li>Notre Dame CSE-30151 <i>Theory Of Computing</i> Teaching Assistant</li>
-                        <li>RIT CMPE-380 <i>Applied Programming</i> Grader</li>
-                        <li>RIT CMPE-250 <i>Assembly Language</i> Grader</li>
-                    </ul>
+                        <h4>Miscellaneous Work</h4>
+                        <ul>
+                            <li>Notre Dame CSE-60625/40625 <i>Advanced Topics in Machine Learning</i> Teaching Assistant</li>
+                            <li>Notre Dame CSE-30151 <i>Theory Of Computing</i> Teaching Assistant</li>
+                            <li>RIT CMPE-380 <i>Applied Programming</i> Grader</li>
+                            <li>RIT CMPE-250 <i>Assembly Language</i> Grader</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
@@ -345,22 +427,33 @@
         <section id="activities" class="activities-section">
             <div class="row">
                 <div class="col-lg-9">
-                    <h1><b>Activities</b></h1>
-                    <hr>
-                    <h5>RIT Tennis Club Treasurer</h5>
-                    <h6><i>2014 - 2017</i></h6>
+                    <div class="card-header" id="activities-header">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#activities-collapse" aria-expanded="false" aria-controls="activities-collapse">
+                                <h2><b>Activities</b></h2>
+                            </button>
+                        </h5>
+                    </div>
+                    <div class="desktop-header">
+                        <h2><b>Activities</b></h2>
+                        <hr>
+                    </div>
+                    <div id="activities-collapse" class="collapse" aria-labelledby="activities-header" data-parent="#portfolio-accordion">
+                        <h5>RIT Tennis Club Treasurer</h5>
+                        <h6><i>2014 - 2017</i></h6>
 
-                    <h5>RIT Intramural Co-Ed Volleyball Captain</h5>
-                    <h6><i>2014 - 2017</i></h6>
+                        <h5>RIT Intramural Co-Ed Volleyball Captain</h5>
+                        <h6><i>2014 - 2017</i></h6>
 
-                    <h5>RIT Intramural Co-Ed Flag Football Captain</h5>
-                    <h6><i>2015 - 2016</i></h6>
+                        <h5>RIT Intramural Co-Ed Flag Football Captain</h5>
+                        <h6><i>2015 - 2016</i></h6>
 
-                    <h5>RIT KanJam Executive Board Member</h5>
-                    <h6><i>2014 - 2016</i></h6>
+                        <h5>RIT KanJam Executive Board Member</h5>
+                        <h6><i>2014 - 2016</i></h6>
 
-                    <h5>Drumming (Kit)</h5>
-                    <h6><i>2009 - Present</i></h6>
+                        <h5>Drumming (Kit)</h5>
+                        <h6><i>2009 - Present</i></h6>
+                    </div>
                 </div>
             </div>
         </section>
