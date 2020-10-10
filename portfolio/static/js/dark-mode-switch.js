@@ -2,6 +2,7 @@
  * MIT License
 
  Copyright (c) 2019 Christian Oliff
+ 2020 Zach Carmichael (modified)
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated documentation files (the "Software"), to deal
@@ -31,6 +32,11 @@ window.addEventListener('load', () => {
     }
 });
 
+/**
+ * Set of elements that should have the `data-theme` tag added, if needed.
+ * Ex: recaptcha
+ */
+const darkModeElements = new Set([document.body]);
 
 /**
  * Summary: function that adds or removes the attribute 'data-theme' depending if
@@ -45,11 +51,15 @@ window.addEventListener('load', () => {
  */
 function initTheme() {
     const darkThemeSelected =
-        localStorage.getItem('darkSwitch') !== null &&
+        ((localStorage.getItem('darkSwitch') === null) &&
+            (window.matchMedia('(prefers-color-scheme: dark)').matches === true)) ||
         localStorage.getItem('darkSwitch') === 'dark';
     darkSwitch.checked = darkThemeSelected;
-    darkThemeSelected ? document.body.setAttribute('data-theme', 'dark') :
-        document.body.removeAttribute('data-theme');
+    darkThemeSelected ? darkModeElements.forEach(function (el) {
+        el.setAttribute('data-theme', 'dark')
+    }) : darkModeElements.forEach(function (el) {
+        el.removeAttribute('data-theme')
+    });
 }
 
 
@@ -61,10 +71,19 @@ function initTheme() {
  */
 function resetTheme() {
     if (darkSwitch.checked) {
-        document.body.setAttribute('data-theme', 'dark');
+        darkModeElements.forEach(function (el) {
+            el.setAttribute('data-theme', 'dark')
+        })
         localStorage.setItem('darkSwitch', 'dark');
     } else {
-        document.body.removeAttribute('data-theme');
+        darkModeElements.forEach(function (el) {
+            el.removeAttribute('data-theme')
+        });
         localStorage.removeItem('darkSwitch');
     }
+}
+
+function addDarkModeElement(el) {
+    darkModeElements.add(el);
+    resetTheme();
 }
