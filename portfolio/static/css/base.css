@@ -8,13 +8,55 @@ warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Ge
 You should have received a copy of the GNU General Public License along with this program.  If not, see
 <http://www.gnu.org/licenses/>.
 */
-.base-container {
-    padding-top: 50px;
-    padding-bottom: 55px;
+body {
+    font-size: 0.9rem;
 }
+
+.base-container {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
 .github-fork-ribbon.right-top:before {
     background-color: #0B3C5D;
 }
+
 .github-fork-ribbon.right-top {
     position: fixed;
+}
+
+.justified :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+[data-theme="dark"] {
+    background-color: #111 !important;
+    color: #eee;
+}
+
+[data-theme="dark"] hr {
+    border-color: #333;
+}
+
+[data-theme="dark"] a {
+    color: #009fff;
+}
+
+[data-theme="dark"] form button {
+    background-color: #222;
+    color: #eee;
+}
+
+/* SVG */
+[data-theme="dark"] text {
+    fill: #eee;
+}
+
+[data-theme="dark"] path {
+    stroke: #333;
+}
+
+[data-theme="dark"] circle {
+    fill: #333 !important;
 }

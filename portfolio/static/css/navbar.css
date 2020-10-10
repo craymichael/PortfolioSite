@@ -8,37 +8,62 @@ warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Ge
 You should have received a copy of the GNU General Public License along with this program.  If not, see
 <http://www.gnu.org/licenses/>.
 */
+@media only screen and (min-width: 991px) {
+    .navbar {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .nav-pills .nav-link,
+    .navbar-brand {
+        padding-top: 16px;
+        padding-bottom: 15px;
+        border-radius: 0;
+    }
+
+    .navbar-brand {
+        line-height: 32px;
+    }
+}
+
 .navbar .nav > li > a > img {
     width: 20px;
     height: 20px;
 }
+
 .navbar {
     background-color: #0B3C5D;
+    border-color: #0B3C5D;
+    padding: 0;
 }
-.navbar > .container {
-    float: center;
-}
-.navbar .nav > li > a {
+
+.navbar .nav > li > a,
+.navbar .nav > li label {
     color: #fff;
 }
+
 .navbar .nav > li.dropdown > a {
     border-bottom: 2px solid #0B3C5D;
 }
-.navbar .nav > li.active > a {
+
+.navbar .nav > li.active {
     background-color: #1D2731;
     color: #fff;
     border-bottom: 2px solid white;
 }
-.navbar .nav > li.active > a:hover,
-.navbar .nav > li.active > a:focus {
+
+.navbar .nav > li.active:hover,
+.navbar .nav > li.active:focus {
     background-color: #1D2731;
     color: #808080;
 }
+
 .navbar .nav > li > a:hover,
 .navbar .nav > li > a:focus {
     color: #808080;
-    background-color: #0B3C5D;
+    text-decoration: none;
 }
+
 .navbar .nav > li > p,
 .navbar .nav > li > p:hover,
 .navbar .nav > li > p:focus {
@@ -49,20 +74,43 @@ You should have received a copy of the GNU General Public License along with thi
     padding-bottom: 15px;
     margin-bottom: 0px;
 }
+
 ul.nav li.dropdown:hover ul.dropdown-menu {
     display: block;
 }
+
+.custom-switch,
+.custom-control-label {
+    cursor: pointer;
+}
+
 .navbar-brand {
     line-height: 32px; /* Image height */
     /* padding = ceil((51 - image height) / 2) */
     padding-bottom: 10px;
     padding-top: 10px;
 }
-@media (min-width: 768px){
-    .nav-centered {
-        float: none;
-        margin: 0 auto;
-        display: table;
-        table-layout: fixed;
-    }
+
+.nav-centered {
+    float: none;
+    margin: 0 auto;
+    display: table;
+    table-layout: fixed;
+}
+
+/* Footer flush to bottom, not fixed */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 50px; /* Margin bottom by footer height */
+}
+
+footer {
+    position: absolute !important;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
 }
