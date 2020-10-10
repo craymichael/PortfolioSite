@@ -6,11 +6,11 @@
                 <img src="{% static 'img/ZC_32x32_white.png' %}">
             </a>
         </div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="nav">
+        <div class="collapse navbar-collapse w-100 order-1 order-md-0 dual-collapse">
+            <ul class="nav mr-auto">
                 <li
                 class="nav-link{% if active == 'index' %} active{% endif %}">
                 <a href="{% url 'portfolio:index' %}">Home</a>
@@ -24,7 +24,9 @@
                 <a href="{% url 'portfolio:projects' %}">Projects</a>
                 </li>
             </ul>
-            <ul class="nav justify-content-end">
+        </div>
+        <div class="collapse navbar-collapse navbar-collapse collapse w-100 order-2 dual-collapse">
+            <ul class="nav ml-auto">
                 <li
                 class="nav-link{% if active == 'contact' %} active{% endif %}">
                 <a href="{% url 'portfolio:contact' %}">Contact</a>

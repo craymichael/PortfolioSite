@@ -42,5 +42,5 @@ section:first-child > div.row {
 }
 
 section:not(:first-child) > div.row {
-    padding-top: 50px;
+    padding-top: 70px;
 }
