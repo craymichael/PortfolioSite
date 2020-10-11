@@ -74,7 +74,7 @@ function resetTheme() {
         localStorage.setItem('darkSwitch', 'dark');
     } else {
         document.body.removeAttribute('data-theme');
-        localStorage.removeItem('darkSwitch');
+        localStorage.setItem('darkSwitch', 'light');
     }
     // darkModeHooks.forEach((el) => {
     //     el(darkSwitch.checked)
