@@ -1,0 +1,13 @@
+{% extends "portfolio/common/base.html" %}
+{% load static %}
+
+{% block title %}{{ status_code }}: {{ status_msg }}{% endblock %}
+{% block body_block %}
+<div class="row">
+    <div class="col-md-12">
+        <h2><b>{{ status_code }}: {{ status_msg }}</b></h2>
+        <p>If you believe you encountered this page in error, please
+            <a href="{% url 'portfolio:contact' %}">contact me</a>.</p>
+    </div>
+</div>
+{% endblock %}

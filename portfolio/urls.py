@@ -20,13 +20,13 @@ app_name = 'portfolio'
 
 project_patterns = [
     url(r'^$', views.ProjectsView.as_view(), name='projects'),
-    #url(r'^portfolio-site/$', views.PortfolioSiteProjectView.as_view(), name='portfolio-site'),
-    #url(r'^st-huberts-isle/$', views.StHubertProjectView.as_view(), name='st-hubert'),
+    # url(r'^/portfolio-site/$', views.PortfolioSiteProjectView.as_view(), name='portfolio-site'),
+    # url(r'^/st-huberts-isle/$', views.StHubertProjectView.as_view(), name='st-hubert'),
 ]
 
 urlpatterns = [
     url(r'^$', views.IndexView.as_view(), name='index'),
-    url(r'^portfolio/$', views.PortfolioView.as_view(), name='portfolio'),
-    url(r'^projects/', include(project_patterns)),
-    url(r'^contact/$', views.contact, name='contact'),
+    url(r'^portfolio$', views.PortfolioView.as_view(), name='portfolio'),
+    url(r'^projects', include(project_patterns)),
+    url(r'^contact$', views.contact, name='contact'),
 ]
