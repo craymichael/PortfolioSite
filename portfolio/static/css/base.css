@@ -25,7 +25,8 @@ body {
     position: fixed;
 }
 
-.justified :not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
+.justified p,
+.justified blockquote {
     text-align: justify;
     text-justify: inter-word;
 }
@@ -48,15 +49,8 @@ body {
     color: #eee;
 }
 
-/* SVG */
-[data-theme="dark"] text {
-    fill: #eee;
-}
-
-[data-theme="dark"] path {
-    stroke: #333;
-}
-
-[data-theme="dark"] circle {
-    fill: #333 !important;
+[data-theme="dark"] svg:not(.svg-no-dark-filter),
+[data-theme="dark"] img.img-dark-filter {
+    filter: invert(1) hue-rotate(180deg);
+    -webkit-filter: invert(1) hue-rotate(180deg);
 }
