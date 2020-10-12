@@ -139,5 +139,5 @@ def generic_error_handler(status_code, status_msg):
 
 handler400 = generic_error_handler(400, 'Bad Request')
 handler403 = generic_error_handler(403, 'Forbidden')
-handler404 = generic_error_handler(404, 'Not Found')
+# handler404 = generic_error_handler(404, 'Not Found')
 handler500 = generic_error_handler(500, 'Internal Server Error')

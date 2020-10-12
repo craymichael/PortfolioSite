@@ -14,14 +14,19 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf.urls import include, url
+# from django.contrib.sitemaps.views import sitemap
+
 # from django.contrib import admin
 
 urlpatterns = [
     # url(r'^admin/', admin.site.urls),
-    url(r'^', include('portfolio.urls'))
+    url(r'^', include('portfolio.urls')),
+    # url('sitemap.xml', sitemap, {'sitemaps': sitemaps},
+    #     name='django.contrib.sitemaps.views.sitemap')
 ]
 
+# Custom error handlers
 handler400 = 'portfolio.views.handler400'
 handler403 = 'portfolio.views.handler403'
-handler404 = 'portfolio.views.handler404'
+# handler404 = 'portfolio.views.handler404'
 handler500 = 'portfolio.views.handler500'

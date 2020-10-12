@@ -114,3 +114,8 @@ footer {
     width: 100%;
     height: 50px;
 }
+
+.nav-link.nav-logo {
+    padding-right: 11px;
+    padding-left: 11px;
+}
