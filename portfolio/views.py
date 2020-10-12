@@ -124,20 +124,3 @@ def contact(request):
 
     return render(request, 'portfolio/contact.html',
                   context={'form': form, 'active': 'contact'})
-
-
-def generic_error_handler(status_code, status_msg):
-    def handler_func(request, exception=None):  # noqa
-        response = render(request, 'portfolio/error/generic_error.html',
-                          context={'status_msg': status_msg,
-                                   'status_code': status_code},
-                          status=status_code)
-        return response
-
-    return handler_func
-
-
-handler400 = generic_error_handler(400, 'Bad Request')
-handler403 = generic_error_handler(403, 'Forbidden')
-# handler404 = generic_error_handler(404, 'Not Found')
-handler500 = generic_error_handler(500, 'Internal Server Error')
