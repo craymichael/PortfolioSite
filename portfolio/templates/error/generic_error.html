@@ -2,8 +2,8 @@
 {% load static %}
 
 {% block body_block %}
-<div class="row">
-    <div class="col-md-12 text-center">
+<div class="row align-items-center justify-content-center">
+    <div class="col-md-6 text-center">
         <h1><b>{% block status_code_msg %}{% endblock %}</b></h1>
         <br>
         <br>
@@ -23,7 +23,12 @@
         <br>
         <br>
         <br>
-
+        {% if message %}
+        <div class="error-message">
+        {{message|safe}}
+        </div>
+        <br>
+        {% endif %}
         <h6>If you believe you encountered this page in error, please
             <a href="{% url 'portfolio:contact' %}">contact me</a>.</h6>
     </div>

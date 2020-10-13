@@ -82,6 +82,8 @@ TEMPLATES = [
         },
     },
 ]
+# CSRF template
+CSRF_FAILURE_VIEW = 'portfolio.views.csrf_failure'
 
 WSGI_APPLICATION = 'PortfolioSite.wsgi.application'
 

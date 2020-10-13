@@ -19,6 +19,7 @@ from django.core.exceptions import ImproperlyConfigured
 from django.core.mail import EmailMessage
 from django.shortcuts import redirect, render, reverse
 from django.template.loader import get_template
+from django.utils.html import escape
 from django.views import generic
 
 from django.conf import settings
@@ -124,3 +125,21 @@ def contact(request):
 
     return render(request, 'portfolio/contact.html',
                   context={'form': form, 'active': 'contact'})
+
+
+CSRF_FAILURE_MSG = '''<h6><b>CSRF verification failed! Request aborted.</b></h6>
+<br>
+You are seeing this message because this site requires a CSRF cookie when
+submitting forms. This cookie is required for security reasons, to ensure that
+your browser is not being hijacked by third parties.
+<br>
+If you have configured your browser to disable cookies, please re-enable them,
+at least for this site, or for “same-origin” requests.'''
+
+
+def csrf_failure(request, reason=''):
+    msg = CSRF_FAILURE_MSG
+    if reason:
+        msg += '<br><b>Reason:</b> ' + escape(reason)
+    return render(request, '403.html',
+                  context={'message': msg})
