@@ -13,8 +13,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 _config_filename = 'settings.ini'
 
 _config_local_name = os.path.join(BASE_DIR, _config_filename)
-_config_home_name = os.path.join('~', '.portfoliosite', _config_filename)
-_config_etc_name = os.path.join('etc', 'portfoliosite', _config_filename)
+_config_home_name = os.path.expanduser(
+    os.path.join('~', '.portfoliosite', _config_filename))
+_config_etc_name = os.path.join('/etc', 'portfoliosite', _config_filename)
 
 if os.path.isfile(_config_local_name):
     _config_path = _config_local_name
