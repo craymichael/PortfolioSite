@@ -1,9 +1,9 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "c3340bcc11e147dd1ddf1effda49665b3bf2216ffc3f8400de2850abaa61817a"
+            "sha256": "77463d3922f05245c549e67e1f8398df44ae7f91d00fa41dcfb33198afd08558"
         },
-        "pipfile-spec": 1,
+        "pipfile-spec": 6,
         "requires": {},
         "sources": [
             {
@@ -14,25 +14,53 @@
     },
     "default": {
         "asgiref": {
-            "version": "==3.2.7"
+            "hashes": [
+                "sha256:5ee950735509d04eb673bd7f7120f8fa1c9e2df495394992c73234d526907e17",
+                "sha256:7162a3cb30ab0609f1a4c95938fd73e8604f63bdba516a7f7d64b83ff09478f0"
+            ],
+            "markers": "python_version >= '3.5'",
+            "version": "==3.3.1"
         },
         "django": {
-            "version": "==3.0.7"
+            "hashes": [
+                "sha256:169e2e7b4839a7910b393eec127fd7cbae62e80fa55f89c6510426abf673fe5f",
+                "sha256:c6c0462b8b361f8691171af1fb87eceb4442da28477e12200c40420176206ba7"
+            ],
+            "version": "==3.1.6"
         },
         "django-subdomains": {
+            "hashes": [
+                "sha256:5684bb3a731de2295a549f6f2c3d6a806da802ff1ad369babd57cf008d9a783f"
+            ],
             "version": "==2.1.0"
         },
         "mod-wsgi": {
+            "hashes": [
+                "sha256:eaeadc28d06ea42fa565c02b83504074ac558fca27f059e12bc5684d660e3cce"
+            ],
             "version": "==4.7.1"
         },
         "pytz": {
-            "version": "==2020.1"
+            "hashes": [
+                "sha256:83a4a90894bf38e243cf052c8b58f381bfe9a7a483f6a9cab140bc7f702ac4da",
+                "sha256:eb10ce3e7736052ed3623d49975ce333bcd712c7bb19a58b9e2089d4057d0798"
+            ],
+            "version": "==2021.1"
         },
         "six": {
+            "hashes": [
+                "sha256:30639c035cdb23534cd4aa2dd52c3bf48f06e5f4a941509c8bafd8ce11080259",
+                "sha256:8b74bedcbbbaca38ff6d7491d76f2b06b3592611af620f8426e82dddb04a5ced"
+            ],
             "version": "==1.15.0"
         },
         "sqlparse": {
-            "version": "==0.3.1"
+            "hashes": [
+                "sha256:017cde379adbd6a1f15a61873f43e8274179378e95ef3fede90b5aa64d304ed0",
+                "sha256:0f91fd2e829c44362cbcfab3e9ae12e22badaa8a29ad5ff599f9ec109f0454e8"
+            ],
+            "markers": "python_version >= '3.5'",
+            "version": "==0.4.1"
         }
     },
     "develop": {}
