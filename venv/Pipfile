@@ -3,7 +3,7 @@ verify_ssl = true
 url = "https://pypi.python.org/simple"
 
 [packages]
-Django = "==3.0.7"
+Django = "==3.1.6"
 django-subdomains = "*"
 six = "*"
 mod-wsgi = "*"
