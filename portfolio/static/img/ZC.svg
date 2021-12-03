@@ -18,14 +18,15 @@
        id="clipPath18"
        clipPathUnits="userSpaceOnUse"><path
          id="path16"
-         d="M 0,500 H 500 V 0 H 0 Z" /></clipPath></defs><g
+         d="M 0,500 H 500 V 0 H 0 Z" /></clipPath>
+</defs><g
      transform="matrix(1.3333333,0,0,-1.3333333,0,666.66667)"
      id="g10"><g
        id="g12"><g
          clip-path="url(#clipPath18)"
          id="g14"><text
            id="text24"
-           style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:522.7512207px;font-family:'Shonar Bangla';-inkscape-font-specification:ShonarBangla;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           style="font-variant:normal;font-weight:normal;font-stretch:normal;font-size:494px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRoman;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
            transform="matrix(1,0,0,-1,64.0005,173.0879)"><tspan
              id="tspan20"
              y="0"
