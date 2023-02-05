@@ -38,7 +38,7 @@ SECRET_KEY = _config.get('security', 'SECRET_KEY')
 RECAPTCHA_SECRET_KEY = _config.get('security', 'RECAPTCHA_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = bool(os.environ.get('PORTFOLIO_WEBSITE_DJANGO_DEBUG', False))
 
 ALLOWED_HOSTS = _config.get('hosts', 'ALLOWED_HOSTS')
 ALLOWED_HOSTS = [_host.strip() for _host in ALLOWED_HOSTS.split(',')]

@@ -14,6 +14,8 @@
 # ======================================================================================================================
 from __future__ import absolute_import
 
+import os
+
 from django.contrib import messages
 from django.core.exceptions import ImproperlyConfigured
 from django.core.mail import EmailMessage
@@ -21,6 +23,8 @@ from django.shortcuts import redirect, render, reverse
 from django.template.loader import get_template
 from django.utils.html import escape
 from django.views import generic
+from django.http import FileResponse, Http404
+from django.templatetags.static import static
 
 from django.conf import settings
 from .forms import ContactForm
@@ -125,6 +129,15 @@ def contact(request):
 
     return render(request, 'portfolio/contact.html',
                   context={'form': form, 'active': 'contact'})
+
+
+def cv_view(request):
+    path = os.path.join(settings.STATIC_ROOT, 'pdf',
+                        'Zachariah_Carmichael_CV_20230205.pdf')
+    try:
+        return FileResponse(open(path, 'rb'), content_type='application/pdf')
+    except FileNotFoundError:
+        raise Http404()
 
 
 CSRF_FAILURE_MSG = '''<h6><b>CSRF verification failed! Request aborted.</b></h6>

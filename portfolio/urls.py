@@ -29,4 +29,5 @@ urlpatterns = [
     url(r'^portfolio$', views.PortfolioView.as_view(), name='portfolio'),
     url(r'^projects', include(project_patterns)),
     url(r'^contact$', views.contact, name='contact'),
+    url(r'^[cC][vV]$', views.cv_view, name='cv'),
 ]

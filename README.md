@@ -15,8 +15,10 @@ the server with insecure settings in order to serve static content (unless you s
 `DEBUG` to false in `settings.py`:
 
 ```shell script
-python manage.py runserver --insecure
+PORTFOLIO_WEBSITE_DJANGO_DEBUG=1 python manage.py runserver --insecure
 ```
+
+Setting `PORTFOLIO_WEBSITE_DJANGO_DEBUG=1` enables debug mode in `settings.py`.
 
 # Development Notes
 
