@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "a87983214893b3e7510c99b0fa32685736607356e9f6a936becb66bfc8d1fb74"
+            "sha256": "34ed7386a41d168b779c70b71debd452938a01c90aca4b600fe25da528919f58"
         },
         "pipfile-spec": 6,
         "requires": {},
@@ -30,6 +30,14 @@
             "index": "pypi",
             "version": "==4.1.7"
         },
+        "django-ipware": {
+            "hashes": [
+                "sha256:4fa5607ee85e12ee5e158bc7569ff1e134fb1579681aa1ff3f0ed04be21be153",
+                "sha256:80b52a3f571a371519cc552798f1015b934dd5dd7738bfad87e101e861bd21b8"
+            ],
+            "index": "pypi",
+            "version": "==5.0.0"
+        },
         "django-subdomains": {
             "hashes": [
                 "sha256:5684bb3a731de2295a549f6f2c3d6a806da802ff1ad369babd57cf008d9a783f"
@@ -43,14 +51,6 @@
             ],
             "index": "pypi",
             "version": "==4.9.4"
-        },
-        "six": {
-            "hashes": [
-                "sha256:1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926",
-                "sha256:8abb2f1d86890a2dfb989f9a77cfcfd3e47c2a354b01111771326f8aa26e0254"
-            ],
-            "index": "pypi",
-            "version": "==1.16.0"
         },
         "sqlparse": {
             "hashes": [

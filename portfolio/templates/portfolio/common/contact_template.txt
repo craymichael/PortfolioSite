@@ -1,5 +1,6 @@
 Name: {{ contact_name }}
 Contact Email: {{ contact_email }}
+IP Address: {{ ip_address }}
 
 Message:
 {{ form_content|safe|striptags }}
