@@ -15,6 +15,10 @@
 from __future__ import absolute_import
 
 import os
+import logging
+import re
+
+from ipware import get_client_ip
 
 from django.contrib import messages
 from django.core.exceptions import ImproperlyConfigured
@@ -28,6 +32,8 @@ from django.templatetags.static import static
 
 from django.conf import settings
 from .forms import ContactForm
+
+logger = logging.getLogger(__name__)
 
 
 class _BaseTemplateView(generic.TemplateView):
@@ -91,6 +97,86 @@ class StHubertProjectView(_BaseProjectView):
     active_project = 'st-hubert'
 
 
+def get_client_ip_str(request):
+    """https://stackoverflow.com/a/16203978/6557588"""
+    ip, is_routable = get_client_ip(request)
+    if ip is None:
+        # Unable to get the client's IP address
+        ip = 'Unable to get IP'
+    else:
+        # We got the client's IP address
+        if is_routable:
+            # The client's IP address is publicly routable on the Internet
+            ip = '{}'.format(ip)
+        else:
+            # The client's IP address is private
+            ip = '{} (Private IP)'.format(ip)
+    return ip
+
+
+# Please stop bypassing my captchas so send me spam -_-
+spam_rx = re.compile(
+    r'(leadgeneration|'
+    r'jasperchatbot|'
+    r'messagenexus|'
+    r'0day(music|flac)|'
+    r'minutes = \$|'
+    r'^\s*https?://[^\s]+\s*$|'  # messages that are just a URL
+    r'(\W|^)bit\.ly(\W|$)|'
+    r'(\W|^)short\.gy(\W|$)|'
+    r'(\W|^)monkeydigital\.co(\W|$)|'
+    r'(\W|^)tinyurl\.com(\W|$)|'
+    r'(\W|^)moviesfunhd\.com(\W|$)|'
+    r'(\W|^)taskbullet\.com(\W|$)|'
+    r'(\W|^)everadvice\.pl(\W|$)|'
+    r'(\W|^)bitcoin-neo\.com(\W|$)|'
+    r'(\W|^)online casin(o|u)s?(\W|$)|'
+    r'(\W|^)chance to win?(\W|$)|'
+    r'(\W|^)porn(\W|$)|'
+    r'(\W|^)XEvil\s\d|'
+    r'(\W|^)opt(-|\s)?out of future communications?(\W|$)|'
+    r'(\W|^)suboxone withdrawal(\W|$)|'
+    r'(\W|^)gum abscess remed(y|ies)(\W|$)|'
+    r'(\W|^)reallygoodemails\.com(\W|$)|'
+    r'(\W|^)shippills\.com(\W|$)|'
+    r'(\W|^)NFT(\W|$)|'
+    r'(\W|^)sports? betting(\W|$)|'
+    r'(\W|^)message id:(\W|$)|'
+    r'(\W|^)u\.to(\W|$)|'
+    r'(\W|^)asso-web\.com(\W|$)|'
+    r'[a-z0-9]\.ru(\W|$)|'
+    r'(\W|^)haschisch(\W|$)|'
+    r'(\W|^)SERVICE EXPIRATION FOR zachariahcarmichael\.com(\W|$)|'
+    r'(\W|^)ARTBBS(\W|$)|'
+    r'(\W|^)593moli\.com(\W|$)|'
+    r'(\W|^)bugivanno\.com(\W|$)|'
+    r'(\W|^)bunnyvv\.space(\W|$)|'
+    r'(\W|^)2track\.info(\W|$)|'
+    r'(\W|^)lone1y\.com(\W|$)|'
+    r'(\W|^)popcornflix\.pl(\W|$)|'
+    r'(\W|^)buy mobile prox(y|ies)(\W|$)|'
+    r'(\W|^)301 Moved Permanently(\W|$)|'
+    r'(\W|^)nymрho|'
+    r'[А-я]+|'
+    r'Google Map Stacking|'
+    r'(\W|^)digital-x-press(\W|$)|'
+    r'unsubscribe click here|'
+    r'(\W|^)strictlydigital\.net(\W|$)|'
+    r'(\W|^)SEO Trend(\W|$)|'
+    r'(\W|^)SEO Campaigns?(\W|$)|'
+    r'(\W|^)we offer SEO(\W|$)|'
+    r'I work for a digital marketing agency|'
+    r'This (letter|message|email) (is|was) (sent|created) automatically)',
+    flags=re.IGNORECASE,
+)
+bad_emails_rx = re.compile(r'(.*no-?reply.*@|\.ru\s*$)',
+                           flags=re.IGNORECASE)
+
+
+def is_spammy(message, email):
+    return bool(spam_rx.search(message)) or bool(bad_emails_rx.search(email))
+
+
 def contact(request):
     if request.method == 'POST':
         form = ContactForm(data=request.POST, request=request)
@@ -101,23 +187,34 @@ def contact(request):
             contact_email = request.POST.get('contact_email', '')
             form_content = request.POST.get('message', '')
 
-            # Render email template with name and message
-            # Email not included; reply to message to view sender's actual email
-            # (stored in headers)
-            template = get_template('portfolio/common/contact_template.txt')
-            context = {
-                'contact_name': contact_name,
-                'contact_email': contact_email,
-                'form_content': form_content
-            }
-            content = template.render(context)
+            # Check form for spam. If spammy, don't send the email and silently
+            # fail (end user won't be able to tell the difference)
 
-            # Create and send email message
-            email = EmailMessage(subject='[DJANGO] Portfolio Inquiry',
-                                 body=content,
-                                 to=[settings.CONTACT_EMAIL],
-                                 reply_to=[contact_email])
-            email.send()
+            if is_spammy(form_content, contact_email):
+                logger.warning(
+                    'Not sending the following spam message from {} ({}) with '
+                    'the content:\n{}'.format(contact_name, contact_email,
+                                              form_content)
+                )
+            else:
+                # Render email template with name and message
+                # Email not included; reply to message to view sender's actual
+                # email (stored in headers)
+                template = get_template('portfolio/common/contact_template.txt')
+                context = {
+                    'contact_name': contact_name,
+                    'contact_email': contact_email,
+                    'form_content': form_content,
+                    'ip_address': get_client_ip_str(request),
+                }
+                content = template.render(context)
+
+                # Create and send email message
+                email = EmailMessage(subject='[DJANGO] Portfolio Inquiry',
+                                     body=content,
+                                     to=[settings.CONTACT_EMAIL],
+                                     reply_to=[contact_email])
+                email.send()
 
             # Add success message in browser storage
             messages.success(request, 'Thanks for the inquiry! I will get back '
@@ -133,7 +230,7 @@ def contact(request):
 
 def cv_view(request):
     path = os.path.join(settings.STATIC_ROOT, 'pdf',
-                        'Zachariah_Carmichael_CV_20230205.pdf')
+                        'Zachariah_Carmichael_CV_20230319.pdf')
     try:
         return FileResponse(open(path, 'rb'), content_type='application/pdf')
     except FileNotFoundError:

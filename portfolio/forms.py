@@ -26,16 +26,6 @@ from PortfolioSite import settings
 VERIFY_URL = 'https://www.google.com/recaptcha/api/siteverify'
 
 
-def get_client_ip(request):
-    """https://stackoverflow.com/q/4581789/6557588"""
-    x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
-    if x_forwarded_for:
-        ip = x_forwarded_for.split(',')[0]
-    else:
-        ip = request.META.get('REMOTE_ADDR')
-    return ip
-
-
 class ContactForm(forms.Form):
     # https://en.wikipedia.org/wiki/Hubert_Blaine_Wolfeschlegelsteinhausenbergerdorff,_Sr.
     contact_name = forms.CharField(max_length=666, required=True)
