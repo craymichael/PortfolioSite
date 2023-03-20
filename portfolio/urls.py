@@ -12,22 +12,22 @@
 # You should have received a copy of the GNU General Public License along with this program.  If not, see
 # <http://www.gnu.org/licenses/>.
 # ======================================================================================================================
-from django.conf.urls import include, url
+from django.urls import include, re_path
 
 from . import views
 
 app_name = 'portfolio'
 
 project_patterns = [
-    url(r'^$', views.ProjectsView.as_view(), name='projects'),
-    # url(r'^/portfolio-site/$', views.PortfolioSiteProjectView.as_view(), name='portfolio-site'),
-    # url(r'^/st-huberts-isle/$', views.StHubertProjectView.as_view(), name='st-hubert'),
+    re_path(r'^$', views.ProjectsView.as_view(), name='projects'),
+    # re_path(r'^/portfolio-site/$', views.PortfolioSiteProjectView.as_view(), name='portfolio-site'),
+    # re_path(r'^/st-huberts-isle/$', views.StHubertProjectView.as_view(), name='st-hubert'),
 ]
 
 urlpatterns = [
-    url(r'^$', views.IndexView.as_view(), name='index'),
-    url(r'^portfolio$', views.PortfolioView.as_view(), name='portfolio'),
-    url(r'^projects', include(project_patterns)),
-    url(r'^contact$', views.contact, name='contact'),
-    url(r'^[cC][vV]$', views.cv_view, name='cv'),
+    re_path(r'^$', views.IndexView.as_view(), name='index'),
+    re_path(r'^portfolio$', views.PortfolioView.as_view(), name='portfolio'),
+    re_path(r'^projects', include(project_patterns)),
+    re_path(r'^contact$', views.contact, name='contact'),
+    re_path(r'^[cC][vV]$', views.cv_view, name='cv'),
 ]
