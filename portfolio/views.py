@@ -149,6 +149,7 @@ spam_rx = re.compile(
     r'(\W|^)SERVICE EXPIRATION FOR zachariahcarmichael\.com(\W|$)|'
     r'(\W|^)ARTBBS(\W|$)|'
     r'(\W|^)593moli\.com(\W|$)|'
+    r'(\W|^)love2me(\W|$)|'
     r'(\W|^)bugivanno\.com(\W|$)|'
     r'(\W|^)bunnyvv\.space(\W|$)|'
     r'(\W|^)2track\.info(\W|$)|'
