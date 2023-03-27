@@ -159,6 +159,7 @@ spam_rx = re.compile(
     r'(\W|^)301 Moved Permanently(\W|$)|'
     r'(\W|^)nymрho|'
     r'[А-я]+|'
+    r'we +only +use +chat +for +communication|'
     r'Google Map Stacking|'
     r'(\W|^)digital-x-press(\W|$)|'
     r'unsubscribe click here|'
@@ -170,7 +171,7 @@ spam_rx = re.compile(
     r'This (letter|message|email) (is|was) (sent|created) automatically)',
     flags=re.IGNORECASE,
 )
-bad_emails_rx = re.compile(r'(.*no-?reply.*@|\.ru\s*$)',
+bad_emails_rx = re.compile(r'(.*no([-.]+)?reply.*@|\.ru\s*$)',
                            flags=re.IGNORECASE)
 
 
