@@ -28,6 +28,7 @@ urlpatterns = [
     re_path(r'^$', views.IndexView.as_view(), name='index'),
     re_path(r'^portfolio$', views.PortfolioView.as_view(), name='portfolio'),
     re_path(r'^projects', include(project_patterns)),
+    re_path(r'^blog$', views.BlogView.as_view(), name='blog'),
     re_path(r'^contact$', views.contact, name='contact'),
     re_path(r'^[cC][vV]$', views.cv_view, name='cv'),
 ]

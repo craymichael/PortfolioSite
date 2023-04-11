@@ -69,6 +69,11 @@ class ProjectsView(_BaseTemplateView):
     active = 'projects'
 
 
+class BlogView(_BaseTemplateView):
+    template_name = 'portfolio/blog.html'
+    active = 'blog'
+
+
 class _BaseProjectView(_BaseTemplateView):
     active = 'projects'
     active_project = None

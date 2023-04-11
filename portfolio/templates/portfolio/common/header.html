@@ -23,6 +23,10 @@
                 class="nav-link{% if active == 'projects' %} active{% endif %}">
                 <a href="{% url 'portfolio:projects' %}">Projects</a>
                 </li>
+                <li
+                class="nav-link{% if active == 'blog' %} active{% endif %}">
+                <a href="{% url 'portfolio:blog' %}">Blog</a>
+                </li>
             </ul>
         </div>
         <div class="collapse navbar-collapse navbar-collapse collapse w-100 order-2 dual-collapse">
