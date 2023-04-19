@@ -128,6 +128,7 @@ spam_rx = re.compile(
     r'minutes = \$|'
     r'^\s*https?://[^\s]+\s*$|'  # messages that are just a URL
     r'(\W|^)bit\.ly(\W|$)|'
+    r'(\W|^)shorturl\.at(\W|$)|'
     r'(\W|^)short\.gy(\W|$)|'
     r'(\W|^)monkeydigital\.co(\W|$)|'
     r'(\W|^)tinyurl\.com(\W|$)|'
@@ -172,6 +173,7 @@ spam_rx = re.compile(
     r'(\W|^)SEO Trend(\W|$)|'
     r'(\W|^)SEO Campaigns?(\W|$)|'
     r'(\W|^)we offer SEO(\W|$)|'
+    r'(\W|^)save you (at least)? \d+% off(\W|$)|'
     r'I work for a digital marketing agency|'
     r'This (letter|message|email) (is|was) (sent|created) automatically)',
     flags=re.IGNORECASE,
