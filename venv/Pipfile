@@ -4,7 +4,7 @@ url = "https://pypi.python.org/simple"
 verify_ssl = true
 
 [packages]
-Django = "==4.1.7"
+Django = ">=4.1.10"
 django-subdomains = "*"
 mod-wsgi = "*"
 django-ipware = "*"
