@@ -6,72 +6,78 @@
                 <img src="{% static 'img/ZC_white.svg' %}" alt="ZC" width="32">
             </a>
         </div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse w-100 order-1 order-md-0 dual-collapse">
             <ul class="nav mr-auto">
-                <li
-                class="nav-link{% if active == 'index' %} active{% endif %}">
-                <a href="{% url 'portfolio:index' %}">Home</a>
+                <li class="nav-item{% if active == 'index' %} active{% endif %}">
+                    <a class="nav-link" href="{% url 'portfolio:index' %}">Home</a>
                 </li>
-                <li
-                class="nav-link{% if active == 'portfolio' %} active{% endif %}">
-                <a href="{% url 'portfolio:portfolio' %}">Portfolio</a>
+                <li class="nav-item{% if active == 'portfolio' %} active{% endif %}">
+                    <a class="nav-link" href="{% url 'portfolio:portfolio' %}">Portfolio</a>
                 </li>
-                <li
-                class="nav-link{% if active == 'projects' %} active{% endif %}">
-                <a href="{% url 'portfolio:projects' %}">Projects</a>
+                <li class="nav-item{% if active == 'projects' %} active{% endif %}">
+                    <a class="nav-link" href="{% url 'portfolio:projects' %}">Projects</a>
                 </li>
-                <li
-                class="nav-link{% if active == 'blog' %} active{% endif %}">
-                <a href="{% url 'portfolio:blog' %}">Blog</a>
+                <li class="nav-item{% if active == 'blog' %} active{% endif %}">
+                    <a class="nav-link" href="{% url 'portfolio:blog' %}">Blog</a>
                 </li>
             </ul>
         </div>
         <div class="collapse navbar-collapse navbar-collapse collapse w-100 order-2 dual-collapse">
             <ul class="nav ml-auto">
-                <li
-                class="nav-link{% if active == 'contact' %} active{% endif %}">
-                <a href="{% url 'portfolio:contact' %}">Contact</a>
+                <li class="nav-item{% if active == 'contact' %} active{% endif %}">
+                    <a class="nav-link" href="{% url 'portfolio:contact' %}">Contact</a>
                 </li>
-                <li class="nav-link nav-logo">
-                    <a href="{% url 'portfolio:cv' %}" target="_blank">
-                        <img src="{% static 'img/cv_icon.png' %}" title="Curriculum Vitae" alt="My Curriculum Vitae"></a>
+                <li class="nav-item nav-logo">
+                    <a class="nav-link" href="{% url 'portfolio:cv' %}" target="_blank">
+                        <img src="{% static 'img/cv_icon.png' %}" title="Curriculum Vitae"
+                             alt="My Curriculum Vitae"></a>
                 </li>
-                <li class="nav-link nav-logo">
-                    <a href="https://www.linkedin.com/in/craymichael/" target="_blank">
+                <li class="nav-item nav-logo">
+                    <a class="nav-link" href="https://www.linkedin.com/in/craymichael/" target="_blank">
                         <img src="{% static 'img/linkedin.png' %}" title="LinkedIn" alt="My LinkedIn Profile"></a>
                 </li>
-<!--                <li class="nav-link nav-logo">-->
-<!--                    <a href="http://meritpages.com/Zachariah-Carmichael/" target="_blank">-->
-<!--                        <img src="{% static 'img/meritpages.png' %}"></a>-->
-<!--                </li>-->
-                <li class="nav-link nav-logo">
-                    <a href="https://github.com/craymichael" target="_blank">
+                <!--                <li class="nav-item nav-logo">-->
+                <!--                    <a href="http://meritpages.com/Zachariah-Carmichael/" target="_blank">-->
+                <!--                        <img src="{% static 'img/meritpages.png' %}"></a>-->
+                <!--                </li>-->
+                <li class="nav-item nav-logo">
+                    <a class="nav-link" href="https://github.com/craymichael" target="_blank">
                         <img src="{% static 'img/GitHub-Mark-Light-32px.png' %}" title="GitHub" alt="My GitHub Profile">
                     </a>
                 </li>
-                <li class="nav-link nav-logo">
-                    <a href="https://stackoverflow.com/users/6557588/craymichael" target="_blank">
-                        <img src="{% static 'img/so_favicon.ico' %}" title="StackOverflow" alt="My StackOverflow Profile">
+                <li class="nav-item nav-logo">
+                    <a class="nav-link" href="https://stackoverflow.com/users/6557588/craymichael" target="_blank">
+                        <img src="{% static 'img/so_favicon.ico' %}" title="StackOverflow"
+                             alt="My StackOverflow Profile">
                     </a>
                 </li>
-                <li class="nav-link nav-logo">
-                    <a href="https://scholar.google.com/citations?user=1Nq_tGYAAAAJ" target="_blank">
-                        <img src="{% static 'img/google-scholar-favicon.ico' %}" title="Google Scholar" alt="My Google Scholar Profile">
+                <li class="nav-item nav-logo">
+                    <a class="nav-link" href="https://scholar.google.com/citations?user=1Nq_tGYAAAAJ" target="_blank">
+                        <img src="{% static 'img/google-scholar-favicon.ico' %}" title="Google Scholar"
+                             alt="My Google Scholar Profile">
                     </a>
                 </li>
                 <li class="nav-link custom-toggle-switch">
                     <div class="custom-control custom-switch">
                         <input type="checkbox" class="custom-control-input" id="darkSwitch"/>
                         <label class="custom-control-label" for="darkSwitch">
-                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-sun svg-no-dark-filter" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-  <path d="M3.5 8a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0z"/>
-  <path fill-rule="evenodd" d="M8.202.28a.25.25 0 0 0-.404 0l-.91 1.255a.25.25 0 0 1-.334.067L5.232.79a.25.25 0 0 0-.374.155l-.36 1.508a.25.25 0 0 1-.282.19l-1.532-.245a.25.25 0 0 0-.286.286l.244 1.532a.25.25 0 0 1-.189.282l-1.509.36a.25.25 0 0 0-.154.374l.812 1.322a.25.25 0 0 1-.067.333l-1.256.91a.25.25 0 0 0 0 .405l1.256.91a.25.25 0 0 1 .067.334L.79 10.768a.25.25 0 0 0 .154.374l1.51.36a.25.25 0 0 1 .188.282l-.244 1.532a.25.25 0 0 0 .286.286l1.532-.244a.25.25 0 0 1 .282.189l.36 1.508a.25.25 0 0 0 .374.155l1.322-.812a.25.25 0 0 1 .333.067l.91 1.256a.25.25 0 0 0 .405 0l.91-1.256a.25.25 0 0 1 .334-.067l1.322.812a.25.25 0 0 0 .374-.155l.36-1.508a.25.25 0 0 1 .282-.19l1.532.245a.25.25 0 0 0 .286-.286l-.244-1.532a.25.25 0 0 1 .189-.282l1.508-.36a.25.25 0 0 0 .155-.374l-.812-1.322a.25.25 0 0 1 .067-.333l1.256-.91a.25.25 0 0 0 0-.405l-1.256-.91a.25.25 0 0 1-.067-.334l.812-1.322a.25.25 0 0 0-.155-.374l-1.508-.36a.25.25 0 0 1-.19-.282l.245-1.532a.25.25 0 0 0-.286-.286l-1.532.244a.25.25 0 0 1-.282-.189l-.36-1.508a.25.25 0 0 0-.374-.155l-1.322.812a.25.25 0 0 1-.333-.067L8.203.28zM8 2.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11z"/>
-</svg> / <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-moon svg-no-dark-filter" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-  <path fill-rule="evenodd" d="M14.53 10.53a7 7 0 0 1-9.058-9.058A7.003 7.003 0 0 0 8 15a7.002 7.002 0 0 0 6.53-4.47z"/>
-</svg></label>
+                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-sun svg-no-dark-filter"
+                                 fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3.5 8a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0z"/>
+                                <path fill-rule="evenodd"
+                                      d="M8.202.28a.25.25 0 0 0-.404 0l-.91 1.255a.25.25 0 0 1-.334.067L5.232.79a.25.25 0 0 0-.374.155l-.36 1.508a.25.25 0 0 1-.282.19l-1.532-.245a.25.25 0 0 0-.286.286l.244 1.532a.25.25 0 0 1-.189.282l-1.509.36a.25.25 0 0 0-.154.374l.812 1.322a.25.25 0 0 1-.067.333l-1.256.91a.25.25 0 0 0 0 .405l1.256.91a.25.25 0 0 1 .067.334L.79 10.768a.25.25 0 0 0 .154.374l1.51.36a.25.25 0 0 1 .188.282l-.244 1.532a.25.25 0 0 0 .286.286l1.532-.244a.25.25 0 0 1 .282.189l.36 1.508a.25.25 0 0 0 .374.155l1.322-.812a.25.25 0 0 1 .333.067l.91 1.256a.25.25 0 0 0 .405 0l.91-1.256a.25.25 0 0 1 .334-.067l1.322.812a.25.25 0 0 0 .374-.155l.36-1.508a.25.25 0 0 1 .282-.19l1.532.245a.25.25 0 0 0 .286-.286l-.244-1.532a.25.25 0 0 1 .189-.282l1.508-.36a.25.25 0 0 0 .155-.374l-.812-1.322a.25.25 0 0 1 .067-.333l1.256-.91a.25.25 0 0 0 0-.405l-1.256-.91a.25.25 0 0 1-.067-.334l.812-1.322a.25.25 0 0 0-.155-.374l-1.508-.36a.25.25 0 0 1-.19-.282l.245-1.532a.25.25 0 0 0-.286-.286l-1.532.244a.25.25 0 0 1-.282-.189l-.36-1.508a.25.25 0 0 0-.374-.155l-1.322.812a.25.25 0 0 1-.333-.067L8.203.28zM8 2.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11z"/>
+                            </svg>
+                            /
+                            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-moon svg-no-dark-filter"
+                                 fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                      d="M14.53 10.53a7 7 0 0 1-9.058-9.058A7.003 7.003 0 0 0 8 15a7.002 7.002 0 0 0 6.53-4.47z"/>
+                            </svg>
+                        </label>
                     </div>
                     <script src="{% static 'js/dark-mode-switch.min.js' %}"></script>
                 </li>
