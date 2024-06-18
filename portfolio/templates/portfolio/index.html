@@ -8,31 +8,24 @@
     <div class="col-md-7 justified">
         <h2><b>Greetings!</b></h2>
         <p>
-            Welcome to my personal site! I am currently a PhD candidate at the Computer Vision Research Lab (CVRL) in
-            the Computer Science & Engineering doctorate program at the University of Notre Dame will be graduating this
-            academic year.
-        </p>
-        <p>
-            My expertise
-            and passion is in explainable AI (XAI) solutions - we must be able to understand how decisions are made in
-            order to trust the decision-makers. I am actively working on opening up the deep learning black box,
-            exploring intrinsically comprehensible algorithms, and shedding light on poor practices in interpretability
-            research. I am fervent about responsibly deploying AI for the betterment of society, deepening our
+            Welcome to my personal site! I am an AI researcher with a passion for explainable AI (XAI) solutions -
+            we must be able to understand how algorithmic decisions are made before such systems are adopted safely and
+            responsibly. My PhD is from the University of Notre Dame where I defended my
+            <a href="https://curate.nd.edu/articles/dataset/Explainable_AI_for_High-Stakes_Decision-Making/25562967" target="_blank">dissertation</a>,
+            <i>Explainable AI for High-Stakes Decision-Making</i>. Therein, I dive into how we can open the AI black box,
+            explore intrinsically comprehensible algorithms, and shed light on poor practices in interpretability
+            research. I care about responsibly deploying AI for the betterment of society, deepening our
             understanding of machine learning algorithms, and contributing to the
             <a href="https://en.wikipedia.org/wiki/Free_and_open-source_software">FLOSS</a> ecosystem.
         </p>
-        <p>
-            Hiring? I'm looking. Please <a href="{% url 'portfolio:contact' %}">contact me</a> if you think I would be a
-            good fit!
-        </p>
         <hr>
-        <h5><a href="{% url 'portfolio:portfolio' %}">View My Portfolio</a></h5>
+        <h5><b><a href="{% url 'portfolio:portfolio' %}">View My Portfolio</a></b></h5>
         <p>
-            Check out my <a href="{% url 'portfolio:projects' %}">projects</a> here and on <a href="https://github.com/craymichael/">GitHub</a>.
+            Check out my <a href="{% url 'portfolio:projects' %}">projects</a> and <a href="https://github.com/craymichael/">GitHub</a>.
             If you like the site and want to explore or use it yourself, view the
-            <a href="https://github.com/craymichael/PortfolioSite" target="_blank">source on GitHub</a>.
+            <a href="https://github.com/craymichael/PortfolioSite" target="_blank">source</a> on GitHub.
         </p>
-        <p>If you would like to <a href="{% url 'portfolio:contact' %}">contact me</a>, feel free to do so.</p>
+        <p>Please don't hesitate to <a href="{% url 'portfolio:contact' %}">contact me</a>!</p>
     </div>
     <div class="col-md-5">
         {{ block.super }}

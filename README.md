@@ -33,3 +33,14 @@ Before deploying, ensure to update static content:
 ```shell script
 python manage.py collectstatic
 ```
+
+# Deployment
+
+- firewalld
+- certbot (+services)
+- apache (https, virtualhost, mod_wsgi [express, python path/home], mod_ssl [+reinstall])
+- DNS configuration
+- Apache ownership
+- pipenv (+--three option)
+- ocamlfuse (headless drive mount)
+- settings.py and config.py file creation
