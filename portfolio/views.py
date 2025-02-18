@@ -239,7 +239,7 @@ def contact(request):
 
 def cv_view(request):
     path = os.path.join(settings.STATIC_ROOT, 'pdf',
-                        'Zachariah_Carmichael_CV_20240618.pdf')
+                        'Zachariah_Carmichael_CV_20250217.pdf')
     try:
         return FileResponse(open(path, 'rb'), content_type='application/pdf')
     except FileNotFoundError:
