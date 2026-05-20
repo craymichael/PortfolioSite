@@ -23,10 +23,6 @@ You should have received a copy of the GNU General Public License along with thi
     <!-- CSS -->
     <link href="{% static 'css/navbar.css' %}" rel="stylesheet" type="text/css">
     <link href="{% static 'css/base.css' %}" rel="stylesheet" type="text/css">
-    <link href="{% static 'css/gh-fork-ribbon.css' %}" rel="stylesheet" type="text/css">
-    <!--[if lt IE 9]>
-    <link href="{% static 'css/gh-fork-ribbon.ie.css' %}" rel="stylesheet" type="text/css">
-    <![endif]-->
     <link rel="shortcut icon" type="image/png" href="{% static 'img/ZC_32x32_opaque.png' %}"/>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-EXXVP7FDLF"></script>
@@ -42,8 +38,6 @@ You should have received a copy of the GNU General Public License along with thi
 <body>{% endblock %}
 <!-- Handle dark mode before full page loads -->
 <script src="{% static 'js/dark-mode-switch-init.min.js' %}"></script>
-<a class="github-fork-ribbon right-top" href="https://github.com/craymichael" title="Fork me on GitHub"
-   target="_blank">Fork me on GitHub</a>
 {% include "portfolio/common/header.html" %}
 <div class="container base-container">{% block body_block %}{% endblock %}</div>
 {% include "portfolio/common/footer.html" %}

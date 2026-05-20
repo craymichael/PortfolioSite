@@ -1,62 +1,59 @@
-{% extends "portfolio/common/Reingold-Tilford.html" %}
+{% extends "portfolio/common/base.html" %}
 {% load static %}
 
 {% block title %}Home{% endblock %}
 
 {% block body_block %}
 <div class="row">
-    <div class="col-md-7 justified">
-        <h2><b>Greetings!</b></h2>
-        <p>
-            Welcome to my personal site! I am an AI researcher with a passion for explainable AI (XAI) solutions -
-            we must be able to understand how algorithmic decisions are made before such systems are adopted safely and
-            responsibly. My PhD is from the University of Notre Dame where I defended my
-            <a href="https://curate.nd.edu/articles/dataset/Explainable_AI_for_High-Stakes_Decision-Making/25562967" target="_blank">dissertation</a>,
-            <i>Explainable AI for High-Stakes Decision-Making</i>. Therein, I dive into how we can open the AI black box,
-            explore intrinsically comprehensible algorithms, and shed light on poor practices in interpretability
-            research. I care about responsibly deploying AI for the betterment of society, deepening our
-            understanding of machine learning algorithms, and contributing to the
-            <a href="https://en.wikipedia.org/wiki/Free_and_open-source_software">FLOSS</a> ecosystem.
-        </p>
+    <div class="col-lg-9">
+        <h1><b>Zachariah Carmichael, Ph.D.</b></h1>
+        <h5 class="text-muted">Research Scientist, Meta &mdash; interpretability and optimization for agentic systems.</h5>
         <hr>
-        <h5><b><a href="{% url 'portfolio:portfolio' %}">View My Portfolio</a></b></h5>
         <p>
-            Check out my <a href="{% url 'portfolio:projects' %}">projects</a> and <a href="https://github.com/craymichael/">GitHub</a>.
-            If you like the site and want to explore or use it yourself, view the
-            <a href="https://github.com/craymichael/PortfolioSite" target="_blank">source</a> on GitHub.
+            I work on opening the black box of generative AI: understanding what large models have learned,
+            why they answered the way they did, and how to tell when their explanations are misleading.
+            My PhD is from the University of Notre Dame (Computer Vision Research Lab, advisor
+            <a href="https://www3.nd.edu/~wscheire/" target="_blank">Walter J. Scheirer</a>); my dissertation,
+            <a href="https://curate.nd.edu/articles/dataset/Explainable_AI_for_High-Stakes_Decision-Making/25562967" target="_blank"><i>Explainable AI for High-Stakes Decision-Making</i></a>,
+            covers intrinsically interpretable models, the failure modes of post hoc explainers, and
+            defenses against adversarial manipulation of explanations.
         </p>
-        <p>Please don't hesitate to <a href="{% url 'portfolio:contact' %}">contact me</a>!</p>
-    </div>
-    <div class="col-md-5">
-        {{ block.super }}
+        <p>
+            At Meta I research and ship interpretability and optimization tooling for
+            production generative AI, and contribute to the open-source
+            <a href="https://github.com/pytorch/captum/" target="_blank">Captum</a> library.
+        </p>
+
+        <h4 class="mt-4"><b>Selected work</b></h4>
+        <ul>
+            <li>
+                <b>This Probably Looks <i>Exactly</i> Like That: An Invertible Prototypical Network</b> &middot;
+                <i>ECCV 2024</i> &middot;
+                <a href="https://arxiv.org/abs/2407.12200" target="_blank"><span class="fa fa-link" aria-hidden="true"></span> arXiv</a>
+            </li>
+            <li>
+                <b>Pixel-Grounded Prototypical Part Networks</b> &middot;
+                <i>WACV 2024</i> &middot;
+                <a href="https://openaccess.thecvf.com/content/WACV2024/html/Carmichael_Pixel-Grounded_Prototypical_Part_Networks_WACV_2024_paper.html" target="_blank"><span class="fa fa-link" aria-hidden="true"></span> WACV</a>
+            </li>
+            <li>
+                <b>Unfooling Perturbation-Based Post Hoc Explainers</b> &middot;
+                <i>AAAI 2023</i> &middot;
+                <a href="https://arxiv.org/abs/2205.14772" target="_blank"><span class="fa fa-link" aria-hidden="true"></span> AAAI</a>
+            </li>
+        </ul>
+        <p class="text-muted">
+            Full list on <a href="{% url 'portfolio:portfolio' %}">the portfolio page</a> and
+            <a href="https://scholar.google.com/citations?user=1Nq_tGYAAAAJ" target="_blank">Google Scholar</a>.
+        </p>
+
+        <hr>
+        <p>
+            <a class="btn btn-outline-primary mr-2" href="{% url 'portfolio:portfolio' %}">Portfolio &amp; publications</a>
+            <a class="btn btn-outline-primary mr-2" href="{% url 'portfolio:cv' %}" target="_blank">CV (PDF)</a>
+            <a class="btn btn-outline-secondary mr-2" href="https://github.com/craymichael" target="_blank">GitHub</a>
+            <a class="btn btn-outline-secondary" href="{% url 'portfolio:contact' %}">Get in touch</a>
+        </p>
     </div>
 </div>
 {% endblock %}
-
-{% block genTree_script %}
-<script type="text/javascript">
-    var siteTree = {
-        name: "root",
-        children: [
-            {
-                name: "Home",
-                href: "{% url 'portfolio:index' %}"
-            },
-            {
-                name: "Portfolio",
-                href: "{% url 'portfolio:portfolio' %}"
-            },
-            {
-                name: "Projects",
-                href: "{% url 'portfolio:projects' %}"
-            },
-            {
-                name: "Contact",
-                href: "{% url 'portfolio:contact' %}"
-            }
-        ]
-    };
-    genTree(siteTree,
-        (window.outerWidth < 375 ? window.outerWidth : 375),
-        (window.outerHeight < 400 ? window.outerHeight : 400));
-</script>{% endblock %}

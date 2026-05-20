@@ -14,72 +14,65 @@
 {% block body_block %}
 <div class="row">
     <div class="col-md-9" id="portfolio-accordion">
-        <section id="education" class="education-section">
+
+        <section id="experience" class="research-section">
             <div class="row">
                 <div class="col-lg-10">
-                    <div class="card-header" id="education-header">
+                    <div class="card-header" id="research-header">
                         <h5 class="mb-0">
-                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#education-collapse" aria-expanded="false" aria-controls="education-collapse">
-                                <h2><b>Education</b></h2>
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#research-collapse" aria-expanded="false" aria-controls="research-collapse">
+                                <h2><b>Experience</b></h2>
                             </button>
                         </h5>
                     </div>
                     <div class="desktop-header">
-                        <h2><b>Education</b></h2>
+                        <h2><b>Experience</b></h2>
                         <hr>
                     </div>
-                    <div id="education-collapse" class="collapse" aria-labelledby="education-header" data-parent="#portfolio-accordion">
-                        <h4>University of Notre Dame — Notre Dame, IN</h4>
-                        <h6>PhD Program in Computer Science & Engineering - Degree Awarded (May 2024)</h6>
+                    <div id="research-collapse" class="collapse" aria-labelledby="research-header" data-parent="#portfolio-accordion">
+                        <h4>Research Scientist — <a href="https://www.meta.com/" target="_blank">Meta Platforms, Inc.</a>, Menlo Park, CA</h4>
+                        <h6></h6>
+                        <h6><i>July 2024 - Present</i></h6>
                         <ul>
-                            <li>
-                                <a href="https://cse.nd.edu/graduate/"
-                                   target="_blank">Doctor of Philosophy in Computer Science and Engineering</a></li>
+                            <li>Researched and developed engineer- and user-facing prompt explanation algorithms for generative AI models, including Meta AI and Llama.</li>
+                            <li>Researched and developed algorithms for estimating the influence of training data on generative AI models, including Meta AI and Llama.</li>
+                            <li>Developed an algorithm that accelerates model debugging by 10× (more than $1 million annual cost reduction) via architecture-aware perturbation-based neuron attribution.</li>
+                            <li>Maintained and contributed to the open-source <a href="https://github.com/pytorch/captum/" target="_blank">Captum</a> library for model and data interpretability.</li>
                         </ul>
-                        <div class="row">
-                            <p class="col-md-3">GPA:</p>
-                            <p class="col-md-2">4.00 / 4.00</p>
-                        </div>
-                        <h4>Rochester Institute of Technology (RIT) — Rochester, NY</h4>
-                        <h6>BS / MS Program in Computer Engineering - All Degrees Awarded (May 2019)</h6>
-                        <i>magna cum laude</i>
+                        <h4>Computer Vision Research Lab (CVRL) Graduate Research Assistant — <a href="https://cvrl.nd.edu/" target="_blank">Notre Dame</a>, Notre Dame, IN</h4>
+                        <h6></h6>
+                        <h6><i>August 2019 - May 2024</i></h6>
                         <ul>
-                            <li>
-                                <a href="https://www.rit.edu/kgcoe/computerengineering/program/dual-degree-bsms/curriculum-bsms-dual-degree"
-                                   target="_blank">Bachelor of Science in Computer Engineering</a></li>
-                            <li>
-                                <a href="https://www.rit.edu/kgcoe/computerengineering/program/dual-degree-bsms/curriculum-bsms-dual-degree"
-                                   target="_blank">Master of Science in Computer Engineering</a></li>
-                            <li><a href="https://www.rit.edu/programs/minors/mathematics" target="_blank">
-                                Minor in Mathematics</a></li>
-                            <li><a href="https://www.rit.edu/programs/immersions/digital-literatures-and-comparative-media"
-                                   target="_blank">Immersion in Digital Literature and Comparative Media</a></li>
+                            <li>Proposed a joint predictive and generative model for intrinsically interpretable classification. By combining concepts in explainable AI (prototypical neural networks) and generative AI (normalizing flows), we achieve state-of-the-art accuracy, density estimation, calibration quality, and interpretability across computer vision benchmarks</li>
+                            <li>Conducted research demonstrating the infidelity of post hoc explanation methods for black box interpretation</li>
+                            <li>Developed an open-source symbolic framework that enables researchers to study feature attribution, interaction effects, & explanations of arbitrarily complex models</li>
+                            <li>Proposed a highly effective defense for explainers against adversarial attacks to identify malicious auditees and recover faithful explanations</li>
+                            <li>Defended by Ph.D. dissertation in March 2024</li>
                         </ul>
-                        <div class="row">
-                            <p class="col-md-3">Grad GPA:</p>
-                            <p class="col-md-2">4.00 / 4.00</p>
-                        </div>
-                        <div class="row">
-                            <p class="col-md-3">Undergrad GPA:</p>
-                            <p class="col-md-2">3.63 / 4.00</p>
-                        </div>
-                        <div class="row">
-                            <p class="col-md-3">Cumulative GPA:</p>
-                            <p class="col-md-2">3.70 / 4.00</p>
-                        </div>
-                        <h5>Courses</h5>
-                        <ul class="row">
-                            <li class="col-md-6 vsplit-list">Brain-Inspired Computing</li>
-                            <li class="col-md-6 vsplit-list">Computer Vision</li>
-                            <li class="col-md-6 vsplit-list">Deep Learning</li>
-                            <li class="col-md-6 vsplit-list">Advanced C++ Programming</li>
-                            <li class="col-md-6 vsplit-list">Graph Theory</li>
-                            <li class="col-md-6 vsplit-list">Computer Architecture</li>
-                            <li class="col-md-6 vsplit-list">Applied Programming</li>
-                            <li class="col-md-6 vsplit-list">Linear Optimization</li>
-                            <li class="col-md-6 vsplit-list">Digital Systems I and II</li>
-                            <li class="col-md-6 vsplit-list">Computer Science I and II</li>
-                            <li class="col-md-6 vsplit-list">Electronics I</li>
+                        <h4>Research Associate Intern — <a href="https://www.labs.hpe.com/" target="_blank">Hewlett Packard Enterprise (HPE) Labs</a>, Milpitas, CA</h4>
+                        <h6></h6>
+                        <h6><i>May 2023 - March 2024</i></h6>
+                        <ul>
+                            <li>Developed methods for the evaluation and enhancement of natural and adversarial robustness in neural networks</li>
+                            <li>Developed a neural surrogate for a computational fluid dynamics solver to improve data center sustainability, achieving 2,000× speedup. The surrogate is combined with online reinforcement learning for the optimization of carbon footprint in data centers</li>
+                        </ul>
+                        <h4>Research Intern — <a href="https://www.merl.com/" target="_blank">Mitsubishi Electric Research Laboratories</a>, Cambridge, MA</h4>
+                        <h6></h6>
+                        <h6><i>June 2022 - September 2022</i></h6>
+                        <ul>
+                            <li>Conducted original research on intrinsically human-interpretable AI for vision tasks (prototypical part neural networks) under supervision of Dr. Mike Jones</li>
+                            <li>Uncovered and mitigated a fundamental shortcoming of prototypical part neural networks that can produce highly misleading explanations - my solution (which led to a patent application that I helped author) quantitatively improves interpretability for this model which is often applied in high-stakes domains including biomedical imaging</li>
+                        </ul>
+                        <h4>Nu.AI Laboratory Research Fellow — <a href="http://engineering.utsa.edu/new-employee-dhireesha-kudithipudi/" target="_blank">UTSA</a>, San Antonio, TX</h4>
+                        <h6></h6>
+                        <h6><i>August 2019 - May 2021</i></h6>
+                        <h4>Nu.AI Laboratory Graduate Research Assistant — <a href="https://www.rit.edu/kgcoe/neuro/" target="_blank">RIT</a>, Rochester, NY</h4>
+                        <h6></h6>
+                        <h6><i>January 2018 - August 2019</i></h6>
+                        <ul>
+                            <li>Collaborated with epidemiologists & demographers in the modeling of COVID-19 infectious spread. Developed a live <a href="https://livid-about-covid19.nuai.utsa.edu/">online dashboard</a> for Texas state showcasing case data & forecasts
+                            <li>Researched the accuracy-energy-latency trade-off of network compression via low-precision arithmetic & custom hardware architecture</li>
+                            <li>Improved efficiency of neural networks for time series forecasting upwards of 95% in size & training speed using randomness & compression for resource-constrained devices</li>
                         </ul>
                     </div>
                 </div>
@@ -160,64 +153,41 @@
             </div>
         </section>
 
-        <section id="research" class="research-section">
+        <section id="teaching" class="work-section">
             <div class="row">
                 <div class="col-lg-10">
-                    <div class="card-header" id="research-header">
+                    <div class="card-header" id="work-header">
                         <h5 class="mb-0">
-                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#research-collapse" aria-expanded="false" aria-controls="research-collapse">
-                                <h2><b>Experience</b></h2>
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#work-collapse" aria-expanded="false" aria-controls="work-collapse">
+                                <h2><b>Open Source & Teaching</b></h2>
                             </button>
                         </h5>
                     </div>
                     <div class="desktop-header">
-                        <h2><b>Experience</b></h2>
+                        <h2><b>Open Source & Teaching</b></h2>
                         <hr>
                     </div>
-                    <div id="research-collapse" class="collapse" aria-labelledby="research-header" data-parent="#portfolio-accordion">
-                        <h4>Research Scientist — <a href="https://www.meta.com/" target="_blank">Meta Platforms, Inc.</a>, Menlo Park, CA</h4>
-                        <h6></h6>
+                    <div id="work-collapse" class="collapse" aria-labelledby="work-header" data-parent="#portfolio-accordion">
+                        <h4><a href="https://captum.ai/" target="_blank">PyTorch Captum</a> Maintainer — Meta Platforms, Inc.</h4>
                         <h6><i>July 2024 - Present</i></h6>
                         <ul>
-                            <li>Researched and developed engineer- and user-facing prompt explanation algorithms for generative AI models, including Meta AI and Llama.</li>
-                            <li>Researched and developed algorithms for estimating the influence of training data on generative AI models, including Meta AI and Llama.</li>
-                            <li>Developed an algorithm that accelerates model debugging by 10× (more than $1 million annual cost reduction) via architecture-aware perturbation-based neuron attribution.</li>
-                            <li>Maintained and contributed to the open-source <a href="https://github.com/pytorch/captum/" target="_blank">Captum</a> library for model and data interpretability.</li>
+                            <li>Maintained and drove releases v0.8.0 - v0.9.0 of Meta's interpretability library.</li>
+                            <li>Contributed extensions of attribution algorithms to LLMs built on the transformers library.</li>
                         </ul>
-                        <h4>Computer Vision Research Lab (CVRL) Graduate Research Assistant — <a href="https://cvrl.nd.edu/" target="_blank">Notre Dame</a>, Notre Dame, IN</h4>
-                        <h6></h6>
-                        <h6><i>August 2019 - May 2024</i></h6>
+
+                        <h4>Web Manager — <a href="https://www.thecvf.com/" target="_blank">Computer Vision Foundation (CVF)</a></h4>
+                        <h6><i>September 2019 – May 2024</i></h6>
                         <ul>
-                            <li>Proposed a joint predictive and generative model for intrinsically interpretable classification. By combining concepts in explainable AI (prototypical neural networks) and generative AI (normalizing flows), we achieve state-of-the-art accuracy, density estimation, calibration quality, and interpretability across computer vision benchmarks</li>
-                            <li>Conducted research demonstrating the infidelity of post hoc explanation methods for black box interpretation</li>
-                            <li>Developed an open-source symbolic framework that enables researchers to study feature attribution, interaction effects, & explanations of arbitrarily complex models</li>
-                            <li>Proposed a highly effective defense for explainers against adversarial attacks to identify malicious auditees and recover faithful explanations</li>
-                            <li>Defended by Ph.D. dissertation in March 2024</li>
+                            <li>Rewrote, audited, and maintained <a href="https://openaccess.thecvf.com/menu" target="_blank">CVF Open Access</a> — serving papers, talks, posters, and other open content from CVPR, ICCV, ECCV, WACV, and ACCV to <b>500,000+ monthly visitors</b>.</li>
+                            <li>Automated synchronization of <a href="https://cove.thecvf.com/" target="_blank">CVF COVE</a> datasets and arXiv erratum retrieval with Open Access.</li>
+                            <li>Discovered and mitigated several SQL security vulnerabilities.</li>
                         </ul>
-                        <h4>Research Associate Intern — <a href="https://www.labs.hpe.com/" target="_blank">Hewlett Packard Enterprise (HPE) Labs</a>, Milpitas, CA</h4>
-                        <h6></h6>
-                        <h6><i>May 2023 - March 2024</i></h6>
+
+                        <h4>Graduate Teaching Assistant — University of Notre Dame</h4>
+                        <h6><i>2019 – 2020</i></h6>
                         <ul>
-                            <li>Developed methods for the evaluation and enhancement of natural and adversarial robustness in neural networks</li>
-                            <li>Developed a neural surrogate for a computational fluid dynamics solver to improve data center sustainability, achieving 2,000× speedup. The surrogate is combined with online reinforcement learning for the optimization of carbon footprint in data centers</li>
-                        </ul>
-                        <h4>Research Intern — <a href="https://www.merl.com/" target="_blank">Mitsubishi Electric Research Laboratories</a>, Cambridge, MA</h4>
-                        <h6></h6>
-                        <h6><i>June 2022 - September 2022</i></h6>
-                        <ul>
-                            <li>Conducted original research on intrinsically human-interpretable AI for vision tasks (prototypical part neural networks) under supervision of Dr. Mike Jones</li>
-                            <li>Uncovered and mitigated a fundamental shortcoming of prototypical part neural networks that can produce highly misleading explanations - my solution (which led to a patent application that I helped author) quantitatively improves interpretability for this model which is often applied in high-stakes domains including biomedical imaging</li>
-                        </ul>
-                        <h4>Nu.AI Laboratory Research Fellow — <a href="http://engineering.utsa.edu/new-employee-dhireesha-kudithipudi/" target="_blank">UTSA</a>, San Antonio, TX</h4>
-                        <h6></h6>
-                        <h6><i>August 2019 - May 2021</i></h6>
-                        <h4>Nu.AI Laboratory Graduate Research Assistant — <a href="https://www.rit.edu/kgcoe/neuro/" target="_blank">RIT</a>, Rochester, NY</h4>
-                        <h6></h6>
-                        <h6><i>January 2018 - August 2019</i></h6>
-                        <ul>
-                            <li>Collaborated with epidemiologists & demographers in the modeling of COVID-19 infectious spread. Developed a live <a href="https://livid-about-covid19.nuai.utsa.edu/">online dashboard</a> for Texas state showcasing case data & forecasts
-                            <li>Researched the accuracy-energy-latency trade-off of network compression via low-precision arithmetic & custom hardware architecture</li>
-                            <li>Improved efficiency of neural networks for time series forecasting upwards of 95% in size & training speed using randomness & compression for resource-constrained devices</li>
+                            <li>CSE-60625/40625 — <i>Advanced Topics in Machine Learning</i> (&gt;20 students)</li>
+                            <li>CSE-30151 — <i>Theory of Computing</i> (&gt;30 students)</li>
                         </ul>
                     </div>
                 </div>
@@ -299,281 +269,53 @@
             </div>
         </section>
 
-        <section id="membership" class="membership-section">
+        <section id="education" class="education-section">
             <div class="row">
                 <div class="col-lg-10">
-                    <div class="card-header" id="membership-header">
+                    <div class="card-header" id="education-header">
                         <h5 class="mb-0">
-                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#membership-collapse" aria-expanded="false" aria-controls="membership-collapse">
-                                <h2><b>Membership</b></h2>
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#education-collapse" aria-expanded="false" aria-controls="education-collapse">
+                                <h2><b>Education</b></h2>
                             </button>
                         </h5>
                     </div>
                     <div class="desktop-header">
-                        <h2><b>Membership</b></h2>
+                        <h2><b>Education</b></h2>
                         <hr>
                     </div>
-                    <div id="membership-collapse" class="collapse" aria-labelledby="membership-header" data-parent="#portfolio-accordion">
-                        <h5>Institute of Electrical and Electronics Engineers (IEEE) Student Member</h5>
-                        <h6><i>Oct 2018 - Present</i></h6>
-                        <h5>Tau Beta Pi - The Engineering Honor Society</h5>
-                        <h6><i>Oct 2018 - Present</i></h6>
-                        <h5>The National Society of Leadership and Success</h5>
-                        <h6><i>Oct 2018 - Present</i></h6>
-                        <h5>Sigma Xi Nomination</h5>
-                        <h6><i>Jun 2020</i></h6>
+                    <div id="education-collapse" class="collapse" aria-labelledby="education-header" data-parent="#portfolio-accordion">
+                        <h4>University of Notre Dame — Notre Dame, IN</h4>
+                        <h6>Ph.D., Computer Science & Engineering - Degree Awarded (May 2024)</h6>
+                        <p>
+                            Advisor: <a href="https://www3.nd.edu/~wscheire/" target="_blank">Walter J. Scheirer</a>.
+                            Dissertation: <a href="https://curate.nd.edu/articles/dataset/Explainable_AI_for_High-Stakes_Decision-Making/25562967" target="_blank"><i>Explainable AI for High-Stakes Decision-Making</i></a>.
+                        </p>
+                        <h4>Rochester Institute of Technology (RIT) — Rochester, NY</h4>
+                        <h6>B.S. M.S., Computer Engineering - All Degrees Awarded (May 2019)</h6>
+                        <p>
+                            <i>magna cum laude</i>. M.S. thesis:
+                            <a href="https://scholarworks.rit.edu/theses/10144/" target="_blank">
+                                <i>Towards Lightweight AI: Leveraging Stochasticity, Quantization, and Tensorization for Forecasting</i></a>.
+                            Minor in Mathematics; Immersion in Digital Literature and Comparative Media.
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="skills" class="skills-section">
-            <div class="row">
-                <div class="col-lg-10">
-                    <div class="card-header" id="skills-header">
-                        <h5 class="mb-0">
-                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#skills-collapse" aria-expanded="false" aria-controls="skills-collapse">
-                                <h2><b>Skills</b></h2>
-                            </button>
-                        </h5>
-                    </div>
-                    <div class="desktop-header">
-                        <h2><b>Skills</b></h2>
-                        <hr>
-                    </div>
-                    <div id="skills-collapse" class="collapse" aria-labelledby="skills-header" data-parent="#portfolio-accordion">
-                        <h4>Languages</h4>
-                        <ul class="row">
-                            <li class="col-md-4 vsplit-list">Python</li>
-                            <li class="col-md-4 vsplit-list">C++</li>
-                            <li class="col-md-4 vsplit-list">C</li>
-                            <li class="col-md-4 vsplit-list">Java</li>
-                            <li class="col-md-4 vsplit-list">LaTeX</li>
-                            <li class="col-md-4 vsplit-list">HTML/CSS</li>
-                            <li class="col-md-4 vsplit-list">Shell/Bash</li>
-                            <li class="col-md-4 vsplit-list">JavaScript</li>
-                            <li class="col-md-4 vsplit-list">TCL</li>
-                            <li class="col-md-4 vsplit-list">System Verilog/Verilog</li>
-                            <li class="col-md-4 vsplit-list">VHDL</li>
-                            <li class="col-md-4 vsplit-list">ARM Assembly</li>
-                            <li class="col-md-4 vsplit-list">Rust</li>
-                        </ul>
-                        <h4>Software and Libraries</h4>
-                        <ul class="row">
-                            <li class="col-md-4 vsplit-list">TensorFlow</li>
-                            <li class="col-md-4 vsplit-list">Scikit-Learn</li>
-                            <li class="col-md-4 vsplit-list">PyTorch</li>
-                            <li class="col-md-4 vsplit-list">Git</li>
-                            <li class="col-md-4 vsplit-list">NumPy/SciPy</li>
-                            <li class="col-md-4 vsplit-list">SVN</li>
-                            <li class="col-md-4 vsplit-list">Docker</li>
-                            <li class="col-md-4 vsplit-list">Singularity</li>
-                            <li class="col-md-4 vsplit-list">Matplotlib/Seaborn</li>
-                            <li class="col-md-4 vsplit-list">MATLAB/Octave</li>
-                            <li class="col-md-4 vsplit-list">Django</li>
-                            <li class="col-md-4 vsplit-list">Apache HTTPD</li>
-                            <li class="col-md-4 vsplit-list">SQL</li>
-                            <li class="col-md-4 vsplit-list">Xilinx ISE/Vivado</li>
-                            <li class="col-md-4 vsplit-list">ROS</li>
-                            <li class="col-md-4 vsplit-list">ModelSim</li>
-                            <li class="col-md-4 vsplit-list">Keil μVision</li>
-                            <li class="col-md-4 vsplit-list">Microsoft Office</li>
-                            <li class="col-md-4 vsplit-list">Eclipse</li>
-                            <li class="col-md-4 vsplit-list">Atlassian Suite</li>
-                        </ul>
-                        <h4>Hardware</h4>
-                        <ul class="row">
-                            <li class="col-md-4 vsplit-list">Cortex M0+/M4 Architectures</li>
-                            <li class="col-md-4 vsplit-list">NXP/Freescale KL46Z/KL64F</li>
-                            <li class="col-md-4 vsplit-list">Arduino</li>
-                            <li class="col-md-4 vsplit-list">Spartan6 FPGA</li>
-                        </ul>
-                        <h4>Operating Systems</h4>
-                        <ul class="row">
-                            <li class="col-md-4 vsplit-list">Arch Linux</li>
-                            <li class="col-md-4 vsplit-list">Debian/Ubuntu & variants</li>
-                            <li class="col-md-4 vsplit-list">CentOS/RedHat</li>
-                            <li class="col-md-4 vsplit-list">NixOS</li>
-                            <li class="col-md-4 vsplit-list">Amazon Linux AMI</li>
-                            <li class="col-md-4 vsplit-list">Windows</li>
-                        </ul>
-                        <h4>Other</h4>
-                        <ul class="row">
-                            <li class="col-md-4 vsplit-list">System administration</li>
-                            <li class="col-md-4 vsplit-list">Project management</li>
-                            <li class="col-md-4 vsplit-list">Web development</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="work" class="work-section">
-            <div class="row">
-                <div class="col-lg-9 justified">
-                     <div class="card-header" id="work-header">
-                        <h5 class="mb-0">
-                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#work-collapse" aria-expanded="false" aria-controls="work-collapse">
-                                <h2><b>Other Experience</b></h2>
-                            </button>
-                        </h5>
-                    </div>
-                    <div class="desktop-header">
-                        <h2><b>Other Experience</b></h2>
-                        <hr>
-                    </div>
-                    <div id="work-collapse" class="collapse" aria-labelledby="work-header" data-parent="#portfolio-accordion">
-
-                        <h4>Web Manager — <a
-                                href="https://www.thecvf.com/" target="_blank">Computer Vision Foundation (CVF)</a></h4>
-                        <h6></h6>
-                        <h6><i>September 2019 - May 2024</i></h6>
-                        <ul>
-                            <li>Position funded my PhD</li>
-                            <li>Rewrote, audited, & actively maintain <a href="https://openaccess.thecvf.com/menu">CVF Open Access</a> to better serve papers, talks, posters, & other open content from the CVPR, ICCV, ECCV, WACV, & ACCV conferences to <i>500,000+</i> monthly visitors</li>
-                            <li>Automated synchronization of <a href="https://cove.thecvf.com/">CVF COVE</a> computer vision datasets & arXiv erratum retrieval with Open Access</li>
-                            <li>Discovered & mitigated several SQL security vulnerabilities</li>
-                        </ul>
-                        <h6>Languages</h6>
-                        <ul>
-                            <li>Python</li>
-                            <li>SQL</li>
-                            <li>Bash</li>
-                        </ul>
-                        <h6>Software</h6>
-                        <ul>
-                            <li>Apache HTTPD</li>
-                            <li>Pandas</li>
-                            <li>Web scraping tools</li>
-                        </ul>
-
-                        <h4>Graduate Teaching Assistant — University of Notre Dame; Rochester Institute of Technology</h4>
-                        <h6></h6>
-                        <h6><i>2018 - 2020</i></h6>
-                        <ul>
-                            <li>Notre Dame CSE-60625/40625 <i>Advanced Topics in Machine Learning</i> Teaching Assistant (>20 students)</li>
-                            <li>Notre Dame CSE-30151 <i>Theory Of Computing</i> Teaching Assistant (>30 students)</li>
-                            <li>RIT CMPE-380 <i>Applied Programming</i> Grader (>30 students)</li>
-                            <li>RIT CMPE-250 <i>Assembly Language</i> Grader (>30 students)</li>
-                        </ul>
-
-                        <h4>Digital Engineering Intern — <a
-                                href="https://www.plexus.com" target="_blank">Plexus Corp.</a>, Raleigh, NC</h4>
-                        <h6></h6>
-                        <h6><i>June 2017 - August 2017</i></h6>
-                        <ul>
-                            <li>Carried out RTL design of FPGA-agnostic module for evaluation of FPGA cooling systems, validated all test cases with digital engineering team</li>
-                            <li>Developed embedded software for a battery testing unit using the FRDM-K64F dev board, validated design & integration with mechanical, electrical, & software teams</li>
-                        </ul>
-                        <h6>Languages</h6>
-                        <ul>
-                            <li>C/C++</li>
-                            <li>System Verilog</li>
-                            <li>Powershell</li>
-                        </ul>
-                        <h6>Hardware</h6>
-                        <ul>
-                            <li>NXP/Freedom K64F</li>
-                            <li>Xilinx Spartan FPGA</li>
-                        </ul>
-
-                        <h4>Software Engineering/Research Intern — <a
-                                href="http://www.cubrc.org/" target="_blank">CUBRC, Inc.</a>, Cheektowaga, NY</h4>
-                        <h6></h6>
-                        <h6><i>June 2016 - December 2016</i></h6>
-                        <ul>
-                            <li>Developed a machine learning framework to model surgery risk, patient mortality, & other analytics using TensorFlow & scikit-learn with automatic model search & hyperparameter optimization</li>
-                            <li>Worked with customers in the design of electronic health record-unifying database & interface</li>
-                        </ul>
-                        <h6>Languages</h6>
-                        <ul>
-                            <li>Python {2, 3}</li>
-                            <li>Shell/Bash</li>
-                            <li>SPARQL and RDF</li>
-                        </ul>
-                        <h6>Software and Libraries</h6>
-                        <ul>
-                            <li>TensorFlow</li>
-                            <li>Scikit-Learn</li>
-                            <li>Flask</li>
-                            <li>NumPy</li>
-                            <li>Kafka</li>
-                            <li>Atlassian Suite {JIRA, Confluence, HipChat, BitBucket}</li>
-                        </ul>
-
-                        <h4>Senior SD Representative and RA Publisher —
-                            <a href="https://www.rit.edu/its/" target="_blank">ITS Service Desk (RIT)</a>,
-                            Rochester, NY</h4>
-                        <h6><i>Fall 2014 - Spring 2016</i></h6>
-                        <ul>
-                            <li>Trained new representatives in customer interaction, internal procedures, and general troubleshooting methods</li>
-                            <li>Worked with RIT staff, faculty, and students to resolve hardware and software problems, manage RIT computer accounts, and provide information on technology services</li>
-                        </ul>
-                        <h6>Software</h6>
-                        <ul>
-                            <li>Footprints</li>
-                            <li>Microsoft Office</li>
-                            <li>RightAnswers</li>
-                            <li>Atlassian Confluence</li>
-                        </ul>
-
-                        <h4>Founding Partner — CPUtiful Tech, Killingworth, CT</h4>
-                        <h6><i>Summer 2015 - Spring 2016</i></h6>
-                        <p>CPUtiful Tech was a company comprising four partners with the mutual interest of
-                            creating a consumer electronics retail company with a business platform based on personable
-                            interactions. The company was dissolved in 2016.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="activities" class="activities-section">
-            <div class="row">
-                <div class="col-lg-10">
-                    <div class="card-header" id="activities-header">
-                        <h5 class="mb-0">
-                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#activities-collapse" aria-expanded="false" aria-controls="activities-collapse">
-                                <h2><b>Activities</b></h2>
-                            </button>
-                        </h5>
-                    </div>
-                    <div class="desktop-header">
-                        <h2><b>Activities</b></h2>
-                        <hr>
-                    </div>
-                    <div id="activities-collapse" class="collapse" aria-labelledby="activities-header" data-parent="#portfolio-accordion">
-                        <h5>RIT Tennis Club Treasurer</h5>
-                        <h6><i>2014 - 2017</i></h6>
-
-                        <h5>RIT Intramural Co-Ed Volleyball Captain</h5>
-                        <h6><i>2014 - 2017</i></h6>
-
-                        <h5>RIT Intramural Co-Ed Flag Football Captain</h5>
-                        <h6><i>2015 - 2016</i></h6>
-
-                        <h5>RIT KanJam Executive Board Member</h5>
-                        <h6><i>2014 - 2016</i></h6>
-
-                        <h5>Drumming (Kit)</h5>
-
-                        <h5>Tennis</h5>
-                    </div>
-                </div>
-            </div>
-        </section>
     </div>
     <!-- Sidebar -->
     <div class="col-md-3">
         <nav class="sidebar-fixed position-fixed">
             <ul id="sidebar" class="nav flex-column">
                 <li class="nav-item">
-                    <a class="nav-link page-scroll" href="#education">Education</a>
+                    <a class="nav-link page-scroll" href="#experience">Experience</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link page-scroll" href="#publications">Publications</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link page-scroll" href="#research">Experience</a>
+                    <a class="nav-link page-scroll" href="#teaching">OSS & Teaching</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link page-scroll" href="#awards">Fellowships & Awards</a>
@@ -582,16 +324,7 @@
                     <a class="nav-link page-scroll" href="#reviewing">Service</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link page-scroll" href="#membership">Membership</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link page-scroll" href="#skills">Skills</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link page-scroll" href="#work">Other Experience</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link page-scroll" href="#activities">Activities</a>
+                    <a class="nav-link page-scroll" href="#education">Education</a>
                 </li>
             </ul>
         </nav>
